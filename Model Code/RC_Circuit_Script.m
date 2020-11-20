@@ -1,4 +1,6 @@
-clear
+% clear
+
+% open_system('sdoRCCircuit')
 
 load sdoRCCircuit_ExperimentData
 
@@ -13,10 +15,12 @@ Voltage.Values = timeseries(data, time);
 
 Exp.OutputData = Voltage;
 
-Simulator    = createSimulator(Exp);
-Simulator    = sim(Simulator);
+Simulator = createSimulator(Exp);
+Simulator = sim(Simulator);
+
 SimLog = find(Simulator.LoggedData,get_param('RC_Circuit','SignalLoggingName'))
 Voltage = find(SimLog,'Voltage');
+
 plot(time,data,'ro',Voltage.Values.Time,Voltage.Values.Data,'b')
 title('Simulated and Measured Responses Before Estimation')
 legend('Measured Voltage','Simulated Voltage')
