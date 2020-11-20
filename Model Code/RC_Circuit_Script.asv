@@ -1,5 +1,7 @@
 clear
 
+open_system('RCircuit');
+
 load sdoRCCircuit_ExperimentData
 
 Exp = sdo.Experiment('RC_Circuit');
@@ -17,10 +19,10 @@ Simulator    = createSimulator(Exp);
 Simulator    = sim(Simulator);
 SimLog = find(Simulator.LoggedData,get_param('RC_Circuit','SignalLoggingName'))
 Voltage = find(SimLog,'Voltage');
-plot(time,data,'ro',Voltage.Values.Time,Voltage.Values.Data,'b')
-title('Simulated and Measured Responses Before Estimation')
-legend('Measured Voltage','Simulated Voltage')
+% plot(time,data,'ro',Voltage.Values.Time,Voltage.Values.Data,'b')
+% title('Simulated and Measured Responses Before Estimation')
+% legend('Measured Voltage','Simulated Voltage')
 
-p = sdo.getParameterFromModel('RC_Circuit','C1');
+p = sdo.getParameterFromModel('RC_Circuit','RC_Circuit/`C1');
 p.Value = 460e-6;
 p.Minimum = 0;
