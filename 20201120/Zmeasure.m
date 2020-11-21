@@ -35,10 +35,13 @@
 % ylabel('jX');
 % grid on;
 
-Zdata1 = power_zmeter('RC_Circuit_2',[1e6:1e6:70e6]);
+L_N10_LE_F = csvread('L_N10_LE_00.CSV',3,0,[3,0,201,0]);
+freq = L_N10_LE_F;
+freq = freq';
+Zdata1 = power_zmeter('RC_Circuit_2',freq);
 Zdata1.Z;
 Zdata1.Freq;
 figure(1)
-plot(f,real(Zdata1.Z))
+plot(freq,real(Zdata1.Z))
 figure(2)
-plot(f,imag(Zdata1.Z))
+plot(freq,imag(Zdata1.Z))
