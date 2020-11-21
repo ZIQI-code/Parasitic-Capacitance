@@ -1,7 +1,9 @@
 clear
 
-% open_system('sdoRCCircuit')
-
+% Load Data
+L_N10_LE_F = csvread('L_N10_LE_00.CSV',3,0,[3,0,201,0]);
+freq = L_N10_LE_F;
+freq = freq';
 L_N10_LE_C_R_1 = csvread('L_N10_LE_00_C.CSV',3,1,[3,1,201,1]);
 L_N10_LE_C_I_1 = csvread('L_N10_LE_00_C.CSV',3,2,[3,2,201,2]);
 
