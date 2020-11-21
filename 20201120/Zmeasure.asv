@@ -35,10 +35,4 @@
 % ylabel('jX');
 % grid on;
 
-Zdata1 = power_zmeter('RC_Circuit_2',[1e6:1e6:70e6]);
-Zdata1.Z;
-Zdata1.Freq;
-figure(1)
-plot(f,real(Zdata1.Z))
-figure(2)
-plot(f,imag(Zdata1.Z))
+plot()
