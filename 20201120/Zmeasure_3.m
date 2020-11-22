@@ -1,8 +1,8 @@
 clear
 
-data_real = csvread('L_N10_LE_00.CSV',3,1,[3,1,201,1]);
-data_imag = csvread('L_N10_LE_00.CSV',3,2,[3,2,201,2]);
-freq = csvread('L_N10_LE_00.CSV', 3, 0, [3, 0, 201, 0]);
+data_real = csvread('L_N10_LE_00_HF.CSV',3,1,[3,1,201,1]);
+data_imag = csvread('L_N10_LE_00_HF.CSV',3,2,[3,2,201,2]);
+freq = csvread('L_N10_LE_00_HF.CSV', 3, 0, [3, 0, 201, 0]);
 
 fcn = @(c) Zmeasure_Objective_3(c, freq, data_real, data_imag);
 
@@ -10,7 +10,7 @@ p = sdo.getParameterFromModel('RC_Circuit_3', {'Cs','Cp','R'});
 
 p(1).Value = 1e-15;
 p(1).Minimum = 0;
-p(1).Maximum = 1e-9;
+p(1).Maximum = 1e-6;
 p(2).Value = 1e-15;
 p(2).Minimum = 0;
 p(2).Maximum = 1e-9;
@@ -18,7 +18,7 @@ p(2).Maximum = 1e-9;
 % p(3).Minimum = 0;
 p(3).Value = 10;
 p(3).Minimum = 0;
-p(3).Maximum = 100;
+p(3).Maximum = 200;
 
 opt_result = sdo.optimize(fcn, p)
 
