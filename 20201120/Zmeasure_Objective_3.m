@@ -1,7 +1,7 @@
 function vals = Zmeasure_Objective_3(p, freq, data_real, data_imag)
-    sdo.setValueInModel('RC_Circuit_3', 'Cs', opt_result(1).Value);
-    sdo.setValueInModel('RC_Circuit_3', 'Cp', opt_result(2).Value);
-    sdo.setValueInModel('RC_Circuit_3', 'Lm', opt_result(3).Value);
+    sdo.setValueInModel('RC_Circuit_3', 'Cs', p(1).Value);
+    sdo.setValueInModel('RC_Circuit_3', 'Cp', p(2).Value);
+    sdo.setValueInModel('RC_Circuit_3', 'R', p(3).Value);
 
     z_data = power_zmeter('RC_Circuit_3', freq');
 
