@@ -63,8 +63,10 @@ fcn = @(c) Zmeasure_Objective(c, freq, data_real, data_imag);
 p = sdo.getParameterFromModel('RC_Circuit_2', {'R1', 'C1'});
 p(1).Value = 100;
 p(1).Minimum = 0;
+p(1).Maximum = 190;
 p(2).Value = 4.27e-12;
 p(2).Minimum = 0;
+p(2).Maximum = 6e-12;
 
 opt_result = sdo.optimize(fcn, p)
 
@@ -72,6 +74,9 @@ sdo.setValueInModel('RC_Circuit_2', 'R1', opt_result(1).Value);
 sdo.setValueInModel('RC_Circuit_2', 'C1', opt_result(2).Value);
 z_data = power_zmeter('RC_Circuit_2', freq');
 figure(9)
-plot(freq, imag(z_data.Z), 'bo', freq, data_imag, 'ro')
+plot(freq, imag(z_data.Z), freq, data_imag)
+legend('simulation', 'experiment')
+figure(10)
+plot(freq, real(z_data.Z), freq, data_real)
 legend('simulation', 'experiment')
 

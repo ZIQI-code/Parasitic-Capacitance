@@ -4,12 +4,13 @@ function vals = Zmeasure_Objective(p, freq, data_real, data_imag)
 
     z_data = power_zmeter('RC_Circuit_2', freq');
 
-    low = 60;
-    high = 130;
-
-    error = sum((real(z_data.Z(low:high)) - data_real(low:high)) .^ 2);
-    error = error + sum((imag(z_data.Z(low:high)) - data_imag(low:high)) .^ 2);
-    error = error / (high - low + 1);
+    low = 57;
+    high = 144;
+    N = (high - low + 1);
+    error = sum(abs(real(z_data.Z(low:high)) - data_real(low:high)) .^ 2 + ...
+    abs(imag(z_data.Z(low:high)) - data_imag(low:high)) .^ 2)./N;
+    
+   
 
     vals.F = error;
 end
