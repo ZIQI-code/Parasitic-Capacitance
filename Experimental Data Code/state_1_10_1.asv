@@ -169,7 +169,7 @@ plot(L0F_C_0,L1R_C_0,L0F_C_0,L1R_C_1,L0F_C_0,L1R_C_2)
 hold on
 plot(L0F_N18C_0_1,L0R_N18C_0_1,L0F_N18C_0_1,L0R_N18C_1_1,L0F_N18C_0_1,L0R_N18C_2_1,'LineWidth',2) 
 legend('N14C-0','N14C-1','N14C-2','N18C-0','N18C-1','N18C-2')
-title('Copper Wire N14 N18 Real')
+title('Copper Wire N18 Real Extension comparison')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
 grid on
