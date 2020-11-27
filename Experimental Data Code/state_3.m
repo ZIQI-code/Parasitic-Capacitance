@@ -148,3 +148,26 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+%% N18 parameters
+% solve copper
+L = 4.6231e-6;
+syms k b
+[k,b] = solve(3921.77==k*47600000+b, -7671.6==k*47900000+b,k,b);
+Fc = abs(b/k);
+%Fc = 4.7701e+07
+syms Cs
+Cs = solve(Fc == 1/(2*pi*sqrt(L*Cs)),Cs);
+%Cs = 2.4079e-12
+
+% solve knitted wire
+syms k b
+[k,b] = solve(2478.94==k*43090000+b, -7579.46==k*44470000+b,k,b);
+Fk = abs(b/k);
+%Fk = 4.3430e+07
+syms Ct
+Ct = solve(Fk == 1/(2*pi*sqrt(L*Ct)),Ct);
+%Ct = 2.9049e-12
+
+%Solve parasitic
+Cp = Ct-Cs;
+%Cp = 4.9693e-13
