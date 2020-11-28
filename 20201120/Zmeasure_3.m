@@ -26,16 +26,15 @@ sdo.setValueInModel('RC_Circuit_3', 'Cs', opt_result(1).Value);
 sdo.setValueInModel('RC_Circuit_3', 'Cp', opt_result(2).Value);
 sdo.setValueInModel('RC_Circuit_3', 'R', opt_result(3).Value);
 %% 
+clear
 
-
-% data_real = csvread('L_N10_LE_00_HF.CSV',3,1,[3,1,201,1]);
-% data_imag = csvread('L_N10_LE_00_HF.CSV',3,2,[3,2,201,2]);
-% freq = csvread('L_N10_LE_00_HF.CSV', 3, 0, [3, 0, 201, 0]);
-freq = K_F_N18_00_P;
+data_real = csvread('L_N10_LE_00_HF.CSV',3,1,[3,1,201,1]);
+data_imag = csvread('L_N10_LE_00_HF.CSV',3,2,[3,2,201,2]);
+freq = csvread('L_N10_LE_00_HF.CSV', 3, 0, [3, 0, 201, 0]);
 z_data = power_zmeter('RC_Circuit_3', freq');
 figure(9)
-plot(freq, imag(z_data.Z), freq, K_I_N18_01)
+plot(freq, imag(z_data.Z), freq, data_imag)
 legend('simulation', 'experiment')
 figure(10)
-plot(freq, real(z_data.Z), freq, K_R_N18_01)
+plot(freq, real(z_data.Z), freq, data_real)
 legend('simulation', 'experiment')

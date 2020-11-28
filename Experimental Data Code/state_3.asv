@@ -1,20 +1,20 @@
 %state3 analysisi of N18_S HF
 %% Knitteed and Copper Wire SD N18 HF
-K_F_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,0,[3,0,600,0]);
-K_R_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,1,[3,1,600,1]);
-K_I_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,2,[3,2,600,2]);
-K_R_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,1,[3,1,600,1]);
-K_I_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,2,[3,2,600,2]);
-K_R_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,1,[3,1,600,1]);
-K_I_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,2,[3,2,600,2]);
+K_F_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,0,[3,0,201,0]);
+K_R_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,1,[3,1,201,1]);
+K_I_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,2,[3,2,201,2]);
+K_R_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,1,[3,1,201,1]);
+K_I_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,2,[3,2,201,2]);
+K_R_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,1,[3,1,201,1]);
+K_I_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,2,[3,2,201,2]);
 
-C_F_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,0,[3,0,600,0]);
-C_R_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,1,[3,1,600,1]);
-C_I_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,2,[3,2,600,2]);
-C_R_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,1,[3,1,600,1]);
-C_I_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,2,[3,2,600,2]);
-C_R_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,1,[3,1,600,1]);
-C_I_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,2,[3,2,600,2]);
+C_F_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,0,[3,0,201,0]);
+C_R_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,1,[3,1,201,1]);
+C_I_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,2,[3,2,201,2]);
+C_R_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,1,[3,1,201,1]);
+C_I_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,2,[3,2,201,2]);
+C_R_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,1,[3,1,201,1]);
+C_I_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,2,[3,2,201,2]);
 
 figure(1)
 plot(K_F_N18_00,K_R_N18_00,K_F_N18_00,K_R_N18_01,K_F_N18_00,K_R_N18_02) 
@@ -38,11 +38,11 @@ ylabel('Reactance')
 grid on
 hold off
 %% take average of each points
-K_R_N18 = zeros(598,1);
-K_I_N18 = zeros(598,1);
-C_R_N18 = zeros(598,1);
-C_I_N18 = zeros(598,1);
-for i = 1:598
+K_R_N18 = zeros(199,1);
+K_I_N18 = zeros(199,1);
+C_R_N18 = zeros(199,1);
+C_I_N18 = zeros(199,1);
+for i = 1:199
     K_R_N18(i) = (K_R_N18_00(i)+K_R_N18_01(i)+K_R_N18_02(i))/3;
     K_I_N18(i) = (K_I_N18_00(i)+K_I_N18_01(i)+K_I_N18_02(i))/3;
     C_R_N18(i) = (C_R_N18_00(i)+C_R_N18_01(i)+C_R_N18_02(i))/3;
@@ -52,7 +52,7 @@ figure(5)
 plot(K_F_N18_00,K_R_N18) 
 hold on
 plot(C_F_N18_00,C_R_N18) 
-legend('Knitted Wire','Copper Wire')
+legend('N18K-0','N18C-0')
 title('Knitteed and Copper Wire N18 Real HF')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
@@ -63,7 +63,7 @@ figure(6)
 plot(K_F_N18_00,K_I_N18) 
 hold on
 plot(C_F_N18_00,C_I_N18) 
-legend('Knitted Wire','Copper Wire')
+legend('N18K-0','N18C-0')
 title('Knitteed and Copper Wire N18 Imag HF')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
@@ -127,23 +127,23 @@ for i = 1:199
     C_R_N18_01(i) = (C_R_N18_00_P(i)+C_R_N18_01_P(i)+C_R_N18_02_P(i))/3;
     C_I_N18_01(i) = (C_I_N18_00_P(i)+C_I_N18_01_P(i)+C_I_N18_02_P(i))/3;
 end
-figure(7)
+figure(5)
 plot(K_F_N18_00_P,K_R_N18_01) 
 hold on
 plot(C_F_N18_00_P,C_R_N18_01) 
 legend('N18K-0','N18C-0')
-title('Knitteed and Copper Wire N18 Real')
+title('Knitteed and Copper Wire N18 Real HF')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
 grid on
 hold off
 
-figure(8)
+figure(6)
 plot(K_F_N18_00_P,K_I_N18_01) 
 hold on
 plot(C_F_N18_00_P,C_I_N18_01) 
 legend('N18K-0','N18C-0')
-title('Knitteed and Copper Wire N18 Imag')
+title('Knitteed and Copper Wire N18 Imag HF')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
@@ -154,35 +154,16 @@ L = 4.6231e-6;
 syms k b
 [k,b] = solve(3921.77==k*47600000+b, -7671.6==k*47900000+b,k,b);
 Fc = abs(b/k);
-%Fc = 4.7701e+07
+%Fc = 4.3430e+07
 syms Cs
 Cs = solve(Fc == 1/(2*pi*sqrt(L*Cs)),Cs);
-%Cs = 2.4079e-12
+%Cs = 2.9049e-12
 
 % solve knitted wire
 syms k b
 [k,b] = solve(2478.94==k*43090000+b, -7579.46==k*44470000+b,k,b);
 Fk = abs(b/k);
-%Fk = 4.3430e+07
+%Fk = 4.7701e+07
 syms Ct
 Ct = solve(Fk == 1/(2*pi*sqrt(L*Ct)),Ct);
-%Ct = 2.9049e-12
-
-%Solve parasitic
-Cp = Ct-Cs;
-%Cp = 4.9693e-13
-
-%error
-%error of Cs
-Ecs=abs((Cs-2.351e-12)/Cs);
-eval(Ecs)
-%Ecs = 0.0236
-
-%error of Cp
-Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
-eval(Ecp)
-%Ecp = 0.0605
-
-Lt = L/18
-Rt = 
-
+%Ct = 2.4079e-12

@@ -183,11 +183,4 @@ Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
 eval(Ecp)
 %Ecp = 0.0605
 
-Rk = 100.12;
-Rc = 76.008;
-
-Lt = L/18
-Rt = Rc/18
-Cpt = eval(Cp*18)
-Cs = eval(Cs*17)
 
