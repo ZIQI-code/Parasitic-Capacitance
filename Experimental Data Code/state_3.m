@@ -1,20 +1,20 @@
 %state3 analysisi of N18_S HF
 %% Knitteed and Copper Wire SD N18 HF
-K_F_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,0,[3,0,201,0]);
-K_R_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,2,[3,2,201,2]);
-K_R_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,2,[3,2,201,2]);
-K_R_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,2,[3,2,201,2]);
+K_F_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,0,[3,0,600,0]);
+K_R_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,1,[3,1,600,1]);
+K_I_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,2,[3,2,600,2]);
+K_R_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,1,[3,1,600,1]);
+K_I_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,2,[3,2,600,2]);
+K_R_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,1,[3,1,600,1]);
+K_I_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,2,[3,2,600,2]);
 
-C_F_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,0,[3,0,201,0]);
-C_R_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,1,[3,1,201,1]);
-C_I_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,2,[3,2,201,2]);
-C_R_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,1,[3,1,201,1]);
-C_I_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,2,[3,2,201,2]);
-C_R_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,1,[3,1,201,1]);
-C_I_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,2,[3,2,201,2]);
+C_F_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,0,[3,0,600,0]);
+C_R_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,1,[3,1,600,1]);
+C_I_N18_00 = csvread('S_N18_SE_00_C_HF.CSV',3,2,[3,2,600,2]);
+C_R_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,1,[3,1,600,1]);
+C_I_N18_01 = csvread('S_N18_SE_01_C_HF.CSV',3,2,[3,2,600,2]);
+C_R_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,1,[3,1,600,1]);
+C_I_N18_02 = csvread('S_N18_SE_02_C_HF.CSV',3,2,[3,2,600,2]);
 
 figure(1)
 plot(K_F_N18_00,K_R_N18_00,K_F_N18_00,K_R_N18_01,K_F_N18_00,K_R_N18_02) 
@@ -38,11 +38,11 @@ ylabel('Reactance')
 grid on
 hold off
 %% take average of each points
-K_R_N18 = zeros(199,1);
-K_I_N18 = zeros(199,1);
-C_R_N18 = zeros(199,1);
-C_I_N18 = zeros(199,1);
-for i = 1:199
+K_R_N18 = zeros(598,1);
+K_I_N18 = zeros(598,1);
+C_R_N18 = zeros(598,1);
+C_I_N18 = zeros(598,1);
+for i = 1:598
     K_R_N18(i) = (K_R_N18_00(i)+K_R_N18_01(i)+K_R_N18_02(i))/3;
     K_I_N18(i) = (K_I_N18_00(i)+K_I_N18_01(i)+K_I_N18_02(i))/3;
     C_R_N18(i) = (C_R_N18_00(i)+C_R_N18_01(i)+C_R_N18_02(i))/3;
@@ -52,7 +52,7 @@ figure(5)
 plot(K_F_N18_00,K_R_N18) 
 hold on
 plot(C_F_N18_00,C_R_N18) 
-legend('N18K-0','N18C-0')
+legend('Knitted Wire','Copper Wire')
 title('Knitteed and Copper Wire N18 Real HF')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
@@ -63,7 +63,7 @@ figure(6)
 plot(K_F_N18_00,K_I_N18) 
 hold on
 plot(C_F_N18_00,C_I_N18) 
-legend('N18K-0','N18C-0')
+legend('Knitted Wire','Copper Wire')
 title('Knitteed and Copper Wire N18 Imag HF')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
