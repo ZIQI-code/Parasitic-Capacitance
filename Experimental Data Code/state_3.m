@@ -127,23 +127,23 @@ for i = 1:199
     C_R_N18_01(i) = (C_R_N18_00_P(i)+C_R_N18_01_P(i)+C_R_N18_02_P(i))/3;
     C_I_N18_01(i) = (C_I_N18_00_P(i)+C_I_N18_01_P(i)+C_I_N18_02_P(i))/3;
 end
-figure(5)
+figure(7)
 plot(K_F_N18_00_P,K_R_N18_01) 
 hold on
 plot(C_F_N18_00_P,C_R_N18_01) 
 legend('N18K-0','N18C-0')
-title('Knitteed and Copper Wire N18 Real HF')
+title('Knitteed and Copper Wire N18 Real')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
 grid on
 hold off
 
-figure(6)
+figure(8)
 plot(K_F_N18_00_P,K_I_N18_01) 
 hold on
 plot(C_F_N18_00_P,C_I_N18_01) 
 legend('N18K-0','N18C-0')
-title('Knitteed and Copper Wire N18 Imag HF')
+title('Knitteed and Copper Wire N18 Imag')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
@@ -171,3 +171,16 @@ Ct = solve(Fk == 1/(2*pi*sqrt(L*Ct)),Ct);
 %Solve parasitic
 Cp = Ct-Cs;
 %Cp = 4.9693e-13
+
+%error
+%error of Cs
+Ecs=abs((Cs-2.351e-12)/Cs);
+eval(Ecs)
+%Ecs = 0.0236
+
+%error of Cp
+Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
+eval(Ecp)
+%Ecp = 0.0605
+
+
