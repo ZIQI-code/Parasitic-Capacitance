@@ -1,26 +1,10 @@
 %% read data
 clear 
 
-K_F_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,0,[3,0,201,0]);
-K_R_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_00 = csvread('S_N18_SE_00_HF.CSV',3,2,[3,2,201,2]);
-K_R_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_01 = csvread('S_N18_SE_01_HF.CSV',3,2,[3,2,201,2]);
-K_R_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,1,[3,1,201,1]);
-K_I_N18_02 = csvread('S_N18_SE_02_HF.CSV',3,2,[3,2,201,2]);
 
-K_R_N18 = zeros(199,1);
-K_I_N18 = zeros(199,1);
-
-for i = 1:199
-    K_R_N18(i) = (K_R_N18_00(i)+K_R_N18_01(i)+K_R_N18_02(i))/3;
-    K_I_N18(i) = (K_I_N18_00(i)+K_I_N18_01(i)+K_I_N18_02(i))/3;
-end 
 %% 
 
-data_real = K_R_N18;
-data_imag = K_I_N18;
-freq = K_F_N18_00;
+
 
 fcn = @(c) Zmeasure_Objective_3(c, freq, data_real, data_imag);
 

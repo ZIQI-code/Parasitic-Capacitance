@@ -150,7 +150,7 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
-%% N18 parameters
+%% N18 of previous study parameters
 % solve copper
 L = 4.6231e-6;
 syms k b
@@ -185,4 +185,41 @@ Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
 eval(Ecp)
 %Ecp = 0.0605
 
+%R=109.27
+%% N18 study of HF 
+L = (29.019113564366666e-6/(2*pi));
+%L = 4.6185e-6
 
+syms k b
+[k,b] = solve(1250.15==k*47515900+b, -4661.88==k*47764600+b,k,b);
+Fc = abs(b/k);
+%Fc = 4.7568e+07
+syms Cs
+Cs = solve(Fc == 1/(2*pi*sqrt(L*Cs)),Cs);
+%Cs = 2.4238e-12
+
+% solve knitted wire
+syms k b
+[k,b] = solve(628.913==k*44210000+b, -6032.29==k*44955000+b,k,b);
+Fk = abs(b/k);
+%Fk = 4.4280e+07
+syms Ct
+Ct = solve(Fk == 1/(2*pi*sqrt(L*Ct)),Ct);
+%Ct = 2.7971e-12
+
+%Solve parasitic
+Cp = Ct-Cs;
+%Cp = 3.7334e-13
+
+%error
+%error of Cs
+Ecs=abs((Cs-2.351e-12)/Cs);
+eval(Ecs);
+%Ecs = 0.0236
+
+%error of Cp
+Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
+eval(Ecp);
+%Ecp = 0.0605
+
+%R=109.27
