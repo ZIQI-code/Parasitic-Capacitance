@@ -213,16 +213,14 @@ Cp = Ct-Cs;
 
 %error
 %error of Cs
-% simulated Cs = 2.383e-12
-Ecs=abs((Cs-2.383e-12)/Cs);
-eval(Ecs)
-%Ecs = 0.0168
+Ecs=abs((Cs-2.329e-12)/Cs);
+eval(Ecs);
+%Ecs = 0.0236
 
 %error of Cp
-%Simulated Ct = 2.7513e-12
-Ecp = abs((Cp-(2.7513e-12 - 2.383e-12))/Cp);
-eval(Ecp)
-%Ecp = 0.0135
+Ecp = abs((Cp-(2.878e-12 - 2.351e-12))/Cp);
+eval(Ecp);
+%Ecp = 0.0605
 
-%Rc = 68.8966
-%Rk=98.9016
+%Rc = 
+%R=109.27

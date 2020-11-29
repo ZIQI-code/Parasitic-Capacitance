@@ -1,7 +1,16 @@
 %% read data
 clear 
+K_F_N10_00 = csvread('L_N10_LE_00_HF.CSV',3,0,[3,0,201,0]);
+K_R_N10_00 = csvread('L_N10_LE_00_HF.CSV',3,1,[3,1,201,1]);
+K_I_N10_00 = csvread('L_N10_LE_00_HF.CSV',3,2,[3,2,201,2]);
 
+C_F_N10_00 = csvread('L_N10_LE_00_C_HF.CSV',3,0,[3,0,201,0]);
+C_R_N10_00 = csvread('L_N10_LE_00_C_HF.CSV',3,1,[3,1,201,1]);
+C_I_N10_00 = csvread('L_N10_LE_00_C_HF.CSV',3,2,[3,2,201,2]);
 
+data_real = K_R_N10_00;
+data_imag = K_I_N10_00;
+freq = K_F_N10_00;
 %% 
 
 
