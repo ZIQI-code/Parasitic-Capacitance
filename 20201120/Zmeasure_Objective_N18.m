@@ -5,7 +5,7 @@ function vals = Zmeasure_Objective_N18(p, freq, data_real, data_imag)
 
     z_data = power_zmeter('RC_Circuit_N18', freq');
 
-    low = 40;
+    low = 1;
     high = 60;
     N = (high - low + 1);
     error = sum(abs(real(z_data.Z(low:high)) - data_real(low:high)) .^ 2 + ...

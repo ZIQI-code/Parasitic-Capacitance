@@ -41,10 +41,10 @@ fcn = @(c) Zmeasure_Objective_N18(c, freq, data_real, data_imag);
 
 p = sdo.getParameterFromModel('RC_Circuit_N18', {'Cs','Cp'})
 
-p(1).Value = 1e-15;
+p(1).Value = 1e-14;
 p(1).Minimum = 0;
 p(1).Maximum = 1e-3;
-p(2).Value = 1e-15;
+p(2).Value = 1e-14;
 p(2).Minimum = 0;
 p(2).Maximum = 1e-3;
 % p(3).Value = 1e-14;
