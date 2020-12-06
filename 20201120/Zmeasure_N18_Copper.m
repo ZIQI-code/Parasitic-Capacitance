@@ -30,14 +30,14 @@ for i = 1:199
     K_I_N18(i) = (K_I_N18_00(i)+K_I_N18_01(i)+K_I_N18_02(i))/3;
 end 
 
-data_real = K_R_N18;
-data_imag = K_I_N18;
-freq = K_F_N18_00;
+data_real = C_R_N18;
+data_imag = C_I_N18;
+freq = C_F_N18_00;
 %% 
 
 
 
-fcn = @(c) Zmeasure_Objective_N18(c, freq, data_real, data_imag);
+fcn = @(c) Zmeasure_Objective_N18_Copper(c, freq, data_real, data_imag);
 
 p = sdo.getParameterFromModel('RC_Circuit_N18_Copper', {'Cs'})
 
