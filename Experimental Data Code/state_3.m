@@ -150,6 +150,45 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+%% N14 small diameter copper
+Cs_F_N14_00 = csvread('N14_sCOPPER-01.CSV',3,0,[3,0,600,0]);
+Cs_R_N14_00 = csvread('N14_sCOPPER-01.CSV',3,1,[3,1,600,1]);
+Cs_I_N14_00 = csvread('N14_sCOPPER-01.CSV',3,2,[3,2,600,2]);
+Cs_R_N14_01 = csvread('N14_sCOPPER-02.CSV',3,1,[3,1,600,1]);
+Cs_I_N14_01 = csvread('N14_sCOPPER-02.CSV',3,2,[3,2,600,2]);
+Cs_R_N14_02 = csvread('N14_sCOPPER-03.CSV',3,1,[3,1,600,1]);
+Cs_I_N14_02 = csvread('N14_sCOPPER-03.CSV',3,2,[3,2,600,2]);
+
+CL_F_N14_00 = csvread('N14_LCOPPER-01.CSV',3,0,[3,0,600,0]);
+CL_R_N14_00 = csvread('N14_LCOPPER-01.CSV',3,1,[3,1,600,1]);
+CL_I_N14_00 = csvread('N14_LCOPPER-01.CSV',3,2,[3,2,600,2]);
+CL_R_N14_01 = csvread('N14_LCOPPER-02.CSV',3,1,[3,1,600,1]);
+CL_I_N14_01 = csvread('N14_LCOPPER-02.CSV',3,2,[3,2,600,2]);
+CL_R_N14_02 = csvread('N14_LCOPPER-03.CSV',3,1,[3,1,600,1]);
+CL_I_N14_02 = csvread('N14_LCOPPER-03.CSV',3,2,[3,2,600,2]);
+
+figure(11)
+plot(Cs_F_N14_00,Cs_R_N14_00,Cs_F_N14_00,Cs_R_N14_01,Cs_F_N14_00,Cs_R_N14_02) 
+hold on
+plot(CL_F_N14_00,CL_R_N14_00,CL_F_N14_00,CL_R_N14_01,CL_F_N14_00,CL_R_N14_02) 
+legend('N14-Sd-0','S2','S3','L1','L2','L3')
+title('Knitteed and Copper Wire N18 Real HF')
+xlabel('Frequency (Hz)')
+ylabel('Ohms')
+grid on
+hold off
+
+figure(12)
+plot(Cs_F_N14_00,Cs_I_N14_00,Cs_F_N14_00,Cs_I_N14_01,Cs_F_N14_00,Cs_I_N14_02) 
+hold on
+plot(CL_F_N14_00,CL_I_N14_00,CL_F_N14_00,CL_I_N14_01,CL_F_N14_00,CL_I_N14_02) 
+legend('N14-Sd-0','2','3','L1','L2','L3')
+title('Knitteed and Copper Wire N18 Imag HF')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+
 %% N18 of previous study parameters
 % solve copper
 L = 4.6231e-6;
@@ -200,7 +239,7 @@ Cs = solve(Fc == 1/(2*pi*sqrt(L*Cs)),Cs);
 
 % solve knitted wire
 syms k b
-[k,b] = solve(628.913==k*44210000+b, -6032.29==k*44955000+b,k,b);
+[k,b] = solve(628.913==k*2.4238e-1244210000+b, -6032.29==k*44955000+b,k,b);
 Fk = abs(b/k);
 %Fk = 4.4280e+07
 syms Ct

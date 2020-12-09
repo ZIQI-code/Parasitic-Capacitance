@@ -165,7 +165,7 @@ L0R_N18C_2_1 = csvread('L0N18_02_COPPER_01_10_1.CSV',3,1,[3,1,201,1]);
 L0I_N18C_2_1 = csvread('L0N18_02_COPPER_01_10_1.CSV',3,2,[3,2,201,2]);
 
 figure(1)
-plot(L0F_C_0,L1R_C_0,L0F_C_0,L1R_C_1,L0F_C_0,L1R_C_2) 
+plot(L1F_C_0,L1R_C_0,L1F_C_0,L1R_C_1,L1F_C_0,L1R_C_2) 
 hold on
 plot(L0F_N18C_0_1,L0R_N18C_0_1,L0F_N18C_0_1,L0R_N18C_1_1,L0F_N18C_0_1,L0R_N18C_2_1,'LineWidth',2) 
 legend('N14C-0','N14C-1','N14C-2','N18C-0','N18C-1','N18C-2')
@@ -176,7 +176,7 @@ grid on
 hold off
 
 figure(2)
-plot(L0F_C_0,L1I_C_0,L0F_C_0,L1I_C_1,L0F_C_0,L1I_C_2)
+plot(L1F_C_0,L1I_C_0,L1F_C_0,L1I_C_1,L1F_C_0,L1I_C_2)
 hold on
 plot(L0F_N18C_0_1,L0I_N18C_0_1,L0F_N18C_0_1,L0I_N18C_1_1,L0F_N18C_0_1,L0I_N18C_2_1,'LineWidth',2) 
 legend('N14C-0','N14C-1','N14C-2','N18C-0','N18C-1','N18C-2')

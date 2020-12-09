@@ -41,9 +41,9 @@ freq = K_F_N18_00;
 
 
 
-fcn = @(c) Zmeasure_Objective_N18(c, freq, data_real, data_imag);
+fcn = @(c) Zmeasure_Objective_N18_2(c, freq, data_real, data_imag);
 
-p = sdo.getParameterFromModel('RC_Circuit_N18', {'Cp','Cs'})
+p = sdo.getParameterFromModel('RC_Circuit_N18_2', {'Cp','Cs'})
 
 p(1).Value = 1e-14;
 p(1).Minimum = 0;
@@ -59,13 +59,13 @@ p(2).Maximum = 1e-3;
 
 opt_result = sdo.optimize(fcn, p)
 
-sdo.setValueInModel('RC_Circuit_N18', 'Cp', opt_result(1).Value);
-sdo.setValueInModel('RC_Circuit_N18', 'Cs', opt_result(2).Value);
+sdo.setValueInModel('RC_Circuit_N18_2', 'Cp', opt_result(1).Value);
+sdo.setValueInModel('RC_Circuit_N18_2', 'Cs', opt_result(2).Value);
 % sdo.setValueInModel('RC_Circuit_3', 'R', opt_result(3).Value);
 %% 
 
 
-z_data = power_zmeter('RC_Circuit_N18', freq');
+z_data = power_zmeter('RC_Circuit_N18_2', freq');
 figure(9)
 plot(freq, imag(z_data.Z), freq, data_imag)
 legend('simulation', 'experiment')
@@ -75,8 +75,8 @@ legend('simulation', 'experiment')
 %% study the sweep of Cp
 % figure(11)
 % for i=-14:-7
-%     sdo.setValueInModel('RC_Circuit_N18', 'Cp', 3.7334*10^(i));
-%     z_data = power_zmeter('RC_Circuit_N18', freq');
+%     sdo.setValueInModel('RC_Circuit_N18_2', 'Cp', 3.7334*10^(i));
+%     z_data = power_zmeter('RC_Circuit_N18_2', freq');
 %     plot(freq, imag(z_data.Z))
 %     hold on
 % end
@@ -88,8 +88,8 @@ legend('simulation', 'experiment')
 % 
 % figure(12)
 % for i=-14:-7
-%     sdo.setValueInModel('RC_Circuit_N18', 'Cp', 3.7334*10^(i));
-%     z_data = power_zmeter('RC_Circuit_N18', freq');
+%     sdo.setValueInModel('RC_Circuit_N18_2', 'Cp', 3.7334*10^(i));
+%     z_data = power_zmeter('RC_Circuit_N18_2', freq');
 %     plot(freq, real(z_data.Z))
 %     hold on
 % end
