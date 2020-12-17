@@ -190,37 +190,47 @@ ylabel('Reactance')
 grid on
 hold off
 %% N14 study of different diameter knitted wire
-K_F_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,0,[3,0,600,0]);
-K_R_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,1,[3,1,600,1]);
-K_I_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,2,[3,2,600,2]);
-K_R_N14_43_01 = csvread('N14_0.43KNIT_SE_02.CSV',3,1,[3,1,600,1]);
-K_I_N14_43_01 = csvread('N14_0.43KNIT_SE_02.CSV',3,2,[3,2,600,2]);
-K_R_N14_43_02 = csvread('N14_0.43KNIT_SE_03.CSV',3,1,[3,1,600,1]);
-K_I_N14_43_02 = csvread('N14_0.43KNIT_SE_03.CSV',3,2,[3,2,600,2]);
+K_F_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,0,[3,0,602,0]);
+K_R_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,1,[3,1,602,1]);
+K_I_N14_43_00 = csvread('N14_0.43KNIT_SE_01.CSV',3,2,[3,2,602,2]);
+K_R_N14_43_01 = csvread('N14_0.43KNIT_SE_02.CSV',3,1,[3,1,602,1]);
+K_I_N14_43_01 = csvread('N14_0.43KNIT_SE_02.CSV',3,2,[3,2,602,2]);
+K_R_N14_43_02 = csvread('N14_0.43KNIT_SE_03.CSV',3,1,[3,1,602,1]);
+K_I_N14_43_02 = csvread('N14_0.43KNIT_SE_03.CSV',3,2,[3,2,602,2]);
 
-K_F_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,0,[3,0,600,0]);
-K_R_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,1,[3,1,600,1]);
-K_I_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,2,[3,2,600,2]);
-K_R_N14_23_01 = csvread('N14_0.23KNIT_SE_02.CSV',3,1,[3,1,600,1]);
-K_I_N14_23_01 = csvread('N14_0.23KNIT_SE_02.CSV',3,2,[3,2,600,2]);
-K_R_N14_23_02 = csvread('N14_0.23KNIT_SE_03.CSV',3,1,[3,1,600,1]);
-K_I_N14_23_02 = csvread('N14_0.23KNIT_SE_03.CSV',3,2,[3,2,600,2]);
+K_F_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,0,[3,0,602,0]);
+K_R_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,1,[3,1,602,1]);
+K_I_N14_23_00 = csvread('N14_0.23KNIT_SE_01.CSV',3,2,[3,2,602,2]);
+K_R_N14_23_01 = csvread('N14_0.23KNIT_SE_02.CSV',3,1,[3,1,602,1]);
+K_I_N14_23_01 = csvread('N14_0.23KNIT_SE_02.CSV',3,2,[3,2,602,2]);
+K_R_N14_23_02 = csvread('N14_0.23KNIT_SE_03.CSV',3,1,[3,1,602,1]);
+K_I_N14_23_02 = csvread('N14_0.23KNIT_SE_03.CSV',3,2,[3,2,602,2]);
 
-C_F_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,0,[3,0,600,0]);
-C_R_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,1,[3,1,600,1]);
-C_I_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,2,[3,2,600,2]);
-C_R_N14_27_01 = csvread('N14_sCOPPER-02.CSV',3,1,[3,1,600,1]);
-C_I_N14_27_01 = csvread('N14_sCOPPER-02.CSV',3,2,[3,2,600,2]);
-C_R_N14_27_02 = csvread('N14_sCOPPER-03.CSV',3,1,[3,1,600,1]);
-C_I_N14_27_02 = csvread('N14_sCOPPER-03.CSV',3,2,[3,2,600,2]);
+C_F_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,0,[3,0,602,0]);
+C_R_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,1,[3,1,602,1]);
+C_I_N14_27_00 = csvread('N14_sCOPPER-01.CSV',3,2,[3,2,602,2]);
+C_R_N14_27_01 = csvread('N14_sCOPPER-02.CSV',3,1,[3,1,602,1]);
+C_I_N14_27_01 = csvread('N14_sCOPPER-02.CSV',3,2,[3,2,602,2]);
+C_R_N14_27_02 = csvread('N14_sCOPPER-03.CSV',3,1,[3,1,602,1]);
+C_I_N14_27_02 = csvread('N14_sCOPPER-03.CSV',3,2,[3,2,602,2]);
 
-K_R_N14_43 = zeros(598,1);
-K_I_N14_43 = zeros(598,1);
-K_R_N14_23 = zeros(598,1);
-K_I_N14_23 = zeros(598,1);
-C_R_N14_27 = zeros(598,1);
-C_I_N14_27 = zeros(598,1);
-for i = 1:598
+K_F_N14_80_00 = csvread('N14_0.8KNIT_SE_01.CSV',3,0,[3,0,602,0]);
+K_R_N14_80_00 = csvread('N14_0.8KNIT_SE_01.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_00 = csvread('N14_0.8KNIT_SE_01.CSV',3,2,[3,2,602,2]);
+K_R_N14_80_01 = csvread('N14_0.8KNIT_SE_02.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_01 = csvread('N14_0.8KNIT_SE_02.CSV',3,2,[3,2,602,2]);
+K_R_N14_80_02 = csvread('N14_0.8KNIT_SE_03.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_02 = csvread('N14_0.8KNIT_SE_03.CSV',3,2,[3,2,602,2]);
+
+K_R_N14_43 = zeros(600,1);
+K_I_N14_43 = zeros(600,1);
+K_R_N14_23 = zeros(600,1);
+K_I_N14_23 = zeros(600,1);
+C_R_N14_27 = zeros(600,1);
+C_I_N14_27 = zeros(600,1);
+K_R_N14_80 = zeros(600,1);
+K_I_N14_80 = zeros(600,1);
+for i = 1:600
     
     K_R_N14_43(i) = (K_R_N14_43_00(i)+K_R_N14_43_01(i)+K_R_N14_43_02(i))/3;
     K_I_N14_43(i) = (K_I_N14_43_00(i)+K_I_N14_43_01(i)+K_I_N14_43_02(i))/3;
@@ -228,27 +238,54 @@ for i = 1:598
     K_I_N14_23(i) = (K_I_N14_23_00(i)+K_I_N14_23_01(i)+K_I_N14_23_02(i))/3;
     C_R_N14_27(i) = (C_R_N14_27_00(i)+C_R_N14_27_01(i)+C_R_N14_27_02(i))/3;
     C_I_N14_27(i) = (C_I_N14_27_00(i)+C_I_N14_27_01(i)+C_I_N14_27_02(i))/3;
+    K_R_N14_80(i) = (K_R_N14_80_00(i)+K_R_N14_80_01(i)+K_R_N14_80_02(i))/3;
+    K_I_N14_80(i) = (K_I_N14_80_00(i)+K_I_N14_80_01(i)+K_I_N14_80_02(i))/3;
 end
 
-figure(13)
-plot(K_F_N14_43_00, K_R_N14_43, K_F_N14_43_00, K_R_N14_23, K_F_N14_43_00, C_R_N14_27)
-hold on
-legend('K_0.43','K_0.23','C_0.27')
+% figure(13)
+% plot(K_F_N14_43_00, K_R_N14_43, K_F_N14_43_00, K_R_N14_23, K_F_N14_43_00, C_R_N14_27)
+% hold on
+% legend('K_0.43','K_0.23','C_0.27')
+% title('N14 study of different diameter Real')
+% xlabel('Frequency (Hz)')
+% ylabel('Ohms')
+% grid on
+% hold off
+% 
+% figure(14)
+% plot(K_F_N14_43_00, K_I_N14_43, K_F_N14_43_00, K_I_N14_23, K_F_N14_43_00, C_I_N14_27)
+% hold on
+% legend('K_0.43','K_0.23','C_0.27')
+% title('N14 study of different diameter Imag')
+% xlabel('Frequency (Hz)')
+% ylabel('Reactance')
+% grid on
+% hold off
+
+figure(15)
+plot(K_F_N14_23_00, K_R_N14_23)
+hold on 
+plot(K_F_N14_80_00, K_R_N14_80)
+plot(C_F_N14_27_00, C_R_N14_27)
+legend('K_0.23','K_0.80','C_0.27')
 title('N14 study of different diameter Real')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
 grid on
 hold off
 
-figure(14)
-plot(K_F_N14_43_00, K_I_N14_43, K_F_N14_43_00, K_I_N14_23, K_F_N14_43_00, C_I_N14_27)
-hold on
-legend('K_0.43','K_0.23','C_0.27')
+figure(16)
+plot(K_F_N14_23_00, K_I_N14_23)
+hold on 
+plot(K_F_N14_80_00, K_I_N14_80)
+plot(C_F_N14_27_00, C_I_N14_27)
+legend('K_0.23','K_0.80','C_0.27')
 title('N14 study of different diameter Imag')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+%% 
 
 %N10 different diameter
 K_F_N10_43_00 = csvread('N10_0.43KNIT_SE_01.CSV',3,0,[3,0,600,0]);
@@ -279,32 +316,39 @@ K_R_N10_43 = zeros(598,1);
 K_I_N10_43 = zeros(598,1);
 K_R_N10_23 = zeros(598,1);
 K_I_N10_23 = zeros(598,1);
-
+K_R_N10_43_P = zeros(199,1);
+K_I_N10_43_P = zeros(199,1);
 for i = 1:598
     
     K_R_N10_43(i) = (K_R_N10_43_00(i)+K_R_N10_43_01(i)+K_R_N10_43_02(i))/3;
     K_I_N10_43(i) = (K_I_N10_43_00(i)+K_I_N10_43_01(i)+K_I_N10_43_02(i))/3;
     K_R_N10_23(i) = (K_R_N10_23_00(i)+K_R_N10_23_01(i)+K_R_N10_23_02(i))/3;
     K_I_N10_23(i) = (K_I_N10_23_00(i)+K_I_N10_23_01(i)+K_I_N10_23_02(i))/3;
-    C_R_N10_27(i) = (C_R_N10_27_00(i)+C_R_N10_27_01(i)+C_R_N10_27_02(i))/3;
-    C_I_N10_27(i) = (C_I_N10_27_00(i)+C_I_N10_27_01(i)+C_I_N10_27_02(i))/3;
+
 end
-fo
-figure(13)
-plot(K_F_N14_43_00, K_R_N14_43, K_F_N14_43_00, K_R_N14_23, K_F_N14_43_00, C_R_N14_27)
+
+for i = 1:199
+    K_R_N10_43_P(i) = (K_R_N10_43_00P(i)+K_R_N10_43_01P(i)+K_R_N10_43_02P(i))/3;
+    K_I_N10_43_P(i) = (K_I_N10_43_00P(i)+K_I_N10_43_01P(i)+K_I_N10_43_02P(i))/3;
+end
+
+figure(18)
+plot(K_F_N10_43_00, K_R_N10_43, K_F_N10_43_00, K_R_N10_23)
 hold on
-legend('K_0.43','K_0.23','C_0.27')
-title('N14 study of different diameter Real')
+plot(K_F_N10_43_00P,K_R_N10_43_P)
+legend('K_0.43','K_0.23','K_0.43P')
+title('N10 study of different diameter Real')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
 grid on
 hold off
 
-figure(14)
-plot(K_F_N14_43_00, K_I_N14_43, K_F_N14_43_00, K_I_N14_23, K_F_N14_43_00, C_I_N14_27)
+figure(19)
+plot(K_F_N10_43_00, K_I_N10_43, K_F_N10_43_00, K_I_N10_23)
 hold on
-legend('K_0.43','K_0.23','C_0.27')
-title('N14 study of different diameter Imag')
+plot(K_F_N10_43_00P,K_I_N10_43_P)
+legend('K_0.43','K_0.23','K_0.43P')
+title('N10 study of different diameter Imag')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
