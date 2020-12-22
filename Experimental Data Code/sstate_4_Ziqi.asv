@@ -8,12 +8,7 @@ C_R_N18_44_01 = csvread('N18_0.44C_02.CSV',3,1,[3,1,602,1]);
 C_I_N18_44_01 = csvread('N18_0.44C_02.CSV',3,2,[3,2,602,2]);
 C_R_N18_44_02 = csvread('N18_0.44C_03.CSV',3,1,[3,1,602,1]);
 C_I_N18_44_02 = csvread('N18_0.44C_03.CSV',3,2,[3,2,602,2]);
-C_R_N18_44_03 = csvread('N18_0.44C_07.CSV',3,1,[3,1,602,1]);
-C_I_N18_44_03 = csvread('N18_0.44C_07.CSV',3,2,[3,2,602,2]);
-C_R_N18_44_04 = csvread('N18_0.44C_08.CSV',3,1,[3,1,602,1]);
-C_I_N18_44_04 = csvread('N18_0.44C_08.CSV',3,2,[3,2,602,2]);
-C_R_N18_44_05 = csvread('N18_0.44C_09.CSV',3,1,[3,1,602,1]);
-C_I_N18_44_05 = csvread('N18_0.44C_09.CSV',3,2,[3,2,602,2]);
+
 %Analyze L
 % L_C_44 = [C_I_N18_44_00(1),C_I_N18_44_01(1),C_I_N18_44_02(1)]./(2*pi);
 %They look similar so take the average
@@ -24,8 +19,7 @@ C_I_N18_44_05 = csvread('N18_0.44C_09.CSV',3,2,[3,2,602,2]);
 figure(1)
 plot(C_F_N18_44_00,C_R_N18_44_00,C_F_N18_44_00,C_R_N18_44_01,C_F_N18_44_00,C_R_N18_44_02)
 hold on 
-plot(C_F_N18_44_00,C_R_N18_44_03,C_F_N18_44_00,C_R_N18_44_04,C_F_N18_44_00,C_R_N18_44_05)
-legend('C44,1','C44,2','C44,3','4','5','6')
+legend('C44,1','C44,2','C44,3')
 title('N18 Copper 0.44mm Real')
 xlabel('Frequency (Hz)')
 ylabel('Ohms')
@@ -35,8 +29,7 @@ hold off
 figure(2)
 plot(C_F_N18_44_00,C_I_N18_44_00,C_F_N18_44_00,C_I_N18_44_01,C_F_N18_44_00,C_I_N18_44_02)
 hold on 
-plot(C_F_N18_44_00,C_I_N18_44_03,C_F_N18_44_00,C_I_N18_44_04,C_F_N18_44_00,C_I_N18_44_05)
-legend('C44,1','C44,2','C44,3','4','5','6')
+legend('C44,1','C44,2','C44,3')
 title('N18 Copper 0.44mm Imag')
 xlabel('Frequency (Hz)')
 ylabel('Reactance')
