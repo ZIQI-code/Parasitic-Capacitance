@@ -1876,9 +1876,9 @@ legend('C_44','C_27','K_43','K_23','K_23_new','K_80','C_80')
 grid on
 
 figure(94)
-plot(x,C_44_Ctt,'*-',x,C_27_Ctt,x,K_23_Ctt_new,'r--o','+-',x,K_43_Ctt,'s-',x,K_80_Ctt,'g--o',x,C_80_Ctt,'>--')
+plot(x,C_44_Ctt,'*-',x,C_27_Ctt,'+-',x,K_43_Ctt,'s-',x,K_80_Ctt,'g--o',x,C_80_Ctt,'>--')
 title('Turn to Turn Capacitance at Resonant Frequency')
-legend('C_44','C_27','K_23_Ctt_new','K_43','K_80','C_80')
+legend('C_44','C_27','K_43','K_80','C_80')
 grid on
 
 figure(93)
