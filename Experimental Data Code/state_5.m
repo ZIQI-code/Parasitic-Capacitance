@@ -1259,12 +1259,12 @@ K_R_N12_80_01 = csvread('N12_0.8K_08.CSV',3,1,[3,1,602,1]);
 K_I_N12_80_01 = csvread('N12_0.8K_08.CSV',3,2,[3,2,602,2]);
 K_R_N12_80_02 = csvread('N12_0.8K_09.CSV',3,1,[3,1,602,1]);
 K_I_N12_80_02 = csvread('N12_0.8K_09.CSV',3,2,[3,2,602,2]);
-K_R_N12_80_03 = csvread('N12_0.8K_04.CSV',3,1,[3,1,602,1]);
-K_I_N12_80_03 = csvread('N12_0.8K_04.CSV',3,2,[3,2,602,2]);
-K_R_N12_80_04 = csvread('N12_0.8K_05.CSV',3,1,[3,1,602,1]);
-K_I_N12_80_04 = csvread('N12_0.8K_05.CSV',3,2,[3,2,602,2]);
-K_R_N12_80_05 = csvread('N12_0.8K_06.CSV',3,1,[3,1,602,1]);
-K_I_N12_80_05 = csvread('N12_0.8K_06.CSV',3,2,[3,2,602,2]);
+% K_R_N12_80_03 = csvread('N12_0.8K_04.CSV',3,1,[3,1,602,1]);
+% K_I_N12_80_03 = csvread('N12_0.8K_04.CSV',3,2,[3,2,602,2]);
+% K_R_N12_80_04 = csvread('N12_0.8K_05.CSV',3,1,[3,1,602,1]);
+% K_I_N12_80_04 = csvread('N12_0.8K_05.CSV',3,2,[3,2,602,2]);
+% K_R_N12_80_05 = csvread('N12_0.8K_06.CSV',3,1,[3,1,602,1]);
+% K_I_N12_80_05 = csvread('N12_0.8K_06.CSV',3,2,[3,2,602,2]);
 
 
 K_R_N12_80_A=zeros(600:1);
@@ -1385,37 +1385,37 @@ ylabel('Reactance')
 grid on
 hold off
 
-% figure(29)
-% plot(K_F_N18_80_00,K_R_N18_80_A)
-% hold on
-% plot(K_F_N16_80_00,K_R_N16_80_A)
-% plot(K_F_N14_80_00,K_R_N14_80_A)
-% plot(K_F_N12_80_00,K_R_N12_80_A)
-% plot(K_F_N10_80_00,K_R_N10_80_A);
-% plot(K_F_N8_80_00,K_R_N8_80_A)
-% plot(K_F_N6_80_00,K_R_N6_80_A)
-% legend('N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
-% title('Knitted 0.8mm Real Average')
-% xlabel('Frequency (Hz)')
-% ylabel('Ohms')
-% grid on
-% hold off
-% 
-% figure(30)
-% plot(K_F_N18_80_00,K_I_N18_80_A)
-% hold on
-% plot(K_F_N16_80_00,K_I_N16_80_A)
-% plot(K_F_N14_80_00,K_I_N14_80_A)
-% plot(K_F_N12_80_00,K_I_N12_80_A)
-% plot(K_F_N10_80_00,K_I_N10_80_A);
-% plot(K_F_N8_80_00,K_I_N8_80_A)
-% plot(K_F_N6_80_00,K_I_N6_80_A)
-% legend('N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
-% title('Knitted 0.8mm Image Average')
-% xlabel('Frequency (Hz)')
-% ylabel('Reactance')
-% grid on
-% hold off
+figure(29)
+plot(K_F_N18_80_00,K_R_N18_80_A)
+hold on
+plot(K_F_N16_80_00,K_R_N16_80_A)
+plot(K_F_N14_80_00,K_R_N14_80_A)
+plot(K_F_N12_80_00,K_R_N12_80_A)
+plot(K_F_N10_80_00,K_R_N10_80_A);
+plot(K_F_N8_80_00,K_R_N8_80_A)
+plot(K_F_N6_80_00,K_R_N6_80_A)
+legend('N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
+title('Knitted 0.8mm Real Average')
+xlabel('Frequency (Hz)')
+ylabel('Ohms')
+grid on
+hold off
+
+figure(30)
+plot(K_F_N18_80_00,K_I_N18_80_A)
+hold on
+plot(K_F_N16_80_00,K_I_N16_80_A)
+plot(K_F_N14_80_00,K_I_N14_80_A)
+plot(K_F_N12_80_00,K_I_N12_80_A)
+plot(K_F_N10_80_00,K_I_N10_80_A);
+plot(K_F_N8_80_00,K_I_N8_80_A)
+plot(K_F_N6_80_00,K_I_N6_80_A)
+legend('N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
+title('Knitted 0.8mm Image Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
 %% n14 13 12
 K_F_N14_80_00 = csvread('N14_0.8K_07.CSV',3,0,[3,0,602,0]);
 K_R_N14_80_00 = csvread('N14_0.8K_07.CSV',3,1,[3,1,602,1]);
@@ -1755,14 +1755,15 @@ C_27_CT = ((2.*pi.*F_C_27).^(-2))./L_C_27_A;
 C_27_Ctt = C_27_CT.*x;
 
 %K_43_CT = ((2.*pi.*F_K_43).^(-2))./L_C_44_0;
-K_43_CT = ((2.*pi.*F_K_43).^(-2))./L_K_43_A;
+K_43_CT = ((2.*pi.*F_K_43).^(-2))./L_C_44_A;
 K_43_Ctt = K_43_CT.*x;
 
 %K_23_CT = ((2.*pi.*F_K_23).^(-2))./L_C_27_0;
 K_23_CT = ((2.*pi.*F_K_23).^(-2))./L_K_23_A;
 K_23_Ctt = K_23_CT.*x;
 
-K_80_CT = ((2.*pi.*F_K_80).^(-2))./L_K_80_A;
+K_80_CT = ((2.*pi.*F_K_80).^(-2))./L_C_80_A;
+
 K_80_Ctt = K_80_CT.*x;
 
 C_80_CT = ((2.*pi.*F_C_80).^(-2))./L_C_80_A;
@@ -1781,6 +1782,6 @@ legend('C_44','C_27','K_43','K_80','C_80')
 grid on
 
 figure(93)
-plot(x,L_C_44_0,'*-',x,L_C_44_1,x,L_C_44_2,x,L_C_27_0,'+-',x,L_C_27_1,x,L_C_27_2,x,L_K_43_0,'s-',x,L_K_43_1,x,L_K_43_2,x,L_K_23_1,'^-');
+plot(x,L_C_44_A,'*-',x,L_C_27_A,'+-',x,L_K_23_A,'s-',x,L_K_43_A,'^-',x,L_K_80_A,x,L_C_80_A);
 title('Inductance at 100kHz')
-legend('C-44-1','C-44-2','C-44-3','C-27-1','C-27-2','C-27-3','K-43-1','K-43-2','K-43-3','K-23-1')
+legend('C-44','C-27','K-23','K-43','K-80','C-80')
