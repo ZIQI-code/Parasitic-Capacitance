@@ -359,9 +359,9 @@ grid on
 hold off
 
 %analze resonant frequency
-syms k b
-[k,b] = solve(3.98526==k*69646400+b, -8.70171==k*69813200+b,k,b);
-F_N3_K_43 = eval(abs(b/k));F_N3_K_43
+%syms k b
+%[k,b] = solve(3.98526==k*69646400+b, -8.70171==k*69813200+b,k,b);
+%F_N3_K_43 = eval(abs(b/k));F_N3_K_43
 
 %% 
 
@@ -1602,9 +1602,9 @@ F_C_44 = [7.2648    6.5977    5.8973    5.3469,4.9133    4.5630    4.2795].* 1.0
 F_K_43 = [7.1648    6.2975    5.7638    5.2802,4.7965    4.4796    4.1961].* 1.0e+07 ;
 F_K_23 = [7.0647    6.3642    5.7305    5.2802,4.7965    4.4796    4.1794].* 1.0e+07 ;
 F_K_80 = [7.1648    6.4310    5.7472    5.3302,4.6965    4.4296    4.1961].* 1.0e+07;
-F_C_80 = [];
+F_C_80 = [7.2648    6.4810    5.8306    5.3469,4.8966    4.5464    4.3129].* 1.0e+07;
 figure(99)
-plot(x,F_K_43,'*-',x,F_C_44,'+-',x,F_C_27,'s-',x,F_K_23,'^-',x,F_K_80,'g--o')
+plot(x,F_K_43,'*-',x,F_C_44,'+-',x,F_C_27,'s-',x,F_K_23,'^-',x,F_K_80,'g--o',x,F_C_80,'>--')
 title('Resonant Frequency')
 legend('K-43','C-44','C-27','K-23','K-80')    
 grid on
@@ -1666,19 +1666,19 @@ K_23_Ctt = K_23_CT.*x;
 K_80_CT = ((2.*pi.*F_K_80).^(-2))./L_K_80_A;
 K_80_Ctt = K_80_CT.*x;
 
-C_80_CT = ((2.*pi.*C_K_80).^(-2))./C_K_80_A;
+C_80_CT = ((2.*pi.*F_C_80).^(-2))./L_C_80_A;
 C_80_Ctt = C_80_CT.*x;
 
 figure(95)
-plot(x,C_44_CT,'*-',x,C_27_CT,'+-',x,K_43_CT,'s-',x,K_23_CT,'^-',x,K_80_CT,'g--o')
+plot(x,C_44_CT,'*-',x,C_27_CT,'+-',x,K_43_CT,'s-',x,K_23_CT,'^-',x,K_80_CT,'g--o',x,C_80_CT,'>--')
 title('Total Capacitance at Resonant Frequency')
-legend('C_44','C_27','K_43','K_23')
+legend('C_44','C_27','K_43','K_23','K_80','C_80')
 grid on
 
 figure(94)
-plot(x,C_44_Ctt,'*-',x,C_27_Ctt,'+-',x,K_43_Ctt,'s-')
+plot(x,C_44_Ctt,'*-',x,C_27_Ctt,'+-',x,K_43_Ctt,'s-',x,K_80_Ctt,'g--o',x,C_80_Ctt,'>--')
 title('Turn to Turn Capacitance at Resonant Frequency')
-legend('C_44','C_27','K_43')
+legend('C_44','C_27','K_43','K_80','C_80')
 grid on
 
 figure(93)
