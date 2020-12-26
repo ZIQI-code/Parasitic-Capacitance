@@ -1864,6 +1864,197 @@ ylabel('Reactance')
 grid on
 hold off
 %% 
+K_F_N18_80_04 = csvread('N18_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N18_80_04 = csvread('N18_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N18_80_04 = csvread('N18_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N18_80_05 = csvread('N18_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N18_80_05 = csvread('N18_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N18_80_06 = csvread('N18_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N18_80_06 = csvread('N18_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N18_80_A_new=zeros(600:1);
+K_I_N18_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N18_80_A_new(i)= (K_R_N18_80_04(i)+K_R_N18_80_05(i)+K_R_N18_80_06(i))./3;
+    K_I_N18_80_A_new(i)= (K_I_N18_80_04(i)+K_I_N18_80_05(i)+K_I_N18_80_06(i))./3;
+end
+
+K_F_N16_80_04 = csvread('N16_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N16_80_04 = csvread('N16_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N16_80_04 = csvread('N16_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N16_80_05 = csvread('N16_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N16_80_05 = csvread('N16_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N16_80_06 = csvread('N16_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N16_80_06 = csvread('N16_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N16_80_A_new=zeros(600:1);
+K_I_N16_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N16_80_A_new(i)= (K_R_N16_80_04(i)+K_R_N16_80_05(i)+K_R_N16_80_06(i))./3;
+    K_I_N16_80_A_new(i)= (K_I_N16_80_04(i)+K_I_N16_80_05(i)+K_I_N16_80_06(i))./3;
+end
+
+K_F_N14_80_04 = csvread('N14_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N14_80_04 = csvread('N14_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_04 = csvread('N14_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N14_80_05 = csvread('N14_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_05 = csvread('N14_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N14_80_06 = csvread('N14_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N14_80_06 = csvread('N14_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N14_80_A_new=zeros(600:1);
+K_I_N14_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N14_80_A_new(i)= (K_R_N14_80_04(i)+K_R_N14_80_05(i)+K_R_N14_80_06(i))./3;
+    K_I_N14_80_A_new(i)= (K_I_N14_80_04(i)+K_I_N14_80_05(i)+K_I_N14_80_06(i))./3;
+end
+
+K_F_N12_80_04 = csvread('N12_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N12_80_04 = csvread('N12_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N12_80_04 = csvread('N12_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N12_80_05 = csvread('N12_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N12_80_05 = csvread('N12_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N12_80_06 = csvread('N12_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N12_80_06 = csvread('N12_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N12_80_A_new=zeros(600:1);
+K_I_N12_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N12_80_A_new(i)= (K_R_N12_80_04(i)+K_R_N12_80_05(i)+K_R_N12_80_06(i))./3;
+    K_I_N12_80_A_new(i)= (K_I_N12_80_04(i)+K_I_N12_80_05(i)+K_I_N12_80_06(i))./3;
+end
+
+K_F_N10_80_04 = csvread('N10_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N10_80_04 = csvread('N10_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N10_80_04 = csvread('N10_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N10_80_05 = csvread('N10_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N10_80_05 = csvread('N10_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N10_80_06 = csvread('N10_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N10_80_06 = csvread('N10_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N10_80_A_new=zeros(600:1);
+K_I_N10_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N10_80_A_new(i)= (K_R_N10_80_04(i)+K_R_N10_80_05(i)+K_R_N10_80_06(i))./3;
+    K_I_N10_80_A_new(i)= (K_I_N10_80_04(i)+K_I_N10_80_05(i)+K_I_N10_80_06(i))./3;
+end
+
+K_F_N8_80_04 = csvread('N8_0.8K_05.CSV',3,0,[3,0,602,0]);
+K_R_N8_80_04 = csvread('N8_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N8_80_04 = csvread('N8_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N8_80_05 = csvread('N8_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N8_80_05 = csvread('N8_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N8_80_A_new=zeros(600:1);
+K_I_N8_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N8_80_A_new(i)= (K_R_N8_80_04(i)+K_R_N8_80_05(i))./2;
+    K_I_N8_80_A_new(i)= (K_I_N8_80_04(i)+K_I_N8_80_05(i))./2;
+end
+
+K_F_N6_80_04 = csvread('N6_0.8K_04.CSV',3,0,[3,0,602,0]);
+K_R_N6_80_04 = csvread('N6_0.8K_04.CSV',3,1,[3,1,602,1]);
+K_I_N6_80_04 = csvread('N6_0.8K_04.CSV',3,2,[3,2,602,2]);
+K_R_N6_80_05 = csvread('N6_0.8K_05.CSV',3,1,[3,1,602,1]);
+K_I_N6_80_05 = csvread('N6_0.8K_05.CSV',3,2,[3,2,602,2]);
+K_R_N6_80_06 = csvread('N6_0.8K_06.CSV',3,1,[3,1,602,1]);
+K_I_N6_80_06 = csvread('N6_0.8K_06.CSV',3,2,[3,2,602,2]);
+
+K_R_N6_80_A_new=zeros(600:1);
+K_I_N6_80_A_new=zeros(600:1);
+for i=1:600
+    K_R_N6_80_A_new(i)= (K_R_N6_80_04(i)+K_R_N6_80_05(i)+K_R_N6_80_06(i))./3;
+    K_I_N6_80_A_new(i)= (K_I_N6_80_04(i)+K_I_N6_80_05(i)+K_I_N6_80_06(i))./3;
+end
+
+x = [6,8,10,12,14,16,18];
+% Analyze L
+L_K_80_0 = [K_I_N18_80_04(1),K_I_N16_80_04(1),K_I_N14_80_04(1),K_I_N12_80_04(1),K_I_N10_80_04(1),K_I_N8_80_04(1),K_I_N6_80_04(1)]./(1e5*(2*pi));
+L_K_80_1 = [K_I_N18_80_05(1),K_I_N16_80_05(1),K_I_N14_80_05(1),K_I_N12_80_05(1),K_I_N10_80_05(1),K_I_N8_80_05(1),K_I_N6_80_05(1)]./(1e5*(2*pi));
+L_K_80_2 = [K_I_N18_80_06(1),K_I_N16_80_06(1),K_I_N14_80_06(1),K_I_N12_80_06(1),K_I_N10_80_06(1),K_I_N8_80_05(1),K_I_N6_80_06(1)]./(1e5*(2*pi));
+L_K_80_0 = flip(L_K_80_0);
+L_K_80_1 = flip(L_K_80_1);
+L_K_80_2 = flip(L_K_80_2);
+
+L_K_80_A_new = [K_I_N18_80_A_new(1),K_I_N16_80_A_new(1),K_I_N14_80_A_new(1),K_I_N12_80_A_new(1),K_I_N10_80_A_new(1),K_I_N8_80_A_new(1),K_I_N6_80_A_new(1)]./(1e5*(2*pi));
+L_K_80_A_new = flip(L_K_80_A_new);
+
+figure(37)
+plot(x,L_K_80_0,x,L_K_80_1,x,L_K_80_2)
+grid on
+title('Inductance K_80')
+legend('1','2','3')
+
+figure(38)
+plot(x,L_K_80_A_new)
+grid on
+title('Average Inductance K_80')
+
+%plot individual graph
+figure(39)
+plot(K_F_N18_80_04,K_R_N18_80_04,K_F_N18_80_04,K_R_N18_80_05,K_F_N18_80_04,K_R_N18_80_06)
+hold on
+plot(K_F_N16_80_04,K_R_N16_80_04,K_F_N16_80_04,K_R_N16_80_05,K_F_N16_80_04,K_R_N16_80_06)
+plot(K_F_N14_80_04,K_R_N14_80_04,K_F_N14_80_04,K_R_N14_80_05,K_F_N14_80_04,K_R_N14_80_06)
+plot(K_F_N12_80_04,K_R_N12_80_04,K_F_N12_80_04,K_R_N12_80_05,K_F_N12_80_04,K_R_N12_80_06)
+plot(K_F_N10_80_04,K_R_N10_80_04,K_F_N10_80_04,K_R_N10_80_05,K_F_N10_80_04,K_R_N10_80_06)
+plot(K_F_N8_80_04,K_R_N8_80_04,K_F_N8_80_04,K_R_N8_80_05)
+plot(K_F_N6_80_04,K_R_N6_80_04,K_F_N6_80_04,K_R_N6_80_05,K_F_N6_80_04,K_R_N6_80_06)
+legend('N18,1','N18,2','N18,3','N16,1','N16,2','N16,3','N14,1','N14,2','N14,3','N12,1','N12,2','N12,3','N10,1','N10,2','N10,3','N8,1','N8,2','N6,1','N6,2','N6,3')
+title('Knitted 0.80mm Real')
+xlabel('Frequency (Hz)')
+ylabel('Ohms')
+grid on
+hold off
+
+figure(40)
+plot(K_F_N18_80_04,K_I_N18_80_04,K_F_N18_80_04,K_I_N18_80_05,K_F_N18_80_04,K_I_N18_80_06)
+hold on
+plot(K_F_N16_80_04,K_I_N16_80_04,K_F_N16_80_04,K_I_N16_80_05,K_F_N16_80_04,K_I_N16_80_06)
+plot(K_F_N14_80_04,K_I_N14_80_04,K_F_N14_80_04,K_I_N14_80_05,K_F_N14_80_04,K_I_N14_80_06)
+plot(K_F_N12_80_04,K_I_N12_80_04,K_F_N12_80_04,K_I_N12_80_05,K_F_N12_80_04,K_I_N12_80_06)
+plot(K_F_N10_80_04,K_I_N10_80_04,K_F_N10_80_04,K_I_N10_80_05,K_F_N10_80_04,K_I_N10_80_06)
+plot(K_F_N8_80_04,K_I_N8_80_04,K_F_N8_80_04,K_I_N8_80_05)
+plot(K_F_N6_80_04,K_I_N6_80_04,K_F_N6_80_04,K_I_N6_80_05,K_F_N6_80_04,K_I_N6_80_06)
+legend('N18,1','N18,2','N18,3','N16,1','N16,2','N16,3','N14,1','N14,2','N14,3','N12,1','N12,2','N12,3','N10,1','N10,2','N10,3','N8,1','N8,2','N6,1','N6,2','N6,3')
+title('Knitted 0.80mm Imag')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+
+figure(41)
+plot(K_F_N18_80_04,K_R_N18_80_A_new)
+hold on
+plot(K_F_N16_80_04,K_R_N16_80_A_new)
+plot(K_F_N14_80_04,K_R_N14_80_A_new)
+plot(K_F_N12_80_04,K_R_N12_80_A_new)
+plot(K_F_N10_80_04,K_R_N10_80_A_new);
+plot(K_F_N8_80_04,K_R_N8_80_A_new)
+plot(K_F_N6_80_04,K_R_N6_80_A_new)
+legend('N18,A''N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
+title('Knitted 0.80mm Real Average')
+xlabel('Frequency (Hz)')
+ylabel('Ohms')
+grid on
+hold off
+
+figure(42)
+plot(K_F_N18_80_04,K_I_N18_80_A_new)
+hold on
+plot(K_F_N16_80_04,K_I_N16_80_A_new)
+plot(K_F_N14_80_04,K_I_N14_80_A_new)
+plot(K_F_N12_80_04,K_I_N12_80_A_new)
+plot(K_F_N10_80_04,K_I_N10_80_A_new);
+plot(K_F_N8_80_04,K_I_N8_80_A_new)
+plot(K_F_N6_80_04,K_I_N6_80_A_new)
+legend('N18,A''N16,A','N14,A','N12,A','N10,A','N8,A','N6,A')
+title('Knitted 0.80mm Imag Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+%% 
 % syms k b
 % [k,b] = solve(797.88==k*48632400+b, -286.278==k*48799200+b,k,b);
 % F_C_27 = [F_C_27,eval(abs(b/k))];
