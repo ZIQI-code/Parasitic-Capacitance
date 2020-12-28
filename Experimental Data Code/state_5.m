@@ -1979,11 +1979,11 @@ x = [6,8,10,12,14,16,18];
 L_K_80_A_new = [K_I_N18_80_A_new(1),K_I_N16_80_A_new(1),K_I_N14_80_A_new(1),K_I_N12_80_A_new(1),K_I_N10_80_A_new(1),K_I_N8_80_A_new(1),K_I_N6_80_A_new(1)]./(1e5*(2*pi));
 L_K_80_A_new = flip(L_K_80_A_new);
 
-figure(43)
-plot(x,L_K_80_0,x,L_K_80_1,x,L_K_80_2)
-grid on
-title('Inductance K_80')
-legend('1','2','3')
+%figure(43)
+%plot(x,L_K_80_0,x,L_K_80_1,x,L_K_80_2)
+%grid on
+%title('Inductance K_80')
+%legend('1','2','3')
 
 figure(44)
 plot(x,L_K_80_A_new)
@@ -2170,11 +2170,11 @@ x = [6,8,10,12,14,16,18];
 L_C_80_A_new = [C_I_N18_80_A_new(1),C_I_N16_80_A_new(1),C_I_N14_80_A_new(1),C_I_N12_80_A_new(1),C_I_N10_80_A_new(1),C_I_N8_80_A_new(1),C_I_N6_80_A_new(1)]./(1e5*(2*pi));
 L_C_80_A_new = flip(L_C_80_A_new);
 
-figure(49)
-plot(x,L_C_80_0,x,L_C_80_1,x,L_C_80_2)
-grid on
-title('Inductance C_80')
-legend('1','2','3')
+%figure(49)
+%plot(x,L_C_80_0,x,L_C_80_1,x,L_C_80_2)
+%grid on
+%title('Inductance C_80')
+%legend('1','2','3')
 
 figure(50)
 plot(x,L_C_80_A_new)
@@ -2512,8 +2512,8 @@ K_23_Ctt = K_23_CT.*x;
 K_23_CT_new = ((2.*pi.*F_K_23_new).^(-2))./L_K_23_A_new;
 K_23_Ctt_new = K_23_CT_new.*x;
 
-K_80_CT = ((2.*pi.*F_K_80).^(-2))./L_K_80_A;
-K_80_Ctt = K_80_CT.*x;
+%K_80_CT = ((2.*pi.*F_K_80).^(-2))./L_K_80_A;
+%K_80_Ctt = K_80_CT.*x;
 
 K_80_CT_new = ((2.*pi.*F_K_80_new).^(-2))./L_K_80_A_new;
 K_80_Ctt_new = K_80_CT_new.*x;
