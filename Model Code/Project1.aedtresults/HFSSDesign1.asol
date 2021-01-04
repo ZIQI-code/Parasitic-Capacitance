@@ -1,0 +1,163 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002021, month=000000000001, day=000000000004, hour=000000000013, min=000000000002, sec=000000000014)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000006034, lin=000000000142, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock1'
+	ProductName=''
+	CircuitName='HFSSDesign1'
+	VersionID=290
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=408
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='L=\'10mm\' pitch=\'10mm\' R_fiber=\'0.4mm\' radius=\'22mm\' turns=\'14\'', ID=387)
+		Map(V='L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=390)
+		Map(V='L=\'2mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=393)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	MeshAssemVersionID=0
+	$begin 'NextAssemVersionID'
+		NextUniqueID=1
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'DefinitionMeshes'
+		$begin 'DefMeshes_Comp-1'
+			DefinitionID=-1
+			VersionID=0
+			VIDMap('L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', 392)
+			DM(VID=392, Ver=0, Dir='NDV392_V0.dmesh/')
+		$end 'DefMeshes_Comp-1'
+	$end 'DefinitionMeshes'
+	$begin 'MI'
+	$end 'MI'
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=46, Instance=\'SetupDefinition\', Solution=-1, VersionID=290)'='SolutionBlock5'
+	'SolutionKey(SimSetup=46, Instance=\'SolutionDefinition\', Solution=47, VersionID=291)'='SolutionBlock2'
+	'SolutionKey(SimSetup=46, Instance=\'SolutionDefinition\', Solution=48, VersionID=291)'='SolutionBlock3'
+	'SolutionKey(SimSetup=46, Instance=\'SolutionDefinition\', Solution=54, VersionID=368)'='SolutionBlock4'
+$end 'BlockMapName'
+$begin 'SolutionBlock5'
+	SimSetupID=46
+	SimSetupName='Setup1'
+	VersionID=290
+	$begin 'EmConvergenceData'
+		EmConv(VID=390, Ver=290, EmConv='DV390_S46_V290.EMConvData')
+	$end 'EmConvergenceData'
+	IsImported=false
+	IsTable=false
+	SolveSetupID=0
+	MeshAssemVersionID=0
+	$begin 'NextAssemVersionID'
+		NextUniqueID=1
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'ADP'
+	$end 'ADP'
+	$begin 'SU'
+	$end 'SU'
+	$begin 'WaveAdapt'
+		WA(VID=390, Ver=290, A=1)
+	$end 'WaveAdapt'
+	$begin 'LastPassNumbers'
+		LP(VID=390, Ver=290, P=2)
+	$end 'LastPassNumbers'
+	$begin 'Profiles'
+		P(VID=390, Ver=290, File='DV390_S46_V290.profile')
+	$end 'Profiles'
+	$begin 'MI'
+	$end 'MI'
+$end 'SolutionBlock5'
+$begin 'SolutionBlock3'
+	SolutionName='LastAdaptive'
+	SolutionID=48
+	V=291
+	$begin 'States'
+		F(VID=390, Ver=291)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=390, Ver=291, File='DV390_SOL48_M0_V291.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock3'
+$begin 'SolutionBlock2'
+	SolutionName='AdaptivePass'
+	SolutionID=47
+	V=291
+	$begin 'States'
+		F(VID=390, Ver=291)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=1
+			M(VID=390, Ver=291, File='DV390_SOL47_M1_V291.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			M(VID=390, Ver=291, File='DV390_SOL47_M2_V291.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock2'
+$begin 'SolutionBlock4'
+	SolutionName='Sweep'
+	SolutionID=54
+	V=368
+	$begin 'States'
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(100000, 1099500, 2099000, 3098500, 4098000, 5097500, 6097000, 7096500, 8096000, 9095500, 10095000, 11094500, 12094000, 13093500, 14093000, 15092500, 16092000, 17091500, 18091000, 19090500, 20090000, 21089500, 22089000, 23088500, 24088000, 25087500, 26087000, 27086500, 28086000, 29085500, 30085000, 31084500, 32084000, 33083500, 34083000, 35082500, 36082000, 37081500, 38081000, 39080500, 40080000, 41079500, 42079000, 43078500, 44078000, 45077500, 46077000, 47076500, 48076000, 49075500, 50075000, 51074500, 52074000, 53073500, 54073000, 55072500, 56072000, 57071500, 58071000, 59070500, 60070000, 61069500, 62069000, 63068500, 64068000, 65067500, 66067000, 67066500, 68066000, 69065500, 70065000, 71064500, 72064000, 73063500, 74063000, 75062500, 76062000, 77061500, 78061000, 79060500, 80060000, 81059500, 82059000, 83058500, 84058000, 85057500, 86057000, 87056500, 88056000, 89055500, 90055000, 91054500, 92054000, 93053500, 94053000, 95052500, 96052000, 97051500, 98051000, 99050500, 100050000, 101049500, 102049000, 103048500, 104048000, 105047500, 106047000, 107046500, 108046000, 109045500, 110045000, 111044500, 112044000, 113043500, 114043000, 115042500, 116042000, 117041500, 118041000, 119040500, 120040000, 121039500, 122039000, 123038500, 124038000, 125037500, 126037000, 127036500, 128036000, 129035500, 130035000, 131034500, 132034000, 133033500, 134033000, 135032500, 136032000, 137031500, 138031000, 139030500, 140030000, 141029500, 142029000, 143028500, 144028000, 145027500, 146027000, 147026500, 148026000, 149025500, 150025000, 151024500, 152024000, 153023500, 154023000, 155022500, 156022000, 157021500, 158021000, 159020500, 160020000, 161019500, 162019000, 163018500, 164018000, 165017500, 166017000, 167016500, 168016000, 169015500, 170015000, 171014500, 172014000, 173013500, 174013000, 175012500, 176012000, 177011500, 178011000, 179010500, 180010000, 181009500, 182009000, 183008500, 184008000, 185007500, 186007000, 187006500, 188006000, 189005500, 190005000, 191004500, 192004000, 193003500, 194003000, 195002500, 196002000, 197001500, 198001000, 199000500, 200000000)
+		SolutionType=4
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=0
+	KeepAllFastSweepFields=false
+$end 'SolutionBlock4'
+$begin '$index$'
+	$begin '$index$'
+		BlockMapName(pos=1324, lin=32, lvl=0)
+		SolutionBlock2(pos=3002, lin=95, lvl=0)
+		SolutionBlock3(pos=2505, lin=70, lvl=0)
+		SolutionBlock4(pos=3597, lin=124, lvl=0)
+		SolutionBlock5(pos=1816, lin=39, lvl=0)
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=6034, lin=142, lvl=0)
+	$end '$index$'
+$end '$index$'

@@ -1,0 +1,10 @@
+$begin 'CacheDataVersion'
+	DataVersion=-1
+$end 'CacheDataVersion'
+$begin 'VariableValues'
+	radius='5mm'
+	pitch='2mm'
+	turns='10'
+	L='2mm'
+	R_fiber='1.5mm'
+$end 'VariableValues'
