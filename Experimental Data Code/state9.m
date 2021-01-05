@@ -770,6 +770,205 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+%% Thin Knit
+K_F_N20_T_00 = csvread('THIN KNIT N20_01.CSV',3,0,[3,0,802,0]);
+K_R_N20_T_00 = csvread('THIN KNIT N20_01.CSV',3,1,[3,1,802,1]);
+K_I_N20_T_00 = csvread('THIN KNIT N20_01.CSV',3,2,[3,2,802,2]);
+K_R_N20_T_01 = csvread('THIN KNIT N20_02.CSV',3,1,[3,1,802,1]);
+K_I_N20_T_01 = csvread('THIN KNIT N20_02.CSV',3,2,[3,2,802,2]);
+K_R_N20_T_02 = csvread('THIN KNIT N20_03.CSV',3,1,[3,1,802,1]);
+K_I_N20_T_02 = csvread('THIN KNIT N20_03.CSV',3,2,[3,2,802,2]);
+
+K_R_N20_T_A=zeros(800:1);
+K_I_N20_T_A=zeros(800:1);
+for i=1:800
+    K_R_N20_T_A(i)= (K_R_N20_T_00(i)+K_R_N20_T_01(i)+K_R_N20_T_02(i))./3;
+    K_I_N20_T_A(i)= (K_I_N20_T_00(i)+K_I_N20_T_01(i)+K_I_N20_T_02(i))./3;
+end
+
+K_F_N18_T_00 = csvread('THIN KNIT N18_01.CSV',3,0,[3,0,802,0]);
+K_R_N18_T_00 = csvread('THIN KNIT N18_01.CSV',3,1,[3,1,802,1]);
+K_I_N18_T_00 = csvread('THIN KNIT N18_01.CSV',3,2,[3,2,802,2]);
+K_R_N18_T_01 = csvread('THIN KNIT N18_02.CSV',3,1,[3,1,802,1]);
+K_I_N18_T_01 = csvread('THIN KNIT N18_02.CSV',3,2,[3,2,802,2]);
+K_R_N18_T_02 = csvread('THIN KNIT N18_03.CSV',3,1,[3,1,802,1]);
+K_I_N18_T_02 = csvread('THIN KNIT N18_03.CSV',3,2,[3,2,802,2]);
+
+K_R_N18_T_A=zeros(800:1);
+K_I_N18_T_A=zeros(800:1);
+for i=1:800
+    K_R_N18_T_A(i)= (K_R_N18_T_00(i)+K_R_N18_T_01(i)+K_R_N18_T_02(i))./3;
+    K_I_N18_T_A(i)= (K_I_N18_T_00(i)+K_I_N18_T_01(i)+K_I_N18_T_02(i))./3;
+end
+
+K_F_N16_T_00 = csvread('THIN KNIT N16_01.CSV',3,0,[3,0,802,0]);
+K_R_N16_T_00 = csvread('THIN KNIT N16_01.CSV',3,1,[3,1,802,1]);
+K_I_N16_T_00 = csvread('THIN KNIT N16_01.CSV',3,2,[3,2,802,2]);
+K_R_N16_T_01 = csvread('THIN KNIT N16_02.CSV',3,1,[3,1,802,1]);
+K_I_N16_T_01 = csvread('THIN KNIT N16_02.CSV',3,2,[3,2,802,2]);
+K_R_N16_T_02 = csvread('THIN KNIT N16_03.CSV',3,1,[3,1,802,1]);
+K_I_N16_T_02 = csvread('THIN KNIT N16_03.CSV',3,2,[3,2,802,2]);
+
+K_R_N16_T_A=zeros(800:1);
+K_I_N16_T_A=zeros(800:1);
+for i=1:800
+    K_R_N16_T_A(i)= (K_R_N16_T_00(i)+K_R_N16_T_01(i)+K_R_N16_T_02(i))./3;
+    K_I_N16_T_A(i)= (K_I_N16_T_00(i)+K_I_N16_T_01(i)+K_I_N16_T_02(i))./3;
+end
+
+
+K_F_N14_T_00 = csvread('THIN KNIT N14_01.CSV',3,0,[3,0,802,0]);
+K_R_N14_T_00 = csvread('THIN KNIT N14_01.CSV',3,1,[3,1,802,1]);
+K_I_N14_T_00 = csvread('THIN KNIT N14_01.CSV',3,2,[3,2,802,2]);
+K_R_N14_T_01 = csvread('THIN KNIT N14_02.CSV',3,1,[3,1,802,1]);
+K_I_N14_T_01 = csvread('THIN KNIT N14_02.CSV',3,2,[3,2,802,2]);
+K_R_N14_T_02 = csvread('THIN KNIT N14_03.CSV',3,1,[3,1,802,1]);
+K_I_N14_T_02 = csvread('THIN KNIT N14_03.CSV',3,2,[3,2,802,2]);
+
+K_R_N14_T_A=zeros(800:1);
+K_I_N14_T_A=zeros(800:1);
+for i=1:800
+    K_R_N14_T_A(i)= (K_R_N14_T_00(i)+K_R_N14_T_01(i)+K_R_N14_T_02(i))./3;
+    K_I_N14_T_A(i)= (K_I_N14_T_00(i)+K_I_N14_T_01(i)+K_I_N14_T_02(i))./3;
+end
+
+K_F_N12_T_00 = csvread('THIN KNIT N12_01.CSV',3,0,[3,0,802,0]);
+K_R_N12_T_00 = csvread('THIN KNIT N12_01.CSV',3,1,[3,1,802,1]);
+K_I_N12_T_00 = csvread('THIN KNIT N12_01.CSV',3,2,[3,2,802,2]);
+K_R_N12_T_01 = csvread('THIN KNIT N12_02.CSV',3,1,[3,1,802,1]);
+K_I_N12_T_01 = csvread('THIN KNIT N12_02.CSV',3,2,[3,2,802,2]);
+K_R_N12_T_02 = csvread('THIN KNIT N12_03.CSV',3,1,[3,1,802,1]);
+K_I_N12_T_02 = csvread('THIN KNIT N12_03.CSV',3,2,[3,2,802,2]);
+
+K_R_N12_T_A=zeros(800:1);
+K_I_N12_T_A=zeros(800:1);
+for i=1:800
+    K_R_N12_T_A(i)= (K_R_N12_T_00(i)+K_R_N12_T_01(i)+K_R_N12_T_02(i))./3;
+    K_I_N12_T_A(i)= (K_I_N12_T_00(i)+K_I_N12_T_01(i)+K_I_N12_T_02(i))./3;
+end
+
+K_F_N10_T_00 = csvread('THIN KNIT N10_01.CSV',3,0,[3,0,802,0]);
+K_R_N10_T_00 = csvread('THIN KNIT N10_01.CSV',3,1,[3,1,802,1]);
+K_I_N10_T_00 = csvread('THIN KNIT N10_01.CSV',3,2,[3,2,802,2]);
+K_R_N10_T_01 = csvread('THIN KNIT N10_02.CSV',3,1,[3,1,802,1]);
+K_I_N10_T_01 = csvread('THIN KNIT N10_02.CSV',3,2,[3,2,802,2]);
+K_R_N10_T_02 = csvread('THIN KNIT N10_03.CSV',3,1,[3,1,802,1]);
+K_I_N10_T_02 = csvread('THIN KNIT N10_03.CSV',3,2,[3,2,802,2]);
+
+
+K_R_N10_T_A=zeros(800:1);
+K_I_N10_T_A=zeros(800:1);
+for i=1:800
+    K_R_N10_T_A(i)= (K_R_N10_T_00(i)+K_R_N10_T_01(i)+K_R_N10_T_02(i))./3;
+    K_I_N10_T_A(i)= (K_I_N10_T_00(i)+K_I_N10_T_01(i)+K_I_N10_T_02(i))./3;
+end
+
+K_F_N8_T_00 = csvread('THIN KNIT N8_01.CSV',3,0,[3,0,802,0]);
+K_R_N8_T_00 = csvread('THIN KNIT N8_01.CSV',3,1,[3,1,802,1]);
+K_I_N8_T_00 = csvread('THIN KNIT N8_01.CSV',3,2,[3,2,802,2]);
+K_R_N8_T_01 = csvread('THIN KNIT N8_02.CSV',3,1,[3,1,802,1]);
+K_I_N8_T_01 = csvread('THIN KNIT N8_02.CSV',3,2,[3,2,802,2]);
+K_R_N8_T_02 = csvread('THIN KNIT N8_03.CSV',3,1,[3,1,802,1]);
+K_I_N8_T_02 = csvread('THIN KNIT N8_03.CSV',3,2,[3,2,802,2]);
+
+
+K_R_N8_T_A=zeros(800:1);
+K_I_N8_T_A=zeros(800:1);
+for i=1:800
+    K_R_N8_T_A(i)= (K_R_N8_T_00(i)+K_R_N8_T_01(i)+K_R_N8_T_02(i))./3;
+    K_I_N8_T_A(i)= (K_I_N8_T_00(i)+K_I_N8_T_01(i)+K_I_N8_T_02(i))./3;
+end
+
+x = [8,10,12,14,16,18,20];
+%Analyze L
+% L_K_T_0 = flip([K_I_N20_T_00(1),K_I_N18_T_00(1),K_I_N16_T_00(1),K_I_N14_T_00(1),K_I_N12_T_00(1),K_I_N10_T_00(1),K_I_N8_T_00(1)]./(1e5*(2*pi)));
+% L_K_T_1 = flip([K_I_N20_T_01(1),K_I_N18_T_01(1),K_I_N16_T_01(1),K_I_N14_T_01(1),K_I_N12_T_01(1),K_I_N10_T_01(1),K_I_N8_T_01(1)]./(1e5*(2*pi)));
+% L_K_T_2 = flip([K_I_N20_T_02(1),K_I_N18_T_02(1),K_I_N16_T_02(1),K_I_N14_T_02(1),K_I_N12_T_02(1),K_I_N10_T_02(1),K_I_N8_T_02(1)]./(1e5*(2*pi)));
+L_K_T_0 = flip([K_I_N20_T_00(1),K_I_N18_T_00(1),K_I_N16_T_00(1),K_I_N14_T_00(1),K_I_N12_T_00(1),K_I_N10_T_00(1),K_I_N8_T_00(1)]./(1e5*(2*pi)));
+L_K_T_1 = flip([K_I_N20_T_01(1),K_I_N18_T_01(1),K_I_N16_T_01(1),K_I_N14_T_01(1),K_I_N12_T_01(1),K_I_N10_T_01(1),K_I_N8_T_01(1)]./(1e5*(2*pi)));
+L_K_T_2 = flip([K_I_N20_T_02(1),K_I_N18_T_02(1),K_I_N16_T_02(1),K_I_N14_T_02(1),K_I_N12_T_02(1),K_I_N10_T_02(1),K_I_N8_T_02(1)]./(1e5*(2*pi)));
+
+% L_K_T_A = [K_I_N20_T_A(1),K_I_N18_T_A(1),K_I_N16_T_A(1),K_I_N14_T_A(1),K_I_N12_T_A(1),K_I_N10_T_A(1),K_I_N8_T_A(1)]./(1e5*(2*pi));
+L_K_T_A = [K_I_N20_T_A(1),K_I_N18_T_A(1),K_I_N16_T_A(1),K_I_N14_T_A(1),K_I_N12_T_A(1),K_I_N10_T_A(1),K_I_N8_T_A(1)]./(1e5*(2*pi));
+L_K_T_A = flip(L_K_T_A);
+
+figure(5)
+plot(x,L_K_T_0,x,L_K_T_1,x,L_K_T_2)
+grid on
+title('Inductance K_T')
+legend('1','2','3')
+
+figure(6)
+plot(x,L_K_T_A)
+grid on
+title('Average Inductance K_T')
+
+%plot individual graph
+figure(1)
+plot(K_F_N20_T_00,K_R_N20_T_00,K_F_N20_T_00,K_R_N20_T_01,K_F_N20_T_00,K_R_N20_T_02)
+hold on
+plot(K_F_N18_T_00,K_R_N18_T_00,K_F_N18_T_00,K_R_N18_T_01,K_F_N18_T_00,K_R_N18_T_02)
+plot(K_F_N16_T_00,K_R_N16_T_00,K_F_N16_T_00,K_R_N16_T_01,K_F_N16_T_00,K_R_N16_T_02)
+plot(K_F_N14_T_00,K_R_N14_T_00,K_F_N14_T_00,K_R_N14_T_01,K_F_N14_T_00,K_R_N14_T_02)
+plot(K_F_N12_T_00,K_R_N12_T_00,K_F_N12_T_00,K_R_N12_T_01,K_F_N12_T_00,K_R_N12_T_02)
+plot(K_F_N10_T_00,K_R_N10_T_00,K_F_N10_T_00,K_R_N10_T_01,K_F_N10_T_00,K_R_N10_T_02)
+plot(K_F_N8_T_00,K_R_N8_T_00,K_F_N8_T_00,K_R_N8_T_01,K_F_N8_T_00,K_R_N8_T_02)
+
+legend('N20-1','N20-2','N20-3','N18-1','N18-2','N18-3','N16-1','N16-2','N16-3','N14-1','N14-2','N14-3','N12-1','N12-2','N12-3','N10-1','N10-2','N10-3','N8-1','N8-2','N8-3')
+title('Knitted THIN Real')
+xlabel('Frequency (Hz)')
+ylabel('Ohms')
+grid on
+hold off
+
+figure(2)
+plot(K_F_N20_T_00,K_I_N20_T_00,K_F_N20_T_00,K_I_N20_T_01,K_F_N20_T_00,K_I_N20_T_02)
+hold on
+plot(K_F_N18_T_00,K_I_N18_T_00,K_F_N18_T_00,K_I_N18_T_01,K_F_N18_T_00,K_I_N18_T_02)
+plot(K_F_N16_T_00,K_I_N16_T_00,K_F_N16_T_00,K_I_N16_T_01,K_F_N16_T_00,K_I_N16_T_02)
+plot(K_F_N14_T_00,K_I_N14_T_00,K_F_N14_T_00,K_I_N14_T_01,K_F_N14_T_00,K_I_N14_T_02)
+plot(K_F_N12_T_00,K_I_N12_T_00,K_F_N12_T_00,K_I_N12_T_01,K_F_N12_T_00,K_I_N12_T_02)
+plot(K_F_N10_T_00,K_I_N10_T_00,K_F_N10_T_00,K_I_N10_T_01,K_F_N10_T_00,K_I_N10_T_02)
+plot(K_F_N8_T_00,K_I_N8_T_00,K_F_N8_T_00,K_I_N8_T_01,K_F_N8_T_00,K_I_N8_T_02)
+legend('N20-1','N20-2','N20-3','N18-1','N18-2','N18-3','N16-1','N16-2','N16-3','N14-1','N14-2','N14-3','N12-1','N12-2','N12-3','N10-1','N10-2','N10-3','N8-1','N8-2','N8-3')
+title('Knitted THIN Imag')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+
+figure(3)
+plot(K_F_N20_T_00,K_R_N20_T_A)
+hold on
+plot(K_F_N18_T_00,K_R_N18_T_A)
+plot(K_F_N16_T_00,K_R_N16_T_A)
+plot(K_F_N14_T_00,K_R_N14_T_A)
+plot(K_F_N12_T_00,K_R_N12_T_A)
+plot(K_F_N10_T_00,K_R_N10_T_A)
+plot(K_F_N8_T_00,K_R_N8_T_A)
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
+title('Knitted THIN Real Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+
+figure(4)
+plot(K_F_N20_T_00,K_I_N20_T_A)
+hold on
+plot(K_F_N18_T_00,K_I_N18_T_A)
+plot(K_F_N16_T_00,K_I_N16_T_A)
+plot(K_F_N14_T_00,K_I_N14_T_A)
+plot(K_F_N12_T_00,K_I_N12_T_A)
+plot(K_F_N10_T_00,K_I_N10_T_A)
+plot(K_F_N8_T_00,K_I_N8_T_A)
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
+title('Knitted THIN Imag Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+hold off
+
 %% 
 x = [10,12,14,16,18,20];
 x2 = [8,10,12,14,16,18,20];
