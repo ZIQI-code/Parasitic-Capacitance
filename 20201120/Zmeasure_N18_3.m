@@ -73,6 +73,7 @@ figure(10)
 plot(freq, real(z_data.Z), freq, data_real)
 legend('simulation', 'experiment')
 %% study the sweep of Cp
+freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
 figure(11)
 for i=-14:-7
     sdo.setValueInModel('RC_Circuit_N18_3', 'Cp', 3.7334*10^(i));
