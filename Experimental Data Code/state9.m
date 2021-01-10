@@ -521,6 +521,8 @@ L_K_31_11 = flip([K_I_N20_31_11(1),K_I_N18_31_13(1),K_I_N16_31_08(1),K_I_N14_31_
 L_K_31_12 = flip([K_I_N20_31_12(1),K_I_N18_31_13(1),K_I_N16_31_06(1),K_I_N14_31_06(1),K_I_N12_31_06(1),K_I_N10_31_06(1),K_I_N8_31_06(1)]./(1e5*(2*pi)));
 L_K_31_13 = flip([K_I_N20_31_13(1),K_I_N18_31_13(1),K_I_N16_31_07(1),K_I_N14_31_07(1),K_I_N12_31_07(1),K_I_N10_31_07(1),K_I_N8_31_07(1)]./(1e5*(2*pi)));
 L_K_31_14 = flip([K_I_N20_31_14(1),K_I_N18_31_13(1),K_I_N16_31_08(1),K_I_N14_31_08(1),K_I_N12_31_08(1),K_I_N10_31_08(1),K_I_N8_31_08(1)]./(1e5*(2*pi)));
+% L_K_31_6 - N20_6 + N18_13 + N16-N8_6
+% L_K_31_14 - N20_14 + N18_13 + N16-N8 8
 
 L_K_31_new_A = (L_K_31_6+L_K_31_14)./2;
 
@@ -605,6 +607,73 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+
+%% New average real&imag plots for new average inductance
+K_R_N20_31_new_A=zeros(800:1);
+K_I_N20_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N20_31_new_A(i)= (K_R_N20_31_06(i)+K_R_N20_31_14(i))./2;
+    K_I_N20_31_new_A(i)= (K_I_N20_31_06(i)+K_I_N20_31_14(i))./2;
+end
+
+K_R_N18_31_new_A=zeros(800:1);
+K_I_N18_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N18_31_new_A(i)= K_R_N18_31_13(i);
+    K_I_N18_31_new_A(i)= K_I_N18_31_13(i);
+end
+
+K_R_N16_31_new_A=zeros(800:1);
+K_I_N16_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N16_31_new_A(i)= (K_R_N16_31_06(i)+K_R_N16_31_08(i))./2;
+    K_I_N16_31_new_A(i)= (K_I_N16_31_06(i)+K_I_N16_31_08(i))./2;
+end
+
+K_R_N14_31_new_A=zeros(800:1);
+K_I_N14_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N14_31_new_A(i)= (K_R_N14_31_06(i)+K_R_N14_31_08(i))./2;
+    K_I_N14_31_new_A(i)= (K_I_N14_31_06(i)+K_I_N14_31_08(i))./2;
+end
+
+K_R_N12_31_new_A=zeros(800:1);
+K_I_N12_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N12_31_new_A(i)= (K_R_N12_31_06(i)+K_R_N12_31_08(i))./2;
+    K_I_N12_31_new_A(i)= (K_I_N12_31_06(i)+K_I_N12_31_08(i))./2;
+end
+
+K_R_N10_31_new_A=zeros(800:1);
+K_I_N10_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N10_31_new_A(i)= (K_R_N10_31_06(i)+K_R_N10_31_08(i))./2;
+    K_I_N10_31_new_A(i)= (K_I_N10_31_06(i)+K_I_N10_31_08(i))./2;
+end
+
+K_R_N8_31_new_A=zeros(800:1);
+K_I_N8_31_new_A=zeros(800:1);
+for i=1:800
+    K_R_N8_31_new_A(i)= (K_R_N8_31_06(i)+K_R_N8_31_08(i))./2;
+    K_I_N8_31_new_A(i)= (K_I_N8_31_06(i)+K_I_N8_31_08(i))./2;
+end
+
+
+figure(58)
+plot(K_F_N20_31_06,K_R_N20_31_new_A,K_F_N20_31_06,K_R_N18_31_new_A,K_F_N20_31_06,K_R_N16_31_new_A,K_F_N20_31_06,K_R_N14_31_new_A,K_F_N20_31_06,K_R_N12_31_new_A,K_F_N20_31_06,K_R_N10_31_new_A,K_F_N20_31_06,K_R_N8_31_new_A)
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
+title('Knitted 0.31mm Real Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
+
+figure(59)
+plot(K_F_N20_31_06,K_I_N20_31_new_A,K_F_N20_31_06,K_I_N18_31_new_A,K_F_N20_31_06,K_I_N16_31_new_A,K_F_N20_31_06,K_I_N14_31_new_A,K_F_N20_31_06,K_I_N12_31_new_A,K_F_N20_31_06,K_I_N10_31_new_A,K_F_N20_31_06,K_I_N8_31_new_A)
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
+title('Knitted 0.31mm Imag Average')
+xlabel('Frequency (Hz)')
+ylabel('Reactance')
+grid on
 %% 0.48k
 K_F_N20_48_00 = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
 K_R_N20_48_00 = csvread('N20_0.48K_01.CSV',3,1,[3,1,802,1]);
