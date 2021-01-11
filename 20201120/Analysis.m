@@ -1,28 +1,26 @@
 %% 
 
-%% study of total capacitance with the increase of the turns Knitted
-freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
-simuL = ([0.829,1.16,1.48,1.81,2.13,2.43,2.75]./(0.2*pi)).*1e-6;
-simu = [170.0150,137.0315,116.0420,102.0490,91.0545,82.0590,75.0625].*1e+6;
-simuC = ((2.*pi.*simu).^(-2))./simuL;
+%% study 0.31 Knitted
+freq = csvread('N20_0.31K_10.CSV',3,0,[3,0,802,0]);
 model = ["RC_Circuit_N8_1","RC_Circuit_N10_1","RC_Circuit_N12_1","RC_Circuit_N14_1","RC_Circuit_N16_1","RC_Circuit_N18_1","RC_Circuit_N20_1"];
-Fc = [];
+Fk31 = [];
 x = [8,10,12,14,16,18,20];
 data_real = [K_R_N8_31_new_A;K_R_N10_31_new_A;K_R_N12_31_new_A;K_R_N14_31_new_A;K_R_N16_31_new_A;K_R_N18_31_new_A;K_R_N20_31_new_A];
 data_imag = [K_I_N8_31_new_A;K_I_N10_31_new_A;K_I_N12_31_new_A;K_I_N14_31_new_A;K_I_N16_31_new_A;K_I_N18_31_new_A;K_I_N20_31_new_A];
-Cslist = [5.83e-13,5.08e-13,4.5e-13,4.2e-13,4e-13,3.92e-13,3.78e-13];
-Rlist = [9,6.2,5,5,4.5,4,4,4];
-%5e-15,2.5e-14,2.5e-14,2.5e-14,2e-14,2e-14
-for i = 1
+Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
+F_K_31_A = [7.4869    6.4241    5.7051    5.1051    4.5298    4.1610    3.8384].*1.0e+07;
+Rlist = [7,6.2,4.5,5.5,4.5,4,4,4];
+Cplist = [1.7e-14,2.4e-14,2.56e-14,2.2e-14, 3.4e-14, 1.7e-14,1.5e-14];
+for i = 7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cp', 2e-14);
+    sdo.setValueInModel(model(i), 'Cp', Cplist(i));
     sdo.setValueInModel(model(i), 'Cs', Cslist(i));
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
-    Fc = [Fc, freq(I)];
-    
+    Fk31 = [Fk31, freq(I)]
+    F_K_31_A 
     figure(99)
     plot(freq,real(z_data.Z),freq, data_real(i,:))
     legend('simulation', 'experiment')
@@ -32,20 +30,16 @@ for i = 1
     legend('simulation', 'experiment')
     grid on
 end 
-CT = ((2.*pi.*Fc).^(-2))./simuL;
-%% Copper smaller Cp
+CT31 = ((2.*pi.*Fk31).^(-2))./L_K_31_A;
+%% Study of 0.32 Copper
 freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
-simuL = ([0.829,1.16,1.48,1.81,2.13,2.43,2.75]./(0.2*pi)).*1e-6;
-simu = [170.0150,137.0315,116.0420,102.0490,91.0545,82.0590,75.0625].*1e+6;
-F_C_32 = [7.6244    6.5741    5.8615    5.2738    4.7237    4.2361    3.9110].*1.0e+07;
-C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;
-simuC = ((2.*pi.*simu).^(-2))./simuL;
+F_C_32 = [7.5869    6.5741    5.8615    5.2363    4.7237    4.2486    3.9110].*1.0e+07;
 data_real = [C_R_N8_32_A;C_R_N10_32_A;C_R_N12_32_A;C_R_N14_32_A;C_R_N16_32_A;C_R_N18_32_A;C_R_N20_32_A];
 data_imag = [C_I_N8_32_A;C_I_N10_32_A;C_I_N12_32_A;C_I_N14_32_A;C_I_N16_32_A;C_I_N18_32_A;C_I_N20_32_A];
 model = ["RC_Circuit_N8C_1","RC_Circuit_N10C_1","RC_Circuit_N12C_1","RC_Circuit_N14C_1","RC_Circuit_N16C_1","RC_Circuit_N18C_1","RC_Circuit_N20C_1"];
-Fc2 = [];
+Fc32 = [];
 x = [8,10,12,14,16,18,20];
-Cslist = [5.83e-13,5.08e-13,4.5e-13,4.2e-13,4e-13,3.92e-13,3.78e-13];
+Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
 for i = 7
     open(model(i))
@@ -55,7 +49,8 @@ for i = 7
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
-    Fc2 = [Fc2, freq(I)];
+    Fc32 = [Fc32, freq(I)]
+    F_C_32
     
     figure(99)
     plot(freq,real(z_data.Z),freq, data_real(i,:))
@@ -67,7 +62,72 @@ for i = 7
     grid on
     
 end 
-CT2 = ((2.*pi.*Fc2).^(-2))./simuL;
+CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
+%% Study of 0.5 Copper
+freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
+data_real = [C_R_N8_50_A;C_R_N10_50_A;C_R_N12_50_A;C_R_N14_50_A;C_R_N16_50_A;C_R_N18_50_A;C_R_N20_50_A];
+data_imag = [C_I_N8_50_A;C_I_N10_50_A;C_I_N12_50_A;C_I_N14_50_A;C_I_N16_50_A;C_I_N18_50_A;C_I_N20_50_A];
+model = ["RC_Circuit_N8C_1","RC_Circuit_N10C_1","RC_Circuit_N12C_1","RC_Circuit_N14C_1","RC_Circuit_N16C_1","RC_Circuit_N18C_1","RC_Circuit_N20C_1"];
+Fc50 = [];
+F_C_50 = [7.6369    6.5616    5.8240    5.2363    4.7362    4.3111    4.0360].*1.0e+07;
+x = [8,10,12,14,16,18,20];
+Cslist = [5.75e-13,5.15e-13,4.64e-13,4.25e-13,4.02e-13,3.86e-13,3.6e-13];
+Rlist = [9,3,2,2,1.8,1.2,1];
+for i = 7
+    open(model(i))
+
+    sdo.setValueInModel(model(i), 'Cs', Cslist(i));
+    sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
+    sdo.setValueInModel(model(i), 'R', Rlist(i));
+    z_data = power_zmeter(model(i), freq'); 
+    [M,I] = max(real(z_data.Z));
+    Fc50 = [Fc50, freq(I)]
+    F_C_50
+    
+    figure(99)
+    plot(freq,real(z_data.Z),freq, data_real(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    figure(98)
+    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    
+end 
+CT50 = ((2.*pi.*Fc50).^(-2))./L_C_50_A;
+%% Knitted 0.48
+freq = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
+data_real = [K_R_N8_48_A;K_R_N10_48_A;K_R_N12_48_A;K_R_N14_48_A;K_R_N16_48_A;K_R_N18_48_A;K_R_N20_48_A];
+data_imag = [K_I_N8_48_A;K_I_N10_48_A;K_I_N12_48_A;K_I_N14_48_A;K_I_N16_48_A;K_I_N18_48_A;K_I_N20_48_A];
+model = ["RC_Circuit_N8_1","RC_Circuit_N10_1","RC_Circuit_N12_1","RC_Circuit_N14_1","RC_Circuit_N16_1","RC_Circuit_N18_1","RC_Circuit_N20_1"];
+Fk48 = [];
+F_K_48 = [7.5994    6.5616    5.8240    5.1988    4.68617    4.2611    3.8860].*1.0e+07;
+x = [8,10,12,14,16,18,20];
+Cslist = [5.75e-13,5.15e-13,4.64e-13,4.25e-13,4.02e-13,3.86e-13,3.6e-13];
+Cplist = [0.6e-14,0.1e-14,0.1e-14,0.6e-14,0.8e-14,0.9e-14,2.8e-14];
+Rlist = [8.5,5,4,3,4,3,2.5];
+for i = 7
+    open(model(i))
+    sdo.setValueInModel(model(i), 'Cp', Cplist(i));
+    sdo.setValueInModel(model(i), 'Cs', Cslist(i));
+    sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
+    sdo.setValueInModel(model(i), 'R', Rlist(i));
+    z_data = power_zmeter(model(i), freq'); 
+    [M,I] = max(real(z_data.Z));
+    Fk48 = [Fk48, freq(I)]
+    F_K_48
+    
+    figure(99)
+    plot(freq,real(z_data.Z),freq, data_real(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    figure(98)
+    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    
+end 
+CT48 = ((2.*pi.*Fk48).^(-2))./L_K_48_A;
 %% 
 freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
 simuL = ([0.829,1.16,1.48,1.81,2.13,2.43,2.75]./(0.2*pi)).*1e-6;
