@@ -44,10 +44,13 @@ x = [8,10,12,14,16,18,20];
 Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
 %3.8e-13,3.9e-13,4e-13,4.2e-13,4.46e-13
-for i = 3
+%Cc 3.601e-13 Cs(8-20)6.53e-12 6.58e-12 5.795e-12 5.1e-12 4.41e-12 4.4e-12 2.96e-12
+%Cc 2.86e-13 Cs 8.64e-12 9.95e-12 1.053e-11 1.14e-11 1.253e-11 1.43e-11 1.56e-11 
+%Cc 2.6e-13  Cs 9.48e-12 1.11e-11 1.22e-11  1.35e-11 1.52e-11  1.84e-11 2.02e-11 
+for i = 7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 4.46e-13);
-    sdo.setValueInModel(model(i), 'Cs', C_32_CT(i)/x(i));
+    sdo.setValueInModel(model(i), 'Cc', 2.86e-13);
+    sdo.setValueInModel(model(i), 'Cs', 1.56e-11);
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
@@ -64,7 +67,7 @@ for i = 3
     legend('simulation', 'experiment')
     grid on
     
-end 
+end
 CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
 %% Study of 0.5 Copper
 freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
