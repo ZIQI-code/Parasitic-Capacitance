@@ -43,16 +43,17 @@ Fc32 = [];
 x = [8,10,12,14,16,18,20];
 Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
-for i = 7
+%3.8e-13,3.9e-13,4e-13,4.2e-13,4.46e-13
+for i = 3
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cp', Cslist(i));
-    sdo.setValueInModel(model(i), 'Cs', Cslist(i));
+    sdo.setValueInModel(model(i), 'Cc', 4.46e-13);
+    sdo.setValueInModel(model(i), 'Cs', C_32_CT(i)/x(i));
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
-    Fc32 = [Fc32, freq(I)]
-    F_C_32
+    Fc32 = [Fc32, freq(I)];
+    F_C_32;
     
     figure(99)
     plot(freq,real(z_data.Z),freq, data_real(i,:))
