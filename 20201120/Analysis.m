@@ -35,6 +35,7 @@ CT31 = ((2.*pi.*Fk31).^(-2))./L_K_31_A;
 %% Study of 0.32 Copper
 freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
 F_C_32 = [7.5869    6.5741    5.8615    5.2363    4.7237    4.2486    3.9110].*1.0e+07;
+C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;
 data_real = [C_R_N8_32_A;C_R_N10_32_A;C_R_N12_32_A;C_R_N14_32_A;C_R_N16_32_A;C_R_N18_32_A;C_R_N20_32_A];
 data_imag = [C_I_N8_32_A;C_I_N10_32_A;C_I_N12_32_A;C_I_N14_32_A;C_I_N16_32_A;C_I_N18_32_A;C_I_N20_32_A];
 model = ["RC_Circuit_N8C_1","RC_Circuit_N10C_1","RC_Circuit_N12C_1","RC_Circuit_N14C_1","RC_Circuit_N16C_1","RC_Circuit_N18C_1","RC_Circuit_N20C_1"];
@@ -42,9 +43,9 @@ Fc32 = [];
 x = [8,10,12,14,16,18,20];
 Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
-for i = 1:7
+for i = 7
     open(model(i))
-
+    sdo.setValueInModel(model(i), 'Cp', Cslist(i));
     sdo.setValueInModel(model(i), 'Cs', Cslist(i));
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
@@ -66,6 +67,7 @@ end
 CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
 %% Study of 0.5 Copper
 freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
+C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;
 data_real = [C_R_N8_50_A;C_R_N10_50_A;C_R_N12_50_A;C_R_N14_50_A;C_R_N16_50_A;C_R_N18_50_A;C_R_N20_50_A];
 data_imag = [C_I_N8_50_A;C_I_N10_50_A;C_I_N12_50_A;C_I_N14_50_A;C_I_N16_50_A;C_I_N18_50_A;C_I_N20_50_A];
 model = ["RC_Circuit_N8C_1","RC_Circuit_N10C_1","RC_Circuit_N12C_1","RC_Circuit_N14C_1","RC_Circuit_N16C_1","RC_Circuit_N18C_1","RC_Circuit_N20C_1"];
@@ -74,9 +76,9 @@ F_C_50 = [7.6369    6.5616    5.8240    5.2363    4.7362    4.3111    4.0360].*1
 x = [8,10,12,14,16,18,20];
 Cslist = [5.75e-13,5.15e-13,4.64e-13,4.25e-13,4.02e-13,3.86e-13,3.6e-13];
 Rlist = [9,3,2,2,1.8,1.2,1];
-for i = 1:7
+for i = 7
     open(model(i))
-
+    sdo.setValueInModel(model(i), 'Cc', 5e-13);
     sdo.setValueInModel(model(i), 'Cs', Cslist(i));
     sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
