@@ -1318,7 +1318,7 @@ legend('C-32','K-31','C-50','K-48')
 grid on
 
 figure(94)
-plot(x2,Diff_30_CT)
+plot(x2,Diff_30_CT./x2)
 title('CT Difference')
 legend('0.3mm')
 grid on
