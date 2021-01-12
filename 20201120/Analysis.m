@@ -7,31 +7,39 @@ Fk31 = [];
 x = [8,10,12,14,16,18,20];
 data_real = [K_R_N8_31_new_A;K_R_N10_31_new_A;K_R_N12_31_new_A;K_R_N14_31_new_A;K_R_N16_31_new_A;K_R_N18_31_new_A;K_R_N20_31_new_A];
 data_imag = [K_I_N8_31_new_A;K_I_N10_31_new_A;K_I_N12_31_new_A;K_I_N14_31_new_A;K_I_N16_31_new_A;K_I_N18_31_new_A;K_I_N20_31_new_A];
-
 F_K_31_A = [7.4869    6.4241    5.7051    5.1051    4.5298    4.1610    3.8384].*1.0e+07;
+K_31_CT = 1./(4.*(pi.*F_K_31_A).^2 .*L_K_31_new_A);
 Rlist = [7,6.2,4.5,5.5,4.5,4,4,4];
-Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
-Cplist = [1.7e-14,2.4e-14,2.56e-14,2.2e-14, 2.5e-14, 1.7e-14,2e-14];
-for i = 1
-    open(model(i))
-    sdo.setValueInModel(model(i), 'Cp', Cplist(i));
-    sdo.setValueInModel(model(i), 'Cs', Cslist(i));
+% Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
+Cplist = [0.1e-14,2.4e-14,2.56e-14,2.2e-14, 2.5e-14, 1.7e-14,2e-14];
+for i = 1:7
+%     open(model(i))
+    sdo.setValueInModel(model(i), 'Cp', 1.5e-14);
+    sdo.setValueInModel(model(i), 'Cc', 3.33e-13);
+    sdo.setValueInModel(model(i), 'Cs', 8.1e-12);
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
-    Fk31 = [Fk31, freq(I)]
-    F_K_31_A 
-    figure(99)
-    plot(freq,real(z_data.Z),freq, data_real(i,:))
-    legend('simulation', 'experiment')
-    grid on
-    figure(98)
-    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
-    legend('simulation', 'experiment')
-    grid on
+    Fk31 = [Fk31, freq(I)];
+    F_K_31_A;
+%     figure(99)
+%     plot(freq,real(z_data.Z),freq, data_real(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
+%     figure(98)
+%     plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
 end 
 CT31 = ((2.*pi.*Fk31).^(-2))./L_K_31_A;
+figure(97)
+plot(x,CT31,x,K_31_CT)
+legend('simulation','experiment','s2')
+grid on
+title('Total Capacitance at Resonant Frequency')
+xlabel('Turn')
+ylabel('Capacitance')
 %% Study of 0.32 Copper
 freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
 F_C_32 = [7.5869    6.5741    5.8615    5.2363    4.7237    4.2486    3.9110].*1.0e+07;
@@ -39,7 +47,8 @@ C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;
 data_real = [C_R_N8_32_A;C_R_N10_32_A;C_R_N12_32_A;C_R_N14_32_A;C_R_N16_32_A;C_R_N18_32_A;C_R_N20_32_A];
 data_imag = [C_I_N8_32_A;C_I_N10_32_A;C_I_N12_32_A;C_I_N14_32_A;C_I_N16_32_A;C_I_N18_32_A;C_I_N20_32_A];
 model = ["RC_Circuit_N8C_1","RC_Circuit_N10C_1","RC_Circuit_N12C_1","RC_Circuit_N14C_1","RC_Circuit_N16C_1","RC_Circuit_N18C_1","RC_Circuit_N20C_1"];
-Fc32 = [];
+Fc32_1 = [];
+Fc32_2 = [];
 x = [8,10,12,14,16,18,20];
 Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
@@ -54,28 +63,39 @@ Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
 %Cc 3.15e-13  Cs      7.83e-12  8.637e-12 8.692e-12 8.869e-12 9.347e-12 1.036e-11
 %Cc 2.86e-13  Cs      8.64e-12  9.95e-12  1.053e-11 1.14e-11  1.253e-11 1.43e-11 1.56e-11 
 %Cc 2.6e-13   Cs      9.48e-12  1.11e-11  1.22e-11  1.35e-11  1.52e-11  1.84e-11 2.02e-11 
-for i = 5
+
+%Cc 3.33e-13  Cs      7.45e-12  7.9e-12   7.5e-12   7.5e-12   7.42e-12  8.2e-12 7.5e-12
+% Fc32_1 'Cc', 3.33e-13 'Cs', 7.5e-12
+% Fc32_2        3.25e-13      8.1e-12
+for i = 1:7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.35e-13);
-    sdo.setValueInModel(model(i), 'Cs', 7.178e-12);
+    sdo.setValueInModel(model(i), 'Cc', 3.33e-13);
+    sdo.setValueInModel(model(i), 'Cs', 8.1e-12);
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
-    Fc32 = [Fc32, freq(I)];
-    F_C_32;
+    Fc32_2 = [Fc32_2, freq(I)]
+    F_C_32
     
-    figure(99)
-    plot(freq,real(z_data.Z),freq, data_real(i,:))
-    legend('simulation', 'experiment')
-    grid on
-    figure(98)
-    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
-    legend('simulation', 'experiment')
-    grid on
+%     figure(99)
+%     plot(freq,real(z_data.Z),freq, data_real(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
+%     figure(98)
+%     plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
     
 end
-CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
+CT32_2 = ((2.*pi.*Fc32_2).^(-2))./L_C_32_A;
+figure(97)
+plot(x,CT32,x,C_32_CT,x,CT32_2)
+legend('simulation','experiment','s2')
+grid on
+title('Total Capacitance at Resonant Frequency')
+xlabel('Turn')
+ylabel('Capacitance')
 %% Study of 0.5 Copper
 freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
 C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;

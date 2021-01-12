@@ -1,13 +1,219 @@
 $begin '$base_index$'
   $begin 'properties'
     all_levels=000000000000
-    time(year=000000002021, month=000000000001, day=000000000005, hour=000000000012, min=000000000036, sec=000000000020)
+    time(year=000000002021, month=000000000001, day=000000000012, hour=000000000016, min=000000000052, sec=000000000019)
     version=000000000000
   $end 'properties'
   $begin '$base_index$'
-    $index$(pos=000000020756, lin=000000000459, lvl=000000000000)
+    $index$(pos=000000018757, lin=000000000388, lvl=000000000000)
   $end '$base_index$'
 $end '$base_index$'
+$begin 'SolutionBlock1'
+	ProductName=''
+	CircuitName='HFSSDesign1'
+	VersionID=290
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=1051
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='L=\'10mm\' pitch=\'10mm\' R_fiber=\'0.4mm\' radius=\'22mm\' turns=\'14\'', ID=387)
+		Map(V='L=\'10mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=468)
+		Map(V='L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=390)
+		Map(V='L=\'2mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=393)
+		Map(V='L=\'5mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'47.2mm\' turns=\'10\'', ID=470)
+		Map(V='L=\'5mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=469)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'1.5mm\' radius=\'47.2mm\' turns=\'10\'', ID=471)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'23.6mm\' turns=\'2\'', ID=696)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'10\'', ID=472)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'2\'', ID=645)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'3\'', ID=661)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'4\'', ID=663)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'5\'', ID=665)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'6\'', ID=667)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'7\'', ID=669)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'8\'', ID=671)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'9\'', ID=673)
+		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=697)
+		Map(V='L=\'7mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=698)
+		Map(V='L=\'8mm\' pitch=\'10mm\' R_fiber=\'0.32mm\' radius=\'22mm\' turns=\'2\'', ID=789)
+		Map(V='L=\'8mm\' pitch=\'10mm\' R_fiber=\'0.44mm\' radius=\'22mm\' turns=\'2\'', ID=788)
+		Map(V='L=\'8mm\' pitch=\'10mm\' R_fiber=\'6.5mm\' radius=\'22mm\' turns=\'2\'', ID=787)
+		Map(V='L=\'8mm\' pitch=\'10mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=785)
+		Map(V='L=\'8mm\' pitch=\'20mm\' R_fiber=\'0.32mm\' radius=\'22mm\' turns=\'2\'', ID=869)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'10\'', ID=701)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=699)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'3\'', ID=700)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'4\'', ID=734)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'5\'', ID=702)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'6\'', ID=737)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'7\'', ID=739)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'8\'', ID=741)
+		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'9\'', ID=743)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'InitialMeshes'
+		M(VID=393, Ver=290, Dir='DV393_V290.imesh/')
+		M(VID=645, Ver=290, Dir='DV645_V290.imesh/')
+		M(VID=701, Ver=290, Dir='DV701_V290.imesh/')
+		M(VID=789, Ver=290, Dir='DV789_V290.imesh/')
+	$end 'InitialMeshes'
+	MeshAssemVersionID=0
+	$begin 'NextAssemVersionID'
+		NextUniqueID=1
+		MoveBackwards=false
+	$end 'NextAssemVersionID'
+	$begin 'DefinitionMeshes'
+		$begin 'DefMeshes_Comp-1'
+			DefinitionID=-1
+			VersionID=0
+			VIDMap('L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', 392, 'L=\'2mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', 423, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'10\'', 675, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'2\'', 647, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'3\'', 662, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'4\'', 664, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'5\'', 666, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'6\'', 668, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'7\'', 670, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'8\'', 672, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'9\'', 674, 'L=\'8mm\' pitch=\'10mm\' R_fiber=\'0.32mm\' radius=\'22mm\' turns=\'2\'', 856, 'L=\'8mm\' pitch=\'20mm\' R_fiber=\'0.32mm\' radius=\'22mm\' turns=\'2\'', 870, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'10\'', 729, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', 732, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'3\'', 733, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'4\'', 735, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'5\'', 736, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'6\'', 738, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'7\'', 740, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'8\'', 742, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'9\'', 744)
+			DM(VID=392, Ver=0, Dir='NDV392_V0.dmesh/')
+			DM(VID=423, Ver=0, Dir='NDV423_V0.dmesh/')
+			DM(VID=647, Ver=0, Dir='NDV647_V0.dmesh/')
+			DM(VID=662, Ver=0, Dir='NDV662_V0.dmesh/')
+			DM(VID=664, Ver=0, Dir='NDV664_V0.dmesh/')
+			DM(VID=666, Ver=0, Dir='NDV666_V0.dmesh/')
+			DM(VID=668, Ver=0, Dir='NDV668_V0.dmesh/')
+			DM(VID=670, Ver=0, Dir='NDV670_V0.dmesh/')
+			DM(VID=672, Ver=0, Dir='NDV672_V0.dmesh/')
+			DM(VID=674, Ver=0, Dir='NDV674_V0.dmesh/')
+			DM(VID=675, Ver=0, Dir='NDV675_V0.dmesh/')
+			DM(VID=729, Ver=0, Dir='NDV729_V0.dmesh/')
+			DM(VID=732, Ver=0, Dir='NDV732_V0.dmesh/')
+			DM(VID=733, Ver=0, Dir='NDV733_V0.dmesh/')
+			DM(VID=735, Ver=0, Dir='NDV735_V0.dmesh/')
+			DM(VID=736, Ver=0, Dir='NDV736_V0.dmesh/')
+			DM(VID=738, Ver=0, Dir='NDV738_V0.dmesh/')
+			DM(VID=740, Ver=0, Dir='NDV740_V0.dmesh/')
+			DM(VID=742, Ver=0, Dir='NDV742_V0.dmesh/')
+			DM(VID=744, Ver=0, Dir='NDV744_V0.dmesh/')
+			DM(VID=856, Ver=0, Dir='NDV856_V0.dmesh/')
+			DM(VID=870, Ver=0, Dir='NDV870_V0.dmesh/')
+		$end 'DefMeshes_Comp-1'
+	$end 'DefinitionMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=393, Ver=290, Dir='DV393_MI0_V290.sd/')
+			MI(VID=645, Ver=290, Dir='DV645_MI0_V290.sd/')
+			MI(VID=701, Ver=290, Dir='DV701_MI0_V290.sd/')
+			MI(VID=789, Ver=290, Dir='DV789_MI0_V290.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock1'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=480, Instance=\'SetupDefinition\', Solution=-1, VersionID=0)'='SolutionBlock8'
+	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=481, VersionID=790)'='SolutionBlock13'
+	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=482, VersionID=790)'='SolutionBlock14'
+	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=676, VersionID=790)'='SolutionBlock15'
+$end 'BlockMapName'
+$begin 'SolutionBlock13'
+	SolutionName='AdaptivePass'
+	SolutionID=481
+	V=790
+	$begin 'States'
+		F(VID=789, Ver=790)
+		F(VID=869, Ver=790)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=1
+			M(VID=789, Ver=790, File='DV789_SOL481_M1_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL481_M1_V790.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=2
+			M(VID=789, Ver=790, File='DV789_SOL481_M2_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL481_M2_V790.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=3
+			M(VID=789, Ver=790, File='DV789_SOL481_M3_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL481_M3_V790.sd')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			M(VID=789, Ver=790, File='DV789_SOL481_M4_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL481_M4_V790.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock13'
+$begin 'SolutionBlock14'
+	SolutionName='LastAdaptive'
+	SolutionID=482
+	V=790
+	$begin 'States'
+		F(VID=789, Ver=790)
+		F(VID=869, Ver=790)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(10000000)
+		SolutionType=6
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=-1
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=789, Ver=790, File='DV789_SOL482_M0_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL482_M0_V790.sd')
+		$end 'SubData'
+	$end 'M'
+	$begin 'Fields'
+		IDDblMap(650, 20000000, 730, 10000000)
+		$begin 'DataMap'
+			VID=789
+			Ver=790
+			F(DblID=730, Dir='DV789_S482_V790_F730/')
+		$end 'DataMap'
+	$end 'Fields'
+$end 'SolutionBlock14'
+$begin 'SolutionBlock15'
+	SolutionName='Sweep'
+	SolutionID=676
+	V=790
+	$begin 'States'
+		F(VID=789, Ver=790)
+		F(VID=869, Ver=790)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies(100000, 1099500, 2099000, 3098500, 4098000, 5097500, 6097000, 7096500, 8096000, 9095500, 10095000, 11094500, 12094000, 13093500, 14093000, 15092500, 16092000, 17091500, 18091000, 19090500, 20090000, 21089500, 22089000, 23088500, 24088000, 25087500, 26087000, 27086500, 28086000, 29085500, 30085000, 31084500, 32084000, 33083500, 34083000, 35082500, 36082000, 37081500, 38081000, 39080500, 40080000, 41079500, 42079000, 43078500, 44078000, 45077500, 46077000, 47076500, 48076000, 49075500, 50075000, 51074500, 52074000, 53073500, 54073000, 55072500, 56072000, 57071500, 58071000, 59070500, 60070000, 61069500, 62069000, 63068500, 64068000, 65067500, 66067000, 67066500, 68066000, 69065500, 70065000, 71064500, 72064000, 73063500, 74063000, 75062500, 76062000, 77061500, 78061000, 79060500, 80060000, 81059500, 82059000, 83058500, 84058000, 85057500, 86057000, 87056500, 88056000, 89055500, 90055000, 91054500, 92054000, 93053500, 94053000, 95052500, 96052000, 97051500, 98051000, 99050500, 100050000, 101049500, 102049000, 103048500, 104048000, 105047500, 106047000, 107046500, 108046000, 109045500, 110045000, 111044500, 112044000, 113043500, 114043000, 115042500, 116042000, 117041500, 118041000, 119040500, 120040000, 121039500, 122039000, 123038500, 124038000, 125037500, 126037000, 127036500, 128036000, 129035500, 130035000, 131034500, 132034000, 133033500, 134033000, 135032500, 136032000, 137031500, 138031000, 139030500, 140030000, 141029500, 142029000, 143028500, 144028000, 145027500, 146027000, 147026500, 148026000, 149025500, 150025000, 151024500, 152024000, 153023500, 154023000, 155022500, 156022000, 157021500, 158021000, 159020500, 160020000, 161019500, 162019000, 163018500, 164018000, 165017500, 166017000, 167016500, 168016000, 169015500, 170015000, 171014500, 172014000, 173013500, 174013000, 175012500, 176012000, 177011500, 178011000, 179010500, 180010000, 181009500, 182009000, 183008500, 184008000, 185007500, 186007000, 187006500, 188006000, 189005500, 190005000, 191004500, 192004000, 193003500, 194003000, 195002500, 196002000, 197001500, 198001000, 199000500, 200000000)
+		SolutionType=4
+		CenterFreq=0
+	$end 'Definition'
+	IsImported=false
+	IsTable=false
+	IsMatrixDataTable=false
+	SweepID=0
+	KeepAllFastSweepFields=false
+	$begin 'M'
+		$begin 'SubData'
+			ID=0
+			M(VID=789, Ver=790, File='DV789_SOL676_M0_V790.sd')
+			M(VID=869, Ver=790, File='DV869_SOL676_M0_V790.sd')
+		$end 'SubData'
+	$end 'M'
+$end 'SolutionBlock15'
 $begin 'SolutionBlock8'
 	SimSetupID=480
 	SimSetupName='Setup1'
@@ -31,6 +237,8 @@ $begin 'SolutionBlock8'
 		EmConv(VID=739, Ver=0, EmConv='DV739_S480_V0.EMConvData')
 		EmConv(VID=741, Ver=0, EmConv='DV741_S480_V0.EMConvData')
 		EmConv(VID=743, Ver=0, EmConv='DV743_S480_V0.EMConvData')
+		EmConv(VID=789, Ver=0, EmConv='DV789_S480_V0.EMConvData')
+		EmConv(VID=869, Ver=0, EmConv='DV869_S480_V0.EMConvData')
 	$end 'EmConvergenceData'
 	IsImported=false
 	IsTable=false
@@ -38,6 +246,7 @@ $begin 'SolutionBlock8'
 	$begin 'CurrMeshes'
 		M(VID=645, Ver=0, Dir='DV645_S480_V0.cmesh/')
 		M(VID=701, Ver=0, Dir='DV701_S480_V0.cmesh/')
+		M(VID=789, Ver=0, Dir='DV789_S480_V0.cmesh/')
 	$end 'CurrMeshes'
 	MeshAssemVersionID=0
 	$begin 'NextAssemVersionID'
@@ -49,20 +258,28 @@ $begin 'SolutionBlock8'
 			ID=0
 			ADP(VID=645, Ver=0, Dir='DV645_S480_ADP0_V0.sd/')
 			ADP(VID=701, Ver=0, Dir='DV701_S480_ADP0_V0.sd/')
+			ADP(VID=789, Ver=0, Dir='DV789_S480_ADP0_V0.sd/')
 		$end 'SubData'
 		$begin 'SubData'
 			ID=1
 			ADP(VID=645, Ver=0, Dir='DV645_S480_ADP1_V0.sd/')
 			ADP(VID=701, Ver=0, Dir='DV701_S480_ADP1_V0.sd/')
+			ADP(VID=789, Ver=0, Dir='DV789_S480_ADP1_V0.sd/')
 		$end 'SubData'
 		$begin 'SubData'
 			ID=2
 			ADP(VID=645, Ver=0, Dir='DV645_S480_ADP2_V0.sd/')
 			ADP(VID=701, Ver=0, Dir='DV701_S480_ADP2_V0.sd/')
+			ADP(VID=789, Ver=0, Dir='DV789_S480_ADP2_V0.sd/')
 		$end 'SubData'
 		$begin 'SubData'
 			ID=3
 			ADP(VID=645, Ver=0, Dir='DV645_S480_ADP3_V0.sd/')
+			ADP(VID=789, Ver=0, Dir='DV789_S480_ADP3_V0.sd/')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			ADP(VID=789, Ver=0, Dir='DV789_S480_ADP4_V0.sd/')
 		$end 'SubData'
 	$end 'ADP'
 	$begin 'SU'
@@ -70,56 +287,33 @@ $begin 'SolutionBlock8'
 			ID=1
 			SU(VID=645, Ver=0, File='DV645_S480_SD1_V0.su')
 			SU(VID=701, Ver=0, File='DV701_S480_SD1_V0.su')
+			SU(VID=789, Ver=0, File='DV789_S480_SD1_V0.su')
 		$end 'SubData'
 		$begin 'SubData'
 			ID=2
 			SU(VID=645, Ver=0, File='DV645_S480_SD2_V0.su')
 			SU(VID=701, Ver=0, File='DV701_S480_SD2_V0.su')
+			SU(VID=789, Ver=0, File='DV789_S480_SD2_V0.su')
 		$end 'SubData'
 		$begin 'SubData'
 			ID=3
 			SU(VID=645, Ver=0, File='DV645_S480_SD3_V0.su')
+			SU(VID=789, Ver=0, File='DV789_S480_SD3_V0.su')
+		$end 'SubData'
+		$begin 'SubData'
+			ID=4
+			SU(VID=789, Ver=0, File='DV789_S480_SD4_V0.su')
 		$end 'SubData'
 	$end 'SU'
 	$begin 'WaveAdapt'
-		WA(VID=472, Ver=0, A=1)
 		WA(VID=645, Ver=0, A=1)
-		WA(VID=661, Ver=0, A=1)
-		WA(VID=663, Ver=0, A=1)
-		WA(VID=665, Ver=0, A=1)
-		WA(VID=667, Ver=0, A=1)
-		WA(VID=669, Ver=0, A=1)
-		WA(VID=671, Ver=0, A=1)
-		WA(VID=673, Ver=0, A=1)
-		WA(VID=699, Ver=0, A=1)
-		WA(VID=700, Ver=0, A=1)
 		WA(VID=701, Ver=0, A=1)
-		WA(VID=702, Ver=0, A=1)
-		WA(VID=734, Ver=0, A=1)
-		WA(VID=737, Ver=0, A=1)
-		WA(VID=739, Ver=0, A=1)
-		WA(VID=741, Ver=0, A=1)
-		WA(VID=743, Ver=0, A=1)
+		WA(VID=789, Ver=0, A=1)
 	$end 'WaveAdapt'
 	$begin 'LastPassNumbers'
-		LP(VID=472, Ver=0, P=2)
 		LP(VID=645, Ver=0, P=3)
-		LP(VID=661, Ver=0, P=3)
-		LP(VID=663, Ver=0, P=2)
-		LP(VID=665, Ver=0, P=2)
-		LP(VID=667, Ver=0, P=2)
-		LP(VID=669, Ver=0, P=2)
-		LP(VID=671, Ver=0, P=2)
-		LP(VID=673, Ver=0, P=2)
-		LP(VID=699, Ver=0, P=3)
-		LP(VID=700, Ver=0, P=3)
 		LP(VID=701, Ver=0, P=2)
-		LP(VID=702, Ver=0, P=3)
-		LP(VID=734, Ver=0, P=3)
-		LP(VID=737, Ver=0, P=3)
-		LP(VID=739, Ver=0, P=3)
-		LP(VID=741, Ver=0, P=3)
-		LP(VID=743, Ver=0, P=3)
+		LP(VID=789, Ver=0, P=4)
 	$end 'LastPassNumbers'
 	$begin 'Profiles'
 		P(VID=472, Ver=0, File='DV472_S480_V0.profile')
@@ -140,159 +334,39 @@ $begin 'SolutionBlock8'
 		P(VID=739, Ver=0, File='DV739_S480_V0.profile')
 		P(VID=741, Ver=0, File='DV741_S480_V0.profile')
 		P(VID=743, Ver=0, File='DV743_S480_V0.profile')
+		P(VID=789, Ver=0, File='DV789_S480_V0.profile')
+		P(VID=869, Ver=0, File='DV869_S480_V0.profile')
 	$end 'Profiles'
 	$begin 'MI'
 		$begin 'SubData'
 			ID=0
 			MI(VID=645, Ver=0, Dir='DV645_S480_MI0_V0.sd/')
 			MI(VID=701, Ver=0, Dir='DV701_S480_MI0_V0.sd/')
+			MI(VID=789, Ver=0, Dir='DV789_S480_MI0_V0.sd/')
 		$end 'SubData'
 	$end 'MI'
 $end 'SolutionBlock8'
-$begin 'BlockMapName'
-	FileHeader='SolutionBlock1'
-	'SolutionKey(SimSetup=480, Instance=\'SetupDefinition\', Solution=-1, VersionID=0)'='SolutionBlock8'
-	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=481, VersionID=0)'='SolutionBlock6'
-	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=482, VersionID=706)'='SolutionBlock10'
-	'SolutionKey(SimSetup=480, Instance=\'SolutionDefinition\', Solution=676, VersionID=747)'='SolutionBlock12'
-$end 'BlockMapName'
-$begin 'SolutionBlock1'
-	ProductName=''
-	CircuitName='HFSSDesign1'
-	VersionID=290
-	PostProcess=false
-	LossLess=true
-	NextUniqueID=761
-	MoveBackwards=false
-	$begin 'VariationIDs'
-		Map(V='L=\'10mm\' pitch=\'10mm\' R_fiber=\'0.4mm\' radius=\'22mm\' turns=\'14\'', ID=387)
-		Map(V='L=\'10mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=468)
-		Map(V='L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=390)
-		Map(V='L=\'2mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=393)
-		Map(V='L=\'5mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'47.2mm\' turns=\'10\'', ID=470)
-		Map(V='L=\'5mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', ID=469)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'1.5mm\' radius=\'47.2mm\' turns=\'10\'', ID=471)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'23.6mm\' turns=\'2\'', ID=696)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'10\'', ID=472)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'2\'', ID=645)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'3\'', ID=661)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'4\'', ID=663)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'5\'', ID=665)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'6\'', ID=667)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'7\'', ID=669)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'8\'', ID=671)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'9\'', ID=673)
-		Map(V='L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=697)
-		Map(V='L=\'7mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=698)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'10\'', ID=701)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', ID=699)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'3\'', ID=700)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'4\'', ID=734)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'5\'', ID=702)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'6\'', ID=737)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'7\'', ID=739)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'8\'', ID=741)
-		Map(V='L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'9\'', ID=743)
-	$end 'VariationIDs'
-	$begin 'LinkedDataList'
-	$end 'LinkedDataList'
-	$begin 'InitialMeshes'
-		M(VID=393, Ver=290, Dir='DV393_V290.imesh/')
-		M(VID=645, Ver=290, Dir='DV645_V290.imesh/')
-		M(VID=701, Ver=290, Dir='DV701_V290.imesh/')
-	$end 'InitialMeshes'
-	MeshAssemVersionID=0
-	$begin 'NextAssemVersionID'
-		NextUniqueID=1
-		MoveBackwards=false
-	$end 'NextAssemVersionID'
-	$begin 'DefinitionMeshes'
-		$begin 'DefMeshes_Comp-1'
-			DefinitionID=-1
-			VersionID=0
-			VIDMap('L=\'1mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', 392, 'L=\'2mm\' pitch=\'2mm\' R_fiber=\'1.5mm\' radius=\'5mm\' turns=\'10\'', 423, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'10\'', 675, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'2\'', 647, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'3\'', 662, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'4\'', 664, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'5\'', 666, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'6\'', 668, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'7\'', 670, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'8\'', 672, 'L=\'5mm\' pitch=\'6.9mm\' R_fiber=\'3.25mm\' radius=\'47.2mm\' turns=\'9\'', 674, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'10\'', 729, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'2\'', 732, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'3\'', 733, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'4\'', 735, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'5\'', 736, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'6\'', 738, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'7\'', 740, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'8\'', 742, 'L=\'8mm\' pitch=\'6.9mm\' R_fiber=\'6.5mm\' radius=\'23.6mm\' turns=\'9\'', 744)
-			DM(VID=392, Ver=0, Dir='NDV392_V0.dmesh/')
-			DM(VID=423, Ver=0, Dir='NDV423_V0.dmesh/')
-			DM(VID=647, Ver=0, Dir='NDV647_V0.dmesh/')
-			DM(VID=662, Ver=0, Dir='NDV662_V0.dmesh/')
-			DM(VID=664, Ver=0, Dir='NDV664_V0.dmesh/')
-			DM(VID=666, Ver=0, Dir='NDV666_V0.dmesh/')
-			DM(VID=668, Ver=0, Dir='NDV668_V0.dmesh/')
-			DM(VID=670, Ver=0, Dir='NDV670_V0.dmesh/')
-			DM(VID=672, Ver=0, Dir='NDV672_V0.dmesh/')
-			DM(VID=674, Ver=0, Dir='NDV674_V0.dmesh/')
-			DM(VID=675, Ver=0, Dir='NDV675_V0.dmesh/')
-			DM(VID=729, Ver=0, Dir='NDV729_V0.dmesh/')
-			DM(VID=732, Ver=0, Dir='NDV732_V0.dmesh/')
-			DM(VID=733, Ver=0, Dir='NDV733_V0.dmesh/')
-			DM(VID=735, Ver=0, Dir='NDV735_V0.dmesh/')
-			DM(VID=736, Ver=0, Dir='NDV736_V0.dmesh/')
-			DM(VID=738, Ver=0, Dir='NDV738_V0.dmesh/')
-			DM(VID=740, Ver=0, Dir='NDV740_V0.dmesh/')
-			DM(VID=742, Ver=0, Dir='NDV742_V0.dmesh/')
-			DM(VID=744, Ver=0, Dir='NDV744_V0.dmesh/')
-		$end 'DefMeshes_Comp-1'
-	$end 'DefinitionMeshes'
-	$begin 'MI'
-		$begin 'SubData'
-			ID=0
-			MI(VID=393, Ver=290, Dir='DV393_MI0_V290.sd/')
-			MI(VID=645, Ver=290, Dir='DV645_MI0_V290.sd/')
-			MI(VID=701, Ver=290, Dir='DV701_MI0_V290.sd/')
-		$end 'SubData'
-	$end 'MI'
-$end 'SolutionBlock1'
-$begin 'SolutionBlock12'
-	SolutionName='Sweep'
-	SolutionID=676
-	V=747
-	$begin 'States'
-		F(VID=699, Ver=747)
-		F(VID=700, Ver=747)
-		F(VID=701, Ver=747)
-		F(VID=702, Ver=747)
-		F(VID=734, Ver=747)
-		F(VID=737, Ver=747)
-		F(VID=739, Ver=747)
-		F(VID=741, Ver=747)
-		F(VID=743, Ver=747)
-	$end 'States'
-	$begin 'Definition'
-		SamplingInterpolation=false
-		Frequencies(10000, 759950, 1509900, 2259850, 3009800, 3759750, 4509700, 5259650, 6009600, 6759550, 7509500, 8259450, 9009400, 9759350, 10509300, 11259250, 12009200, 12759150, 13509100, 14259050, 15009000, 15758950, 16508900, 17258850, 18008800, 18758750, 19508700, 20258650, 21008600, 21758550, 22508500, 23258450, 24008400, 24758350, 25508300, 26258250, 27008200, 27758150, 28508100, 29258050, 30008000, 30757950, 31507900, 32257850, 33007800, 33757750, 34507700, 35257650, 36007600, 36757550, 37507500, 38257450, 39007400, 39757350, 40507300, 41257250, 42007200, 42757150, 43507100, 44257050, 45007000, 45756950, 46506900, 47256850, 48006800, 48756750, 49506700, 50256650, 51006600, 51756550, 52506500, 53256450, 54006400, 54756350, 55506300, 56256250, 57006200, 57756150, 58506100, 59256050, 60006000, 60755950, 61505900, 62255850, 63005800, 63755750, 64505700, 65255650, 66005600, 66755550, 67505500, 68255450, 69005400, 69755350, 70505300, 71255250, 72005200, 72755150, 73505100, 74255050, 75005000, 75754950, 76504900, 77254850, 78004800, 78754750, 79504700, 80254650, 81004600, 81754550, 82504500, 83254450, 84004400, 84754350, 85504300, 86254250, 87004200, 87754150, 88504100, 89254050, 90004000, 90753950, 91503900, 92253850, 93003800, 93753750, 94503700, 95253650, 96003600, 96753550, 97503500, 98253450, 99003400, 99753350, 100503300, 101253250, 102003200, 102753150, 103503100, 104253050, 105003000, 105752950, 106502900, 107252850, 108002800, 108752750, 109502700, 110252650, 111002600, 111752550, 112502500, 113252450, 114002400, 114752350, 115502300, 116252250, 117002200, 117752150, 118502100, 119252050, 120002000, 120751950, 121501900, 122251850, 123001800, 123751750, 124501700, 125251650, 126001600, 126751550, 127501500, 128251450, 129001400, 129751350, 130501300, 131251250, 132001200, 132751150, 133501100, 134251050, 135001000, 135750950, 136500900, 137250850, 138000800, 138750750, 139500700, 140250650, 141000600, 141750550, 142500500, 143250450, 144000400, 144750350, 145500300, 146250250, 147000200, 147750150, 148500100, 149250050, 150000000)
-		SolutionType=4
-		CenterFreq=0
-	$end 'Definition'
-	IsImported=false
-	IsTable=false
-	IsMatrixDataTable=false
-	SweepID=0
-	KeepAllFastSweepFields=false
-	$begin 'M'
-		$begin 'SubData'
-			ID=0
-			M(VID=699, Ver=747, File='DV699_SOL676_M0_V747.sd')
-			M(VID=700, Ver=747, File='DV700_SOL676_M0_V747.sd')
-			M(VID=701, Ver=747, File='DV701_SOL676_M0_V747.sd')
-			M(VID=702, Ver=747, File='DV702_SOL676_M0_V747.sd')
-			M(VID=734, Ver=747, File='DV734_SOL676_M0_V747.sd')
-			M(VID=737, Ver=747, File='DV737_SOL676_M0_V747.sd')
-			M(VID=739, Ver=747, File='DV739_SOL676_M0_V747.sd')
-			M(VID=741, Ver=747, File='DV741_SOL676_M0_V747.sd')
-			M(VID=743, Ver=747, File='DV743_SOL676_M0_V747.sd')
-		$end 'SubData'
-	$end 'M'
-	$begin 'Fields'
-		IDDblMap(731, 25005000, 760, 75005000)
-		$begin 'DataMap'
-			VID=701
-			Ver=747
-			F(DblID=760, Dir='DV701_S676_V747_F760/')
-		$end 'DataMap'
-	$end 'Fields'
-$end 'SolutionBlock12'
+$begin 'ResponseSurfaceCache'
+	ResponseSurfaceCache()
+$end 'ResponseSurfaceCache'
+$begin 'OptimetricsResult2'
+	V=2
+	svi('L', '8mm')
+	svi('R_fiber', '0.32mm')
+	vi('pitch', '10mm', '10mm', '10mm')
+	svi('turns', '2')
+	gver(0)
+	ev(482, 790)
+	ev(676, 790)
+	ev(802, 0)
+	var(8.000000000000000e-003, 3.200000000000000e-004, 1.000000000000000e-002, 2.000000000000000e+000)
+	gvs(1.000000000000000e-002)
+	var(8.000000000000000e-003, 3.200000000000000e-004, 2.000000000000000e-002, 2.000000000000000e+000)
+	gvs(2.000000000000000e-002)
+$end 'OptimetricsResult2'
 $begin 'OptimetricsResults'
 	'6:4'='OptimetricsResult1'
+	'7:0'='OptimetricsResult2'
 $end 'OptimetricsResults'
 $begin 'OptimetricsResult1'
 	V=2
@@ -321,164 +395,19 @@ $begin 'OptimetricsResult1'
 	var(8.000000000000000e-003, 6.900000000000001e-003, 1.000000000000000e+001)
 	gvs(1.000000000000000e+001)
 $end 'OptimetricsResult1'
-$begin 'ResponseSurfaceCache'
-	ResponseSurfaceCache()
-$end 'ResponseSurfaceCache'
-$begin 'SolutionBlock6'
-	SolutionName='AdaptivePass'
-	SolutionID=481
-	V=0
-	$begin 'States'
-		F(VID=472, Ver=0)
-		F(VID=645, Ver=0)
-		F(VID=661, Ver=0)
-		F(VID=663, Ver=0)
-		F(VID=665, Ver=0)
-		F(VID=667, Ver=0)
-		F(VID=669, Ver=0)
-		F(VID=671, Ver=0)
-		F(VID=673, Ver=0)
-		F(VID=699, Ver=0)
-		F(VID=700, Ver=0)
-		F(VID=701, Ver=0)
-		F(VID=702, Ver=0)
-		F(VID=734, Ver=0)
-		F(VID=737, Ver=0)
-		F(VID=739, Ver=0)
-		F(VID=741, Ver=0)
-		F(VID=743, Ver=0)
-	$end 'States'
-	$begin 'Definition'
-		SamplingInterpolation=false
-		Frequencies(10000000, 20000000)
-		SolutionType=6
-		CenterFreq=0
-	$end 'Definition'
-	IsImported=false
-	IsTable=false
-	IsMatrixDataTable=false
-	SweepID=-1
-	KeepAllFastSweepFields=false
-	$begin 'M'
-		$begin 'SubData'
-			ID=1
-			M(VID=472, Ver=0, File='DV472_SOL481_M1_V0.sd')
-			M(VID=645, Ver=0, File='DV645_SOL481_M1_V0.sd')
-			M(VID=661, Ver=0, File='DV661_SOL481_M1_V0.sd')
-			M(VID=663, Ver=0, File='DV663_SOL481_M1_V0.sd')
-			M(VID=665, Ver=0, File='DV665_SOL481_M1_V0.sd')
-			M(VID=667, Ver=0, File='DV667_SOL481_M1_V0.sd')
-			M(VID=669, Ver=0, File='DV669_SOL481_M1_V0.sd')
-			M(VID=671, Ver=0, File='DV671_SOL481_M1_V0.sd')
-			M(VID=673, Ver=0, File='DV673_SOL481_M1_V0.sd')
-			M(VID=699, Ver=0, File='DV699_SOL481_M1_V0.sd')
-			M(VID=700, Ver=0, File='DV700_SOL481_M1_V0.sd')
-			M(VID=701, Ver=0, File='DV701_SOL481_M1_V0.sd')
-			M(VID=702, Ver=0, File='DV702_SOL481_M1_V0.sd')
-			M(VID=734, Ver=0, File='DV734_SOL481_M1_V0.sd')
-			M(VID=737, Ver=0, File='DV737_SOL481_M1_V0.sd')
-			M(VID=739, Ver=0, File='DV739_SOL481_M1_V0.sd')
-			M(VID=741, Ver=0, File='DV741_SOL481_M1_V0.sd')
-			M(VID=743, Ver=0, File='DV743_SOL481_M1_V0.sd')
-		$end 'SubData'
-		$begin 'SubData'
-			ID=2
-			M(VID=472, Ver=0, File='DV472_SOL481_M2_V0.sd')
-			M(VID=645, Ver=0, File='DV645_SOL481_M2_V0.sd')
-			M(VID=661, Ver=0, File='DV661_SOL481_M2_V0.sd')
-			M(VID=663, Ver=0, File='DV663_SOL481_M2_V0.sd')
-			M(VID=665, Ver=0, File='DV665_SOL481_M2_V0.sd')
-			M(VID=667, Ver=0, File='DV667_SOL481_M2_V0.sd')
-			M(VID=669, Ver=0, File='DV669_SOL481_M2_V0.sd')
-			M(VID=671, Ver=0, File='DV671_SOL481_M2_V0.sd')
-			M(VID=673, Ver=0, File='DV673_SOL481_M2_V0.sd')
-			M(VID=699, Ver=0, File='DV699_SOL481_M2_V0.sd')
-			M(VID=700, Ver=0, File='DV700_SOL481_M2_V0.sd')
-			M(VID=701, Ver=0, File='DV701_SOL481_M2_V0.sd')
-			M(VID=702, Ver=0, File='DV702_SOL481_M2_V0.sd')
-			M(VID=734, Ver=0, File='DV734_SOL481_M2_V0.sd')
-			M(VID=737, Ver=0, File='DV737_SOL481_M2_V0.sd')
-			M(VID=739, Ver=0, File='DV739_SOL481_M2_V0.sd')
-			M(VID=741, Ver=0, File='DV741_SOL481_M2_V0.sd')
-			M(VID=743, Ver=0, File='DV743_SOL481_M2_V0.sd')
-		$end 'SubData'
-		$begin 'SubData'
-			ID=3
-			M(VID=645, Ver=0, File='DV645_SOL481_M3_V0.sd')
-			M(VID=661, Ver=0, File='DV661_SOL481_M3_V0.sd')
-			M(VID=699, Ver=0, File='DV699_SOL481_M3_V0.sd')
-			M(VID=700, Ver=0, File='DV700_SOL481_M3_V0.sd')
-			M(VID=702, Ver=0, File='DV702_SOL481_M3_V0.sd')
-			M(VID=734, Ver=0, File='DV734_SOL481_M3_V0.sd')
-			M(VID=737, Ver=0, File='DV737_SOL481_M3_V0.sd')
-			M(VID=739, Ver=0, File='DV739_SOL481_M3_V0.sd')
-			M(VID=741, Ver=0, File='DV741_SOL481_M3_V0.sd')
-			M(VID=743, Ver=0, File='DV743_SOL481_M3_V0.sd')
-		$end 'SubData'
-	$end 'M'
-$end 'SolutionBlock6'
-$begin 'SolutionBlock10'
-	SolutionName='LastAdaptive'
-	SolutionID=482
-	V=706
-	$begin 'States'
-		F(VID=699, Ver=706)
-		F(VID=700, Ver=706)
-		F(VID=701, Ver=706)
-		F(VID=702, Ver=706)
-		F(VID=734, Ver=706)
-		F(VID=737, Ver=706)
-		F(VID=739, Ver=706)
-		F(VID=741, Ver=706)
-		F(VID=743, Ver=706)
-	$end 'States'
-	$begin 'Definition'
-		SamplingInterpolation=false
-		Frequencies(10000000)
-		SolutionType=6
-		CenterFreq=0
-	$end 'Definition'
-	IsImported=false
-	IsTable=false
-	IsMatrixDataTable=false
-	SweepID=-1
-	KeepAllFastSweepFields=false
-	$begin 'M'
-		$begin 'SubData'
-			ID=0
-			M(VID=699, Ver=706, File='DV699_SOL482_M0_V706.sd')
-			M(VID=700, Ver=706, File='DV700_SOL482_M0_V706.sd')
-			M(VID=701, Ver=706, File='DV701_SOL482_M0_V706.sd')
-			M(VID=702, Ver=706, File='DV702_SOL482_M0_V706.sd')
-			M(VID=734, Ver=706, File='DV734_SOL482_M0_V706.sd')
-			M(VID=737, Ver=706, File='DV737_SOL482_M0_V706.sd')
-			M(VID=739, Ver=706, File='DV739_SOL482_M0_V706.sd')
-			M(VID=741, Ver=706, File='DV741_SOL482_M0_V706.sd')
-			M(VID=743, Ver=706, File='DV743_SOL482_M0_V706.sd')
-		$end 'SubData'
-	$end 'M'
-	$begin 'Fields'
-		IDDblMap(650, 20000000, 730, 10000000)
-		$begin 'DataMap'
-			VID=701
-			Ver=706
-			F(DblID=730, Dir='DV701_S482_V706_F730/')
-		$end 'DataMap'
-	$end 'Fields'
-$end 'SolutionBlock10'
 $begin '$index$'
 	$begin '$index$'
-		BlockMapName(pos=5018, lin=142, lvl=0)
-		OptimetricsResults(pos=14954, lin=284, lvl=0)
-		OptimetricsResult1(pos=15036, lin=287, lvl=0)
-		ResponseSurfaceCache(pos=16157, lin=314, lvl=0)
-		SolutionBlock6(pos=16239, lin=317, lvl=0)
-		SolutionBlock10(pos=19463, lin=410, lvl=0)
-		SolutionBlock12(pos=11619, lin=235, lvl=0)
-		SolutionBlock8(pos=370, lin=1, lvl=0)
-		SolutionBlock1(pos=5515, lin=149, lvl=0)
+		OptimetricsResult1(pos=17636, lin=361, lvl=0)
+		SolutionBlock13(pos=7779, lin=103, lvl=0)
+		SolutionBlock14(pos=8819, lin=145, lvl=0)
+		SolutionBlock15(pos=9573, lin=180, lvl=0)
+		BlockMapName(pos=7279, lin=96, lvl=0)
+		SolutionBlock1(pos=370, lin=1, lvl=0)
+		SolutionBlock8(pos=12233, lin=207, lvl=0)
+		ResponseSurfaceCache(pos=16977, lin=339, lvl=0)
+		OptimetricsResult2(pos=17059, lin=342, lvl=0)
+		OptimetricsResults(pos=17526, lin=357, lvl=0)
 		$base_index$(pos=0, lin=1, lvl=0)
-		$index$(pos=20756, lin=459, lvl=0)
+		$index$(pos=18757, lin=388, lvl=0)
 	$end '$index$'
 $end '$index$'
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

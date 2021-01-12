@@ -105,6 +105,25 @@ $begin 'AnsoftProject'
 				LibLocation='SysLibrary'
 				ModSinceLib=false
 			$end 'pec'
+			$begin 'copper'
+				CoordinateSystemType='Cartesian'
+				BulkOrSurfaceType=1
+				$begin 'PhysicsTypes'
+					set('Electromagnetic', 'Thermal', 'Structural')
+				$end 'PhysicsTypes'
+				permeability='0.999991'
+				conductivity='58000000'
+				thermal_conductivity='400'
+				mass_density='8933'
+				specific_heat='385'
+				youngs_modulus='120000000000'
+				poissons_ratio='0.38'
+				thermal_expansion_coeffcient='1.77e-005'
+				ModTime=1132068239
+				Library='Materials'
+				LibLocation='SysLibrary'
+				ModSinceLib=false
+			$end 'copper'
 		$end 'Materials'
 		$begin 'SurfaceMaterials'
 		$end 'SurfaceMaterials'
@@ -187,6 +206,7 @@ $begin 'AnsoftProject'
 		AverageSarMethod=0
 		UseAutoDCThickness=true
 		HaveZwaveSupport=true
+		DCThicknessObjects(42401, '"<Effective>"')
 		$begin 'OutputVariable'
 			NextUniqueID=0
 			MoveBackwards=false
@@ -200,11 +220,11 @@ $begin 'AnsoftProject'
 				$end 'DatasetDefinitions'
 			$end 'DesignDatasets'
 			$begin 'Properties'
-				VariableProp('radius', 'UD', '', '(47.2/2) mm')
-				VariableProp('pitch', 'UD', '', '6.9mm')
-				VariableProp('turns', 'UD', '', '10')
+				VariableProp('radius', 'UD', '', '(44/2) mm')
+				VariableProp('pitch', 'UD', '', '10mm')
+				VariableProp('turns', 'UD', '', '2')
 				VariableProp('L', 'UD', '', '8mm')
-				VariableProp('R_fiber', 'UD', '', '(3.25*2) mm')
+				VariableProp('R_fiber', 'UD', '', '0.32mm')
 			$end 'Properties'
 			VariableOrders[5: 'radius', 'pitch', 'turns', 'L', 'R_fiber']
 			$begin 'Editor3D Doc Preferences'
@@ -224,7 +244,7 @@ $begin 'AnsoftProject'
 			WorkingCS=1
 			$begin 'GeometryCore'
 				BlockVersionID=3
-				DataVersion=21
+				DataVersion=22
 				NativeKernel='ACIS'
 				NativeKernelVersionID=9
 				Units='mm'
@@ -241,7 +261,7 @@ $begin 'AnsoftProject'
 							IDServerObjectTypeID=0
 							IDServerRangeMin=0
 							IDServerRangeMax=2146483647
-							NextUniqueID=58233
+							NextUniqueID=58691
 							MoveBackwards=false
 						$end 'AnsoftRangedIDServer'
 						$begin 'AnsoftRangedIDServer'
@@ -349,13 +369,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=406.25
-															FcUVMid(31.6, 34.5, 0)
+															Area=6.29760000000001
+															FcUVMid(30, 10, 0)
 															$begin 'FcTolVts'
-																TolVt(28.35, 65.75, 0, 0)
-																TolVt(34.85, 65.75, 0, 0)
-																TolVt(34.85, 3.25, 0, 0)
-																TolVt(28.35, 3.25, 0, 0)
+																TolVt(29.84, 19.84, 0, 0)
+																TolVt(30.16, 19.84, 0, 0)
+																TolVt(30.16, 0.16, 0, 0)
+																TolVt(29.84, 0.16, 0, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -367,62 +387,62 @@ $begin 'AnsoftProject'
 													ID=12018
 													EdgeFaces(12017)
 													$begin 'EdTolVts'
-														TolVt(28.35, 65.75, 0, 0)
-														TolVt(34.85, 65.75, 0, 0)
+														TolVt(29.84, 19.84, 0, 0)
+														TolVt(30.16, 19.84, 0, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(31.6, 65.75, 0)
+													EdgeMidPoint(30, 19.84, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=12019
 													EdgeFaces(12017)
 													$begin 'EdTolVts'
-														TolVt(34.85, 3.25, 0, 0)
-														TolVt(34.85, 65.75, 0, 0)
+														TolVt(30.16, 0.16, 0, 0)
+														TolVt(30.16, 19.84, 0, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 34.5, 0)
+													EdgeMidPoint(30.16, 10, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=12020
 													EdgeFaces(12017)
 													$begin 'EdTolVts'
-														TolVt(34.85, 3.25, 0, 0)
-														TolVt(28.35, 3.25, 0, 0)
+														TolVt(30.16, 0.16, 0, 0)
+														TolVt(29.84, 0.16, 0, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(31.6, 3.25, 0)
+													EdgeMidPoint(30, 0.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=12021
 													EdgeFaces(12017)
 													$begin 'EdTolVts'
-														TolVt(28.35, 3.25, 0, 0)
-														TolVt(28.35, 65.75, 0, 0)
+														TolVt(29.84, 0.16, 0, 0)
+														TolVt(29.84, 19.84, 0, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(28.35, 34.5, 0)
+													EdgeMidPoint(29.84, 10, 0)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=12022
-													VtPos(28.35, 65.75, 0)
+													VtPos(29.84, 19.84, 0)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=12023
-													VtPos(34.85, 65.75, 0)
+													VtPos(30.16, 19.84, 0)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=12024
-													VtPos(34.85, 3.25, 0)
+													VtPos(30.16, 0.16, 0)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=12025
-													VtPos(28.35, 3.25, 0)
+													VtPos(29.84, 0.16, 0)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -493,7 +513,7 @@ $begin 'AnsoftProject'
 								PartCoordinateSystem=1
 								UDMId=-1
 								GroupId=-1
-								MaterialValue='"pec"'
+								MaterialValue='"copper"'
 								SurfaceMaterialValue='""'
 								SolveInside=false
 								IsMaterialEditable=true
@@ -529,20 +549,20 @@ $begin 'AnsoftProject'
 										$begin 'Topology'
 											NumLumps=1
 											NumShells=1
-											NumFaces=362
+											NumFaces=74
 											NumWires=0
-											NumLoops=722
-											NumCoedges=1440
-											NumEdges=720
-											NumVertices=720
+											NumLoops=146
+											NumCoedges=288
+											NumEdges=144
+											NumVertices=144
 										$end 'Topology'
 										BodyID=42401
-										StartFaceID=56403
-										StartEdgeID=56765
-										StartVertexID=57485
-										NumNewFaces=362
-										NumNewEdges=720
-										NumNewVertices=720
+										StartFaceID=58233
+										StartEdgeID=58307
+										StartVertexID=58451
+										NumNewFaces=74
+										NumNewEdges=144
+										NumNewVertices=144
 										FaceNameAndIDMap()
 										EdgeNameAndIDMap()
 										VertexNameAndIDMap()
@@ -565,17 +585,17 @@ $begin 'AnsoftProject'
 										$begin 'Topology'
 											NumLumps=1
 											NumShells=1
-											NumFaces=374
+											NumFaces=86
 											NumWires=0
-											NumLoops=734
-											NumCoedges=1508
-											NumEdges=754
-											NumVertices=742
+											NumLoops=158
+											NumCoedges=356
+											NumEdges=178
+											NumVertices=166
 										$end 'Topology'
 										BodyID=-1
-										StartFaceID=58205
-										StartEdgeID=58209
-										StartVertexID=58225
+										StartFaceID=58663
+										StartEdgeID=58667
+										StartVertexID=58683
 										NumNewFaces=4
 										NumNewEdges=16
 										NumNewVertices=8
@@ -586,68 +606,68 @@ $begin 'AnsoftProject'
 											$begin 'NewFaces'
 												$begin 'Face'
 													NormalizedSerialNum=0
-													ID=58205
+													ID=58663
 													$begin 'FaceGeomTopol'
-														FaceTopol(1, 3, 3, 3)
+														FaceTopol(1, 5, 5, 5)
 														$begin 'FaceGeometry'
-															Area=1.20990862625055
-															FcUVMid(21.3281636688809, 66.6150877035905, -3.25)
+															Area=2.58123819132671
+															FcUVMid(25.9998893363419, 20.0027117203891, -0.16)
 															$begin 'FcTolVts'
-																TolVt(20.35, 67.480175407181, -3.25, 0)
-																TolVt(22.3063273377618, 65.75, -3.25, 0)
-																TolVt(20.35, 65.75, -3.25, 0)
+																TolVt(22.0461486232486, 19.84, -0.160000000000001, 0)
+																TolVt(21.84, 20.0542928591022, -0.16, 0)
+																TolVt(21.84, 20.16, -0.16, 0)
+																TolVt(30.16, 20.16, -0.16, 0)
+																TolVt(30.16, 19.84, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
 												$end 'Face'
 												$begin 'Face'
 													NormalizedSerialNum=1
-													ID=58206
+													ID=58664
 													$begin 'FaceGeomTopol'
-														FaceTopol(1, 5, 5, 5)
+														FaceTopol(1, 3, 3, 3)
 														$begin 'FaceGeometry'
-															Area=60.443376988874
-															FcUVMid(27.5980223734078, 69.1271161140798, -3.25)
+															Area=0.00252236767742214
+															FcUVMid(21.8819886417605, 19.8802979620623, -0.16)
 															$begin 'FcTolVts'
-																TolVt(24.2996988026154, 65.75, -3.25, 0)
-																TolVt(20.35, 70.1917361713391, -3.25, 0)
-																TolVt(20.35, 72.25, -3.25, 0)
-																TolVt(34.85, 72.25, -3.25, 0)
-																TolVt(34.85, 65.75, -3.25, 0)
+																TolVt(21.84, 19.9205959241246, -0.16, 0)
+																TolVt(21.923977283521, 19.84, -0.16, 0)
+																TolVt(21.84, 19.84, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
 												$end 'Face'
 												$begin 'Face'
 													NormalizedSerialNum=2
-													ID=58207
+													ID=58665
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 5, 5, 5)
 														$begin 'FaceGeometry'
-															Area=60.4433769888746
-															FcUVMid(27.5980223734079, -0.12711611407968, 3.25)
+															Area=2.58123819132671
+															FcUVMid(25.9998893363419, -0.00271172038908683, 0.16)
 															$begin 'FcTolVts'
-																TolVt(24.2996988026156, 3.25, 3.25, 0)
-																TolVt(20.35, -1.1917361713388, 3.25, 0)
-																TolVt(20.35, -3.25, 3.25, 0)
-																TolVt(34.85, -3.25, 3.25, 0)
-																TolVt(34.85, 3.25, 3.25, 0)
+																TolVt(22.0461486232487, 0.16, 0.16, 0)
+																TolVt(21.84, -0.054292859102153, 0.16, 0)
+																TolVt(21.84, -0.16, 0.16, 0)
+																TolVt(30.16, -0.16, 0.16, 0)
+																TolVt(30.16, 0.16, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
 												$end 'Face'
 												$begin 'Face'
 													NormalizedSerialNum=3
-													ID=58208
+													ID=58666
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 3, 3, 3)
 														$begin 'FaceGeometry'
-															Area=1.20990862625061
-															FcUVMid(21.3281636688809, 2.38491229640941, 3.25)
+															Area=0.00252236767742171
+															FcUVMid(21.8819886417605, 0.119702037937704, 0.16)
 															$begin 'FcTolVts'
-																TolVt(20.35, 1.51982459281882, 3.25, 0)
-																TolVt(22.3063273377617, 3.25, 3.25, 0)
-																TolVt(20.35, 3.25, 3.25, 0)
+																TolVt(21.84, 0.0794040758754083, 0.16, 0)
+																TolVt(21.923977283521, 0.16, 0.16, 0)
+																TolVt(21.84, 0.16, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -656,205 +676,205 @@ $begin 'AnsoftProject'
 											$begin 'NewEdges'
 												$begin 'Edge'
 													NormalizedSerialNum=0
-													ID=58209
-													EdgeFaces(45025, 56403)
+													ID=58667
+													EdgeFaces(45023, 58233)
 													$begin 'EdTolVts'
-														TolVt(20.35, 67.480175407181, -3.25, 0)
-														TolVt(20.35, 70.1917361713391, -3.25, 0)
+														TolVt(22.0461486232486, 19.84, -0.160000000000001, 0)
+														TolVt(21.923977283521, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 68.9933887275535, 0.14189806445382)
+													EdgeMidPoint(21.9994930928337, 19.84, 0.00580927160161317)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
-													ID=58210
-													EdgeFaces(45025, 58205)
+													ID=58668
+													EdgeFaces(45023, 58663)
 													$begin 'EdTolVts'
-														TolVt(20.35, 67.480175407181, -3.25, 0)
-														TolVt(20.35, 65.75, -3.25, 0)
+														TolVt(22.0461486232486, 19.84, -0.160000000000001, 0)
+														TolVt(30.16, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 66.6150877035905, -3.25)
+													EdgeMidPoint(26.1030743116243, 19.84, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
-													ID=58211
-													EdgeFaces(45025, 58206)
+													ID=58669
+													EdgeFaces(45023, 58664)
 													$begin 'EdTolVts'
-														TolVt(20.35, 72.25, -3.25, 0)
-														TolVt(20.35, 70.1917361713391, -3.25, 0)
+														TolVt(21.84, 19.84, -0.16, 0)
+														TolVt(21.923977283521, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 71.2208680856696, -3.25)
+													EdgeMidPoint(21.8819886417605, 19.84, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
-													ID=58212
-													EdgeFaces(56403, 58205)
+													ID=58670
+													EdgeFaces(58233, 58663)
 													$begin 'EdTolVts'
-														TolVt(22.3063273377618, 65.75, -3.25, 0)
-														TolVt(20.35, 67.480175407181, -3.25, 0)
+														TolVt(21.84, 20.0542928591022, -0.16, 0)
+														TolVt(22.0461486232486, 19.84, -0.160000000000001, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(21.1455129130048, 66.409883563066, -3.25)
+													EdgeMidPoint(22.1021518250556, 20.0998952633003, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
-													ID=58213
-													EdgeFaces(45023, 58205)
+													ID=58671
+													EdgeFaces(45025, 58663)
 													$begin 'EdTolVts'
-														TolVt(20.35, 65.75, -3.25, 0)
-														TolVt(22.3063273377618, 65.75, -3.25, 0)
+														TolVt(21.84, 20.16, -0.16, 0)
+														TolVt(21.84, 20.0542928591022, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(21.3281636688809, 65.75, -3.25)
+													EdgeMidPoint(21.84, 20.1071464295511, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
-													ID=58214
-													EdgeFaces(56403, 58206)
+													ID=58672
+													EdgeFaces(58233, 58664)
 													$begin 'EdTolVts'
-														TolVt(20.35, 70.1917361713391, -3.25, 0)
-														TolVt(24.2996988026154, 65.75, -3.25, 0)
+														TolVt(21.923977283521, 19.84, -0.16, 0)
+														TolVt(21.84, 19.9205959241246, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(25.7604176661989, 71.0122525843762, -3.25)
+													EdgeMidPoint(21.8743414325725, 19.8723526240284, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
-													ID=58215
-													EdgeFaces(45023, 58206)
+													ID=58673
+													EdgeFaces(45025, 58664)
 													$begin 'EdTolVts'
-														TolVt(24.2996988026154, 65.75, -3.25, 0)
-														TolVt(34.85, 65.75, -3.25, 0)
+														TolVt(21.84, 19.9205959241246, -0.16, 0)
+														TolVt(21.84, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(29.5748494013077, 65.75, -3.25)
+													EdgeMidPoint(21.84, 19.8802979620623, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
-													ID=58216
-													EdgeFaces(45023, 56403)
+													ID=58674
+													EdgeFaces(45025, 58233)
 													$begin 'EdTolVts'
-														TolVt(24.2996988026154, 65.75, -3.25, 0)
-														TolVt(22.3063273377618, 65.75, -3.25, 0)
+														TolVt(21.84, 19.9205959241246, -0.16, 0)
+														TolVt(21.84, 20.0542928591022, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(23.5933616868544, 65.75, 0.0759592070915076)
+													EdgeMidPoint(21.84, 19.9994939867283, 0.00698575086540512)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=8
-													ID=58217
-													EdgeFaces(44993, 56763)
+													ID=58675
+													EdgeFaces(44993, 58305)
 													$begin 'EdTolVts'
-														TolVt(24.2996988026156, 3.25, 3.25, 0)
-														TolVt(22.3063273377617, 3.25, 3.25, 0)
+														TolVt(22.0461486232487, 0.16, 0.16, 0)
+														TolVt(21.923977283521, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(23.5933616868546, 3.25, -0.0759592070924027)
+													EdgeMidPoint(21.9994930928337, 0.16, -0.00580927160176994)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=9
-													ID=58218
-													EdgeFaces(44993, 58207)
+													ID=58676
+													EdgeFaces(44993, 58665)
 													$begin 'EdTolVts'
-														TolVt(24.2996988026156, 3.25, 3.25, 0)
-														TolVt(34.85, 3.25, 3.25, 0)
+														TolVt(22.0461486232487, 0.16, 0.16, 0)
+														TolVt(30.16, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(29.5748494013078, 3.25, 3.25)
+													EdgeMidPoint(26.1030743116243, 0.16, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=10
-													ID=58219
-													EdgeFaces(44993, 58208)
+													ID=58677
+													EdgeFaces(44993, 58666)
 													$begin 'EdTolVts'
-														TolVt(20.35, 3.25, 3.25, 0)
-														TolVt(22.3063273377617, 3.25, 3.25, 0)
+														TolVt(21.84, 0.16, 0.16, 0)
+														TolVt(21.923977283521, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(21.3281636688809, 3.25, 3.25)
+													EdgeMidPoint(21.8819886417605, 0.16, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=11
-													ID=58220
-													EdgeFaces(56763, 58207)
+													ID=58678
+													EdgeFaces(58305, 58665)
 													$begin 'EdTolVts'
-														TolVt(20.35, -1.1917361713388, 3.25, 0)
-														TolVt(24.2996988026156, 3.25, 3.25, 0)
+														TolVt(21.84, -0.054292859102153, 0.16, 0)
+														TolVt(22.0461486232487, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(25.7604176661988, -2.0122525843762, 3.25)
+													EdgeMidPoint(22.1021518250556, -0.0998952633002854, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=12
-													ID=58221
-													EdgeFaces(44997, 58207)
+													ID=58679
+													EdgeFaces(44997, 58665)
 													$begin 'EdTolVts'
-														TolVt(20.35, -3.25, 3.25, 0)
-														TolVt(20.35, -1.1917361713388, 3.25, 0)
+														TolVt(21.84, -0.16, 0.16, 0)
+														TolVt(21.84, -0.054292859102153, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, -2.2208680856694, 3.25)
+													EdgeMidPoint(21.84, -0.107146429551077, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=13
-													ID=58222
-													EdgeFaces(56763, 58208)
+													ID=58680
+													EdgeFaces(58305, 58666)
 													$begin 'EdTolVts'
-														TolVt(22.3063273377617, 3.25, 3.25, 0)
-														TolVt(20.35, 1.51982459281882, 3.25, 0)
+														TolVt(21.923977283521, 0.16, 0.16, 0)
+														TolVt(21.84, 0.0794040758754083, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(21.1455129130048, 2.59011643693395, 3.25)
+													EdgeMidPoint(21.8743414325725, 0.12764737597159, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=14
-													ID=58223
-													EdgeFaces(44997, 58208)
+													ID=58681
+													EdgeFaces(44997, 58666)
 													$begin 'EdTolVts'
-														TolVt(20.35, 1.51982459281882, 3.25, 0)
-														TolVt(20.35, 3.25, 3.25, 0)
+														TolVt(21.84, 0.0794040758754083, 0.16, 0)
+														TolVt(21.84, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 2.38491229640941, 3.25)
+													EdgeMidPoint(21.84, 0.119702037937704, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=15
-													ID=58224
-													EdgeFaces(44997, 56763)
+													ID=58682
+													EdgeFaces(44997, 58305)
 													$begin 'EdTolVts'
-														TolVt(20.35, 1.51982459281882, 3.25, 0)
-														TolVt(20.35, -1.1917361713388, 3.25, 0)
+														TolVt(21.84, 0.0794040758754083, 0.16, 0)
+														TolVt(21.84, -0.054292859102153, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 0.00661127244665196, -0.141898064452705)
+													EdgeMidPoint(21.84, 0.000506013271687732, -0.00698575086531919)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
-													ID=58225
-													VtPos(20.35, 70.1917361713391, -3.25)
+													ID=58683
+													VtPos(21.923977283521, 19.84, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
-													ID=58226
-													VtPos(20.35, 67.480175407181, -3.25)
+													ID=58684
+													VtPos(22.0461486232486, 19.84, -0.160000000000001)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
-													ID=58227
-													VtPos(22.3063273377618, 65.75, -3.25)
+													ID=58685
+													VtPos(21.84, 20.0542928591022, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
-													ID=58228
-													VtPos(24.2996988026154, 65.75, -3.25)
+													ID=58686
+													VtPos(21.84, 19.9205959241246, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
-													ID=58229
-													VtPos(22.3063273377617, 3.25, 3.25)
+													ID=58687
+													VtPos(21.923977283521, 0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
-													ID=58230
-													VtPos(24.2996988026156, 3.25, 3.25)
+													ID=58688
+													VtPos(22.0461486232487, 0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
-													ID=58231
-													VtPos(20.35, -1.1917361713388, 3.25)
+													ID=58689
+													VtPos(21.84, -0.054292859102153, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
-													ID=58232
-													VtPos(20.35, 1.51982459281882, 3.25)
+													ID=58690
+													VtPos(21.84, 0.0794040758754083, 0.16)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -954,13 +974,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 0, 3.25)
+															Area=2.6624
+															FcUVMid(26, 0, 0.16)
 															$begin 'FcTolVts'
-																TolVt(34.85, -3.25, 3.25, 0)
-																TolVt(34.85, 3.25, 3.25, 0)
-																TolVt(20.35, 3.25, 3.25, 0)
-																TolVt(20.35, -3.25, 3.25, 0)
+																TolVt(30.16, -0.16, 0.16, 0)
+																TolVt(30.16, 0.16, 0.16, 0)
+																TolVt(21.84, 0.16, 0.16, 0)
+																TolVt(21.84, -0.16, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -971,13 +991,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 3.25, 0)
+															Area=2.6624
+															FcUVMid(26, 0.16, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, 3.25, 3.25, 0)
-																TolVt(34.85, 3.25, -3.25, 0)
-																TolVt(20.35, 3.25, -3.25, 0)
-																TolVt(20.35, 3.25, 3.25, 0)
+																TolVt(30.16, 0.16, 0.16, 0)
+																TolVt(30.16, 0.16, -0.16, 0)
+																TolVt(21.84, 0.16, -0.16, 0)
+																TolVt(21.84, 0.16, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -988,13 +1008,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 0, -3.25)
+															Area=2.6624
+															FcUVMid(26, 0, -0.16)
 															$begin 'FcTolVts'
-																TolVt(34.85, 3.25, -3.25, 0)
-																TolVt(34.85, -3.25, -3.25, 0)
-																TolVt(20.35, -3.25, -3.25, 0)
-																TolVt(20.35, 3.25, -3.25, 0)
+																TolVt(30.16, 0.16, -0.16, 0)
+																TolVt(30.16, -0.16, -0.16, 0)
+																TolVt(21.84, -0.16, -0.16, 0)
+																TolVt(21.84, 0.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1005,13 +1025,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, -3.25, 0)
+															Area=2.6624
+															FcUVMid(26, -0.16, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, -3.25, -3.25, 0)
-																TolVt(34.85, -3.25, 3.25, 0)
-																TolVt(20.35, -3.25, 3.25, 0)
-																TolVt(20.35, -3.25, -3.25, 0)
+																TolVt(30.16, -0.16, -0.16, 0)
+																TolVt(30.16, -0.16, 0.16, 0)
+																TolVt(21.84, -0.16, 0.16, 0)
+																TolVt(21.84, -0.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1022,13 +1042,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=42.25
-															FcUVMid(34.85, 0, 0)
+															Area=0.1024
+															FcUVMid(30.16, 0, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, 3.25, 3.25, 0)
-																TolVt(34.85, -3.25, 3.25, 0)
-																TolVt(34.85, -3.25, -3.25, 0)
-																TolVt(34.85, 3.25, -3.25, 0)
+																TolVt(30.16, 0.16, 0.16, 0)
+																TolVt(30.16, -0.16, 0.16, 0)
+																TolVt(30.16, -0.16, -0.16, 0)
+																TolVt(30.16, 0.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1039,13 +1059,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=42.25
-															FcUVMid(20.35, 0, 0)
+															Area=0.1024
+															FcUVMid(21.84, 0, 0)
 															$begin 'FcTolVts'
-																TolVt(20.35, -3.25, -3.25, 0)
-																TolVt(20.35, -3.25, 3.25, 0)
-																TolVt(20.35, 3.25, 3.25, 0)
-																TolVt(20.35, 3.25, -3.25, 0)
+																TolVt(21.84, -0.16, -0.16, 0)
+																TolVt(21.84, -0.16, 0.16, 0)
+																TolVt(21.84, 0.16, 0.16, 0)
+																TolVt(21.84, 0.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1057,162 +1077,162 @@ $begin 'AnsoftProject'
 													ID=44998
 													EdgeFaces(44992, 44996)
 													$begin 'EdTolVts'
-														TolVt(34.85, -3.25, 3.25, 0)
-														TolVt(34.85, 3.25, 3.25, 0)
+														TolVt(30.16, -0.16, 0.16, 0)
+														TolVt(30.16, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 0, 3.25)
+													EdgeMidPoint(30.16, 0, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=44999
 													EdgeFaces(44992, 44993)
 													$begin 'EdTolVts'
-														TolVt(20.35, 3.25, 3.25, 0)
-														TolVt(34.85, 3.25, 3.25, 0)
+														TolVt(21.84, 0.16, 0.16, 0)
+														TolVt(30.16, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 3.25, 3.25)
+													EdgeMidPoint(26, 0.16, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=45000
 													EdgeFaces(44992, 44997)
 													$begin 'EdTolVts'
-														TolVt(20.35, -3.25, 3.25, 0)
-														TolVt(20.35, 3.25, 3.25, 0)
+														TolVt(21.84, -0.16, 0.16, 0)
+														TolVt(21.84, 0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 0, 3.25)
+													EdgeMidPoint(21.84, 0, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=45001
 													EdgeFaces(44992, 44995)
 													$begin 'EdTolVts'
-														TolVt(20.35, -3.25, 3.25, 0)
-														TolVt(34.85, -3.25, 3.25, 0)
+														TolVt(21.84, -0.16, 0.16, 0)
+														TolVt(30.16, -0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, -3.25, 3.25)
+													EdgeMidPoint(26, -0.16, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=45002
 													EdgeFaces(44993, 44996)
 													$begin 'EdTolVts'
-														TolVt(34.85, 3.25, 3.25, 0)
-														TolVt(34.85, 3.25, -3.25, 0)
+														TolVt(30.16, 0.16, 0.16, 0)
+														TolVt(30.16, 0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 3.25, 0)
+													EdgeMidPoint(30.16, 0.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=45003
 													EdgeFaces(44993, 44994)
 													$begin 'EdTolVts'
-														TolVt(20.35, 3.25, -3.25, 0)
-														TolVt(34.85, 3.25, -3.25, 0)
+														TolVt(21.84, 0.16, -0.16, 0)
+														TolVt(30.16, 0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 3.25, -3.25)
+													EdgeMidPoint(26, 0.16, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
 													ID=45004
 													EdgeFaces(44993, 44997)
 													$begin 'EdTolVts'
-														TolVt(20.35, 3.25, 3.25, 0)
-														TolVt(20.35, 3.25, -3.25, 0)
+														TolVt(21.84, 0.16, 0.16, 0)
+														TolVt(21.84, 0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 3.25, 0)
+													EdgeMidPoint(21.84, 0.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
 													ID=45005
 													EdgeFaces(44994, 44996)
 													$begin 'EdTolVts'
-														TolVt(34.85, 3.25, -3.25, 0)
-														TolVt(34.85, -3.25, -3.25, 0)
+														TolVt(30.16, 0.16, -0.16, 0)
+														TolVt(30.16, -0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 0, -3.25)
+													EdgeMidPoint(30.16, 0, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=8
 													ID=45006
 													EdgeFaces(44994, 44995)
 													$begin 'EdTolVts'
-														TolVt(20.35, -3.25, -3.25, 0)
-														TolVt(34.85, -3.25, -3.25, 0)
+														TolVt(21.84, -0.16, -0.16, 0)
+														TolVt(30.16, -0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, -3.25, -3.25)
+													EdgeMidPoint(26, -0.16, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=9
 													ID=45007
 													EdgeFaces(44994, 44997)
 													$begin 'EdTolVts'
-														TolVt(20.35, 3.25, -3.25, 0)
-														TolVt(20.35, -3.25, -3.25, 0)
+														TolVt(21.84, 0.16, -0.16, 0)
+														TolVt(21.84, -0.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 0, -3.25)
+													EdgeMidPoint(21.84, 0, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=10
 													ID=45008
 													EdgeFaces(44995, 44996)
 													$begin 'EdTolVts'
-														TolVt(34.85, -3.25, -3.25, 0)
-														TolVt(34.85, -3.25, 3.25, 0)
+														TolVt(30.16, -0.16, -0.16, 0)
+														TolVt(30.16, -0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, -3.25, 0)
+													EdgeMidPoint(30.16, -0.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=11
 													ID=45009
 													EdgeFaces(44995, 44997)
 													$begin 'EdTolVts'
-														TolVt(20.35, -3.25, -3.25, 0)
-														TolVt(20.35, -3.25, 3.25, 0)
+														TolVt(21.84, -0.16, -0.16, 0)
+														TolVt(21.84, -0.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, -3.25, 0)
+													EdgeMidPoint(21.84, -0.16, 0)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=45010
-													VtPos(34.85, -3.25, 3.25)
+													VtPos(30.16, -0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=45011
-													VtPos(34.85, 3.25, 3.25)
+													VtPos(30.16, 0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=45012
-													VtPos(20.35, 3.25, 3.25)
+													VtPos(21.84, 0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=45013
-													VtPos(20.35, -3.25, 3.25)
+													VtPos(21.84, -0.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=45014
-													VtPos(34.85, 3.25, -3.25)
+													VtPos(30.16, 0.16, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=45015
-													VtPos(20.35, 3.25, -3.25)
+													VtPos(21.84, 0.16, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=45016
-													VtPos(34.85, -3.25, -3.25)
+													VtPos(30.16, -0.16, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
 													ID=45017
-													VtPos(20.35, -3.25, -3.25)
+													VtPos(21.84, -0.16, -0.16)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -1303,13 +1323,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 69, 3.25)
+															Area=2.6624
+															FcUVMid(26, 20, 0.16)
 															$begin 'FcTolVts'
-																TolVt(34.85, 65.75, 3.25, 0)
-																TolVt(34.85, 72.25, 3.25, 0)
-																TolVt(20.35, 72.25, 3.25, 0)
-																TolVt(20.35, 65.75, 3.25, 0)
+																TolVt(30.16, 19.84, 0.16, 0)
+																TolVt(30.16, 20.16, 0.16, 0)
+																TolVt(21.84, 20.16, 0.16, 0)
+																TolVt(21.84, 19.84, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1320,13 +1340,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 72.25, 0)
+															Area=2.6624
+															FcUVMid(26, 20.16, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, 72.25, 3.25, 0)
-																TolVt(34.85, 72.25, -3.25, 0)
-																TolVt(20.35, 72.25, -3.25, 0)
-																TolVt(20.35, 72.25, 3.25, 0)
+																TolVt(30.16, 20.16, 0.16, 0)
+																TolVt(30.16, 20.16, -0.16, 0)
+																TolVt(21.84, 20.16, -0.16, 0)
+																TolVt(21.84, 20.16, 0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1337,13 +1357,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 69, -3.25)
+															Area=2.6624
+															FcUVMid(26, 20, -0.16)
 															$begin 'FcTolVts'
-																TolVt(34.85, 72.25, -3.25, 0)
-																TolVt(34.85, 65.75, -3.25, 0)
-																TolVt(20.35, 65.75, -3.25, 0)
-																TolVt(20.35, 72.25, -3.25, 0)
+																TolVt(30.16, 20.16, -0.16, 0)
+																TolVt(30.16, 19.84, -0.16, 0)
+																TolVt(21.84, 19.84, -0.16, 0)
+																TolVt(21.84, 20.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1354,13 +1374,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=94.25
-															FcUVMid(27.6, 65.75, 0)
+															Area=2.6624
+															FcUVMid(26, 19.84, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, 65.75, -3.25, 0)
-																TolVt(34.85, 65.75, 3.25, 0)
-																TolVt(20.35, 65.75, 3.25, 0)
-																TolVt(20.35, 65.75, -3.25, 0)
+																TolVt(30.16, 19.84, -0.16, 0)
+																TolVt(30.16, 19.84, 0.16, 0)
+																TolVt(21.84, 19.84, 0.16, 0)
+																TolVt(21.84, 19.84, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1371,13 +1391,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=42.25
-															FcUVMid(34.85, 69, 0)
+															Area=0.1024
+															FcUVMid(30.16, 20, 0)
 															$begin 'FcTolVts'
-																TolVt(34.85, 72.25, 3.25, 0)
-																TolVt(34.85, 65.75, 3.25, 0)
-																TolVt(34.85, 65.75, -3.25, 0)
-																TolVt(34.85, 72.25, -3.25, 0)
+																TolVt(30.16, 20.16, 0.16, 0)
+																TolVt(30.16, 19.84, 0.16, 0)
+																TolVt(30.16, 19.84, -0.16, 0)
+																TolVt(30.16, 20.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1388,13 +1408,13 @@ $begin 'AnsoftProject'
 													$begin 'FaceGeomTopol'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
-															Area=42.25
-															FcUVMid(20.35, 69, 0)
+															Area=0.1024
+															FcUVMid(21.84, 20, 0)
 															$begin 'FcTolVts'
-																TolVt(20.35, 65.75, -3.25, 0)
-																TolVt(20.35, 65.75, 3.25, 0)
-																TolVt(20.35, 72.25, 3.25, 0)
-																TolVt(20.35, 72.25, -3.25, 0)
+																TolVt(21.84, 19.84, -0.16, 0)
+																TolVt(21.84, 19.84, 0.16, 0)
+																TolVt(21.84, 20.16, 0.16, 0)
+																TolVt(21.84, 20.16, -0.16, 0)
 															$end 'FcTolVts'
 														$end 'FaceGeometry'
 													$end 'FaceGeomTopol'
@@ -1406,162 +1426,162 @@ $begin 'AnsoftProject'
 													ID=45026
 													EdgeFaces(45020, 45024)
 													$begin 'EdTolVts'
-														TolVt(34.85, 65.75, 3.25, 0)
-														TolVt(34.85, 72.25, 3.25, 0)
+														TolVt(30.16, 19.84, 0.16, 0)
+														TolVt(30.16, 20.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 69, 3.25)
+													EdgeMidPoint(30.16, 20, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=1
 													ID=45027
 													EdgeFaces(45020, 45021)
 													$begin 'EdTolVts'
-														TolVt(20.35, 72.25, 3.25, 0)
-														TolVt(34.85, 72.25, 3.25, 0)
+														TolVt(21.84, 20.16, 0.16, 0)
+														TolVt(30.16, 20.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 72.25, 3.25)
+													EdgeMidPoint(26, 20.16, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=2
 													ID=45028
 													EdgeFaces(45020, 45025)
 													$begin 'EdTolVts'
-														TolVt(20.35, 65.75, 3.25, 0)
-														TolVt(20.35, 72.25, 3.25, 0)
+														TolVt(21.84, 19.84, 0.16, 0)
+														TolVt(21.84, 20.16, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 69, 3.25)
+													EdgeMidPoint(21.84, 20, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=3
 													ID=45029
 													EdgeFaces(45020, 45023)
 													$begin 'EdTolVts'
-														TolVt(20.35, 65.75, 3.25, 0)
-														TolVt(34.85, 65.75, 3.25, 0)
+														TolVt(21.84, 19.84, 0.16, 0)
+														TolVt(30.16, 19.84, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 65.75, 3.25)
+													EdgeMidPoint(26, 19.84, 0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=4
 													ID=45030
 													EdgeFaces(45021, 45024)
 													$begin 'EdTolVts'
-														TolVt(34.85, 72.25, 3.25, 0)
-														TolVt(34.85, 72.25, -3.25, 0)
+														TolVt(30.16, 20.16, 0.16, 0)
+														TolVt(30.16, 20.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 72.25, 0)
+													EdgeMidPoint(30.16, 20.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=5
 													ID=45031
 													EdgeFaces(45021, 45022)
 													$begin 'EdTolVts'
-														TolVt(20.35, 72.25, -3.25, 0)
-														TolVt(34.85, 72.25, -3.25, 0)
+														TolVt(21.84, 20.16, -0.16, 0)
+														TolVt(30.16, 20.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 72.25, -3.25)
+													EdgeMidPoint(26, 20.16, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=6
 													ID=45032
 													EdgeFaces(45021, 45025)
 													$begin 'EdTolVts'
-														TolVt(20.35, 72.25, 3.25, 0)
-														TolVt(20.35, 72.25, -3.25, 0)
+														TolVt(21.84, 20.16, 0.16, 0)
+														TolVt(21.84, 20.16, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 72.25, 0)
+													EdgeMidPoint(21.84, 20.16, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=7
 													ID=45033
 													EdgeFaces(45022, 45024)
 													$begin 'EdTolVts'
-														TolVt(34.85, 72.25, -3.25, 0)
-														TolVt(34.85, 65.75, -3.25, 0)
+														TolVt(30.16, 20.16, -0.16, 0)
+														TolVt(30.16, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 69, -3.25)
+													EdgeMidPoint(30.16, 20, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=8
 													ID=45034
 													EdgeFaces(45022, 45023)
 													$begin 'EdTolVts'
-														TolVt(20.35, 65.75, -3.25, 0)
-														TolVt(34.85, 65.75, -3.25, 0)
+														TolVt(21.84, 19.84, -0.16, 0)
+														TolVt(30.16, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(27.6, 65.75, -3.25)
+													EdgeMidPoint(26, 19.84, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=9
 													ID=45035
 													EdgeFaces(45022, 45025)
 													$begin 'EdTolVts'
-														TolVt(20.35, 72.25, -3.25, 0)
-														TolVt(20.35, 65.75, -3.25, 0)
+														TolVt(21.84, 20.16, -0.16, 0)
+														TolVt(21.84, 19.84, -0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 69, -3.25)
+													EdgeMidPoint(21.84, 20, -0.16)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=10
 													ID=45036
 													EdgeFaces(45023, 45024)
 													$begin 'EdTolVts'
-														TolVt(34.85, 65.75, -3.25, 0)
-														TolVt(34.85, 65.75, 3.25, 0)
+														TolVt(30.16, 19.84, -0.16, 0)
+														TolVt(30.16, 19.84, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(34.85, 65.75, 0)
+													EdgeMidPoint(30.16, 19.84, 0)
 												$end 'Edge'
 												$begin 'Edge'
 													NormalizedSerialNum=11
 													ID=45037
 													EdgeFaces(45023, 45025)
 													$begin 'EdTolVts'
-														TolVt(20.35, 65.75, -3.25, 0)
-														TolVt(20.35, 65.75, 3.25, 0)
+														TolVt(21.84, 19.84, -0.16, 0)
+														TolVt(21.84, 19.84, 0.16, 0)
 													$end 'EdTolVts'
-													EdgeMidPoint(20.35, 65.75, 0)
+													EdgeMidPoint(21.84, 19.84, 0)
 												$end 'Edge'
 											$end 'NewEdges'
 											$begin 'NewVertices'
 												$begin 'Vertex'
 													NormalizedSerialNum=0
 													ID=45038
-													VtPos(34.85, 65.75, 3.25)
+													VtPos(30.16, 19.84, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=1
 													ID=45039
-													VtPos(34.85, 72.25, 3.25)
+													VtPos(30.16, 20.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=2
 													ID=45040
-													VtPos(20.35, 72.25, 3.25)
+													VtPos(21.84, 20.16, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=3
 													ID=45041
-													VtPos(20.35, 65.75, 3.25)
+													VtPos(21.84, 19.84, 0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=4
 													ID=45042
-													VtPos(34.85, 72.25, -3.25)
+													VtPos(30.16, 20.16, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=5
 													ID=45043
-													VtPos(20.35, 72.25, -3.25)
+													VtPos(21.84, 20.16, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=6
 													ID=45044
-													VtPos(34.85, 65.75, -3.25)
+													VtPos(30.16, 19.84, -0.16)
 												$end 'Vertex'
 												$begin 'Vertex'
 													NormalizedSerialNum=7
 													ID=45045
-													VtPos(20.35, 65.75, -3.25)
+													VtPos(21.84, 19.84, -0.16)
 												$end 'Vertex'
 											$end 'NewVertices'
 										$end 'GeomTopolBasedOperationIdentityHelper'
@@ -1801,14 +1821,14 @@ $begin 'AnsoftProject'
 					MaxNumberOfBounces=5
 					InfiniteSphereSetup=-1
 					$begin 'Sweeps'
-						NextUniqueID=1
+						NextUniqueID=2
 						MoveBackwards=false
 						$begin 'Sweep'
 							ID=0
 							IsEnabled=true
 							RangeType='LinearCount'
-							RangeStart='10kHz'
-							RangeEnd='150MHz'
+							RangeStart='100kHz'
+							RangeEnd='200MHz'
 							RangeCount=201
 							Type='Fast'
 							SaveFields=true
@@ -1822,16 +1842,16 @@ $begin 'AnsoftProject'
 		$end 'AnalysisSetup'
 		$begin 'Optimetrics'
 			$begin 'OptimetricsSetups'
-				NextUniqueID=7
+				NextUniqueID=8
 				MoveBackwards=false
 				$begin 'ParametricSetup1'
-					ID=6
+					ID=7
 					SetupType='OptiParametric'
 					IsEnabled=true
-					NextUniqueID=5
+					NextUniqueID=2
 					MoveBackwards=false
 					GoalSetupVersion=0
-					Version=4
+					Version=1
 					$begin 'ProdOptiSetupDataV2'
 						SaveFields=false
 						CopyMesh=false
@@ -1842,8 +1862,8 @@ $begin 'AnsoftProject'
 					'Sim. Setups'(480)
 					$begin 'Sweeps'
 						$begin 'SweepDefinition'
-							Variable='turns'
-							Data='LIN 2 10 1'
+							Variable='pitch'
+							Data='LIN 10mm 20mm 10mm'
 							OffsetF1=false
 							Synchronize=0
 						$end 'SweepDefinition'
@@ -1995,31 +2015,6 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
-							$begin 'Sweep'
-								Variable='radius'
-								Column='23.6mm;47.2mm'
-								Units='mm'
-							$end 'Sweep'
-							$begin 'Sweep'
-								Variable='pitch'
-								Column='6.9mm'
-								Units='mm'
-							$end 'Sweep'
-							$begin 'Sweep'
-								Variable='turns'
-								Column='2;3;4;5;6;7;8;9;10'
-								Units=''
-							$end 'Sweep'
-							$begin 'Sweep'
-								Variable='L'
-								Column='5mm;8mm'
-								Units='mm'
-							$end 'Sweep'
-							$begin 'Sweep'
-								Variable='R_fiber'
-								Column='3.25mm;6.5mm'
-								Units='mm'
-							$end 'Sweep'
 						$end 'Sweeps'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
@@ -2028,8 +2023,6 @@ $begin 'AnsoftProject'
 					ID=482
 					Name='LastAdaptive'
 					$begin 'SimDataExtractor'
-						SimValue('S(1,1)', 2, 90, false, SimValueID=489, 0, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
-						SimValue('Z(1,1)', 2, 90, false, SimValueID=490, 0, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'Sweep'
 								Variable='Freq'
@@ -2074,17 +2067,17 @@ $begin 'AnsoftProject'
 							$end 'PostprocessSweep'
 							$begin 'Sweep'
 								Variable='radius'
-								Column='23.6mm'
+								Column='22mm'
 								Units='mm'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='pitch'
-								Column='6.9mm'
+								Column='10mm;20mm'
 								Units='mm'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='turns'
-								Column='2;3;4;5;6;7;8;9;10'
+								Column='2'
 								Units=''
 							$end 'Sweep'
 							$begin 'Sweep'
@@ -2094,7 +2087,7 @@ $begin 'AnsoftProject'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='R_fiber'
-								Column='6.5mm'
+								Column='0.32mm'
 								Units='mm'
 							$end 'Sweep'
 						$end 'Sweeps'
@@ -2105,16 +2098,15 @@ $begin 'AnsoftProject'
 					ID=676
 					Name='Sweep'
 					$begin 'SimDataExtractor'
-						SimValue('S(1,1)', 2, 90, false, SimValueID=745, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
-						SimValue('Z(1,1)', 2, 90, false, SimValueID=746, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+						SimValue('Z(1,1)', 2, 90, false, SimValueID=1038, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'PostprocessSweep'
 								Variable='Freq'
-								Column='1e-005GHz;0.00075995GHz;0.0015099GHz;0.00225985GHz;0.0030098GHz;0.00375975GHz;0.0045097GHz;0.00525965GHz;0.0060096GHz;0.00675955GHz;0.0075095GHz;0.00825945GHz;0.0090094GHz;0.00975935GHz;0.0105093GHz;0.01125925GHz;0.0120092GHz;0.01275915GHz;0.0135091GHz;0.01425905GHz;0.015009GHz;0.01575895GHz;0.0165089GHz;0.01725885GHz;0.0180088GHz;0.01875875GHz;0.0195087GHz;0.02025865GHz;0.0210086GHz;0.02175855GHz;0.0225085GHz;0.02325845GHz;0.0240084GHz;0.02475835GHz;0.0255083GHz;0.02625825GHz;0.0270082GHz;0.02775815GHz;0.0285081GHz;0.02925805GHz;0.030008GHz;0.03075795GHz;0.0315079GHz;0.03225785GHz;0.0330078GHz;0.03375775GHz;0.0345077GHz;0.03525765GHz;0.0360076GHz;0.03675755GHz;0.0375075GHz;0.03825745GHz;0.0390074GHz;0.03975735GHz;0.0405073GHz;0.04125725GHz;0.0420072GHz;0.04275715GHz;0.0435071GHz;0.04425705GHz;0.045007GHz;0.04575695GHz;0.0465069GHz;0.04725685GHz;0.0480068GHz;0.04875675GHz;0.0495067GHz;0.05025665GHz;0.0510066GHz;0.05175655GHz;0.0525065GHz;0.05325645GHz;0.0540064GHz;0.05475635GHz;0.0555063GHz;0.05625625GHz;0.0570062GHz;0.05775615GHz;0.0585061GHz;0.05925605GHz;0.060006GHz;0.06075595GHz;0.0615059GHz;0.06225585GHz;0.0630058GHz;0.06375575GHz;0.0645057GHz;0.06525565GHz;0.0660056GHz;0.06675555GHz;0.0675055GHz;0.06825545GHz;0.0690054GHz;0.06975535GHz;0.0705053GHz;0.07125525GHz;0.0720052GHz;0.07275515GHz;0.0735051GHz;0.07425505GHz;0.075005GHz;0.07575495GHz;0.0765049GHz;0.07725485GHz;0.0780048GHz;0.07875475GHz;0.0795047GHz;0.08025465GHz;0.0810046GHz;0.08175455GHz;0.0825045GHz;0.08325445GHz;0.0840044GHz;0.08475435GHz;0.0855043GHz;0.08625425GHz;0.0870042GHz;0.08775415GHz;0.0885041GHz;0.08925405GHz;0.090004GHz;0.09075395GHz;0.0915039GHz;0.09225385GHz;0.0930038GHz;0.09375375GHz;0.0945037GHz;0.09525365GHz;0.0960036GHz;0.09675355GHz;0.0975035GHz;0.09825345GHz;0.0990034GHz;0.09975335GHz;0.1005033GHz;0.10125325GHz;0.1020032GHz;0.10275315GHz;0.1035031GHz;0.10425305GHz;0.105003GHz;0.10575295GHz;0.1065029GHz;0.10725285GHz;0.1080028GHz;0.10875275GHz;0.1095027GHz;0.11025265GHz;0.1110026GHz;0.11175255GHz;0.1125025GHz;0.11325245GHz;0.1140024GHz;0.11475235GHz;0.1155023GHz;0.11625225GHz;0.1170022GHz;0.11775215GHz;0.1185021GHz;0.11925205GHz;0.120002GHz;0.12075195GHz;0.1215019GHz;0.12225185GHz;0.1230018GHz;0.12375175GHz;0.1245017GHz;0.12525165GHz;0.1260016GHz;0.12675155GHz;0.1275015GHz;0.12825145GHz;0.1290014GHz;0.12975135GHz;0.1305013GHz;0.13125125GHz;0.1320012GHz;0.13275115GHz;0.1335011GHz;0.13425105GHz;0.135001GHz;0.13575095GHz;0.1365009GHz;0.13725085GHz;0.1380008GHz;0.13875075GHz;0.1395007GHz;0.14025065GHz;0.1410006GHz;0.14175055GHz;0.1425005GHz;0.14325045GHz;0.1440004GHz;0.14475035GHz;0.1455003GHz;0.14625025GHz;0.1470002GHz;0.14775015GHz;0.1485001GHz;0.14925005GHz;0.15GHz'
+								Column='0.0001GHz;0.0010995GHz;0.002099GHz;0.0030985GHz;0.004098GHz;0.0050975GHz;0.006097GHz;0.0070965GHz;0.008096GHz;0.0090955GHz;0.010095GHz;0.0110945GHz;0.012094GHz;0.0130935GHz;0.014093GHz;0.0150925GHz;0.016092GHz;0.0170915GHz;0.018091GHz;0.0190905GHz;0.02009GHz;0.0210895GHz;0.022089GHz;0.0230885GHz;0.024088GHz;0.0250875GHz;0.026087GHz;0.0270865GHz;0.028086GHz;0.0290855GHz;0.030085GHz;0.0310845GHz;0.032084GHz;0.0330835GHz;0.034083GHz;0.0350825GHz;0.036082GHz;0.0370815GHz;0.038081GHz;0.0390805GHz;0.04008GHz;0.0410795GHz;0.042079GHz;0.0430785GHz;0.044078GHz;0.0450775GHz;0.046077GHz;0.0470765GHz;0.048076GHz;0.0490755GHz;0.050075GHz;0.0510745GHz;0.052074GHz;0.0530735GHz;0.054073GHz;0.0550725GHz;0.056072GHz;0.0570715GHz;0.058071GHz;0.0590705GHz;0.06007GHz;0.0610695GHz;0.062069GHz;0.0630685GHz;0.064068GHz;0.0650675GHz;0.066067GHz;0.0670665GHz;0.068066GHz;0.0690655GHz;0.070065GHz;0.0710645GHz;0.072064GHz;0.0730635GHz;0.074063GHz;0.0750625GHz;0.076062GHz;0.0770615GHz;0.078061GHz;0.0790605GHz;0.08006GHz;0.0810595GHz;0.082059GHz;0.0830585GHz;0.084058GHz;0.0850575GHz;0.086057GHz;0.0870565GHz;0.088056GHz;0.0890555GHz;0.090055GHz;0.0910545GHz;0.092054GHz;0.0930535GHz;0.094053GHz;0.0950525GHz;0.096052GHz;0.0970515GHz;0.098051GHz;0.0990505GHz;0.10005GHz;0.1010495GHz;0.102049GHz;0.1030485GHz;0.104048GHz;0.1050475GHz;0.106047GHz;0.1070465GHz;0.108046GHz;0.1090455GHz;0.110045GHz;0.1110445GHz;0.112044GHz;0.1130435GHz;0.114043GHz;0.1150425GHz;0.116042GHz;0.1170415GHz;0.118041GHz;0.1190405GHz;0.12004GHz;0.1210395GHz;0.122039GHz;0.1230385GHz;0.124038GHz;0.1250375GHz;0.126037GHz;0.1270365GHz;0.128036GHz;0.1290355GHz;0.130035GHz;0.1310345GHz;0.132034GHz;0.1330335GHz;0.134033GHz;0.1350325GHz;0.136032GHz;0.1370315GHz;0.138031GHz;0.1390305GHz;0.14003GHz;0.1410295GHz;0.142029GHz;0.1430285GHz;0.144028GHz;0.1450275GHz;0.146027GHz;0.1470265GHz;0.148026GHz;0.1490255GHz;0.150025GHz;0.1510245GHz;0.152024GHz;0.1530235GHz;0.154023GHz;0.1550225GHz;0.156022GHz;0.1570215GHz;0.158021GHz;0.1590205GHz;0.16002GHz;0.1610195GHz;0.162019GHz;0.1630185GHz;0.164018GHz;0.1650175GHz;0.166017GHz;0.1670165GHz;0.168016GHz;0.1690155GHz;0.170015GHz;0.1710145GHz;0.172014GHz;0.1730135GHz;0.174013GHz;0.1750125GHz;0.176012GHz;0.1770115GHz;0.178011GHz;0.1790105GHz;0.18001GHz;0.1810095GHz;0.182009GHz;0.1830085GHz;0.184008GHz;0.1850075GHz;0.186007GHz;0.1870065GHz;0.188006GHz;0.1890055GHz;0.190005GHz;0.1910045GHz;0.192004GHz;0.1930035GHz;0.194003GHz;0.1950025GHz;0.196002GHz;0.1970015GHz;0.198001GHz;0.1990005GHz;0.2GHz'
 								Units='GHz'
-								Minimum=10000
-								Maximum=150000000
-								Increment=150000000
+								Minimum=100000
+								Maximum=200000000
+								Increment=200000000
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
 							$begin 'PostprocessSweep'
@@ -2155,17 +2147,17 @@ $begin 'AnsoftProject'
 							$end 'PostprocessSweep'
 							$begin 'Sweep'
 								Variable='radius'
-								Column='23.6mm'
+								Column='22mm'
 								Units='mm'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='pitch'
-								Column='6.9mm'
+								Column='10mm;20mm'
 								Units='mm'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='turns'
-								Column='2;3;4;5;6;7;8;9;10'
+								Column='2'
 								Units=''
 							$end 'Sweep'
 							$begin 'Sweep'
@@ -2175,7 +2167,7 @@ $begin 'AnsoftProject'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='R_fiber'
-								Column='6.5mm'
+								Column='0.32mm'
 								Units='mm'
 							$end 'Sweep'
 						$end 'Sweeps'
@@ -2188,9 +2180,9 @@ $begin 'AnsoftProject'
 				$begin 'Setup'
 					N='Setup1'
 					V=0
-					Soln(N='AdaptivePass', V=0)
-					Soln(N='LastAdaptive', V=706)
-					Soln(N='Sweep', V=747)
+					Soln(N='AdaptivePass', V=790)
+					Soln(N='LastAdaptive', V=790)
+					Soln(N='Sweep', V=790)
 				$end 'Setup'
 			$end 'Version ID Map'
 			$begin 'ID Map'
@@ -2240,7 +2232,7 @@ $begin 'AnsoftProject'
 				DesignInstanceID=1
 				$begin 'WindowPosition'
 					$begin 'EditorWindow'
-						Circuit(Editor3d(View(WindowPos(3, -1, -1, -11, -45, 161, 0, 1725, 668), OrientationMatrix(-0.00366618181578815, -0.0107631757855415, -0.0122322449460626, 0, 0.015433601103723, -0.00631312048062682, 0.000928973779082298, 0, -0.00522279553115368, -0.0111007262021303, 0.0113321710377932, 0, -0.0654559135437012, 1.39900159835815, -4.91345548629761, 1, 0, -0.775766611099243, 2.47445368766785, 0.11051344871521, 1.78270769119263, 0.281802654266357, 9.57871627807617), Drawings[2: 'port', 'EquationCurve2'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=5, dYForGrid=5, dZForGrid=5, dRForGrid=5, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+						Circuit(Editor3d(View(WindowPos(3, -1, -1, -11, -45, 161, 0, 1725, 589), OrientationMatrix(-0.00366618181578815, -0.0107631757855415, -0.0122322449460626, 0, 0.015433601103723, -0.00631312048062682, 0.000928973779082298, 0, -0.00522279553115368, -0.0111007262021303, 0.0113321710377932, 0, -0.0654559135437012, 1.39900159835815, -4.91345548629761, 1, 0, -0.433106899261475, 3.98719501495361, -0.245823621749878, 2.02836155891418, 1.94428205490112, 7.91623735427856), Drawings[2: 'port', 'EquationCurve2'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=5, dYForGrid=5, dZForGrid=5, dRForGrid=5, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
 					$end 'EditorWindow'
 				$end 'WindowPosition'
 				$begin 'ReportSetup'
@@ -2262,7 +2254,7 @@ $begin 'AnsoftProject'
 										$end 'DESIGN_SOLUTION_SIM_VALUE_CONTEXT'
 									$end 'DesignSolnDefn'
 									ID=42
-									VersionID=157
+									VersionID=169
 									Name='re(Z(1,1))'
 									TieNameToExpr=true
 									$begin 'Components'
@@ -2340,7 +2332,7 @@ $begin 'AnsoftProject'
 										$end 'DESIGN_SOLUTION_SIM_VALUE_CONTEXT'
 									$end 'DesignSolnDefn'
 									ID=45
-									VersionID=158
+									VersionID=170
 									Name='im(Z(1,1))'
 									TieNameToExpr=true
 									$begin 'Components'
@@ -2406,7 +2398,7 @@ $begin 'AnsoftProject'
 						NextUniqueID=47
 						MoveBackwards=false
 						$begin 'NextVersID'
-							NextUniqueID=159
+							NextUniqueID=171
 							MoveBackwards=false
 						$end 'NextVersID'
 					$end 'ReportManager'
@@ -4391,7 +4383,7 @@ $begin 'AnsoftProject'
 									$end 'DocDefaultAttributes'
 									$begin 'PerViewPlotAttributeStoreMap'
 										$begin 'MapItem'
-											ItemID=36
+											ItemID=-1
 											$begin 'PlotAttributeStoreMap'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
@@ -4497,6 +4489,30 @@ $begin 'AnsoftProject'
 																	ModifyPosition=false
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_0'
+															$begin 'Dock_1'
+																$begin 'OverlayLayoutAttribute'
+																	$begin 'BoundingRect'
+																		Top=5000
+																		Left=0
+																		Bottom=10000
+																		Right=10000
+																	$end 'BoundingRect'
+																	ModifySize=false
+																	ModifyPosition=false
+																$end 'OverlayLayoutAttribute'
+															$end 'Dock_1'
+															$begin 'Dock_2'
+																$begin 'OverlayLayoutAttribute'
+																	$begin 'BoundingRect'
+																		Top=0
+																		Left=0
+																		Bottom=5000
+																		Right=10000
+																	$end 'BoundingRect'
+																	ModifySize=false
+																	ModifyPosition=false
+																$end 'OverlayLayoutAttribute'
+															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
@@ -6222,7 +6238,7 @@ $begin 'AnsoftProject'
 									$end 'DocDefaultAttributes'
 									$begin 'PerViewPlotAttributeStoreMap'
 										$begin 'MapItem'
-											ItemID=36
+											ItemID=-1
 											$begin 'PlotAttributeStoreMap'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
@@ -6339,6 +6355,30 @@ $begin 'AnsoftProject'
 																	ModifyPosition=true
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_0'
+															$begin 'Dock_1'
+																$begin 'OverlayLayoutAttribute'
+																	$begin 'BoundingRect'
+																		Top=7957
+																		Left=0
+																		Bottom=10000
+																		Right=10000
+																	$end 'BoundingRect'
+																	ModifySize=false
+																	ModifyPosition=true
+																$end 'OverlayLayoutAttribute'
+															$end 'Dock_1'
+															$begin 'Dock_2'
+																$begin 'OverlayLayoutAttribute'
+																	$begin 'BoundingRect'
+																		Top=0
+																		Left=0
+																		Bottom=2043
+																		Right=10000
+																	$end 'BoundingRect'
+																	ModifySize=false
+																	ModifyPosition=true
+																$end 'OverlayLayoutAttribute'
+															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
@@ -6388,26 +6428,6 @@ $begin 'AnsoftProject'
 							ReportID=44
 							$begin 'WindowInfoList'
 								$begin 'Report2D'
-									$begin 'ViewInfo'
-										$begin 'WrapperView'
-											ID(36)
-										$end 'WrapperView'
-										$begin 'WrapperDoc'
-											HiddenDrawings()
-											$begin 'DispType'
-												PlotType=1
-												$begin 'CurveMed'
-													$begin 'MedCamera'
-														$begin 'svrc'
-															svid=4
-															view(36, cam(XYCam(false, true, true, true, -0.0977234542369843, 1.16745960712433, -0.0791893303394318, 1.18599247932434, 0, 1, 0, 1, 0, 0)))
-														$end 'svrc'
-													$end 'MedCamera'
-												$end 'CurveMed'
-											$end 'DispType'
-										$end 'WrapperDoc'
-										WindowPos(WindowPos(5, -1, -1, -11, -45, 190, 190, 1412, 590))
-									$end 'ViewInfo'
 								$end 'Report2D'
 							$end 'WindowInfoList'
 						$end 'Z Parameter Plot 1'
@@ -6415,26 +6435,6 @@ $begin 'AnsoftProject'
 							ReportID=46
 							$begin 'WindowInfoList'
 								$begin 'Report2D'
-									$begin 'ViewInfo'
-										$begin 'WrapperView'
-											ID(36)
-										$end 'WrapperView'
-										$begin 'WrapperDoc'
-											HiddenDrawings()
-											$begin 'DispType'
-												PlotType=1
-												$begin 'CurveMed'
-													$begin 'MedCamera'
-														$begin 'svrc'
-															svid=4
-															view(36, cam(XYCam(false, true, true, true, 0, 1, 0, 1, 0, 1, 0, 1, 5.14286065236765e-039, 4.59185047801663e-039)))
-														$end 'svrc'
-													$end 'MedCamera'
-												$end 'CurveMed'
-											$end 'DispType'
-										$end 'WrapperDoc'
-										WindowPos(WindowPos(5, -1, -1, -11, -45, 0, 0, 1378, 403))
-									$end 'ViewInfo'
 								$end 'Report2D'
 							$end 'WindowInfoList'
 						$end 'Z Parameter Plot 2'

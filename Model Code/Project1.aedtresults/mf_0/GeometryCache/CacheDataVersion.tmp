@@ -1,10 +1,10 @@
 $begin 'CacheDataVersion'
-	DataVersion=-1
+	DataVersion=22
 $end 'CacheDataVersion'
 $begin 'VariableValues'
-	radius='(47.2/2) mm'
-	pitch='6.9mm'
-	turns='10'
+	radius='(44/2) mm'
+	pitch='10mm'
+	turns='2'
 	L='8mm'
-	R_fiber='(3.25*2) mm'
+	R_fiber='0.32mm'
 $end 'VariableValues'
