@@ -13,7 +13,7 @@ Rlist = [7,6.2,4.5,5.5,4.5,4,4,4];
 % Cslist = [5.87e-13,5.1e-13,4.51e-13,4.21e-13,4e-13,3.92e-13,3.78e-13];
 Cplist = [0.1e-14,2.4e-14,2.56e-14,2.2e-14, 2.5e-14, 1.7e-14,2e-14];
 for i = 1:7
-%     open(model(i))
+    open(model(i))
     sdo.setValueInModel(model(i), 'Cp', 1.5e-14);
     sdo.setValueInModel(model(i), 'Cc', 3.33e-13);
     sdo.setValueInModel(model(i), 'Cs', 8.1e-12);
@@ -219,6 +219,7 @@ CT2 = ((2.*pi.*Fc2).^(-2))./L_C_32_A;
 % plot(x,CT,x,CT2)
 % title('Total Capacitance at Resonant Frequency')
 % legend('Knitted','Copper')
+%% 
 % grid on
 
 Cslist50 = [5.75e-13,5.15e-13,4.64e-13,4.25e-13,4.02e-13,3.86e-13,3.6e-13];
