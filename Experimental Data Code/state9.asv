@@ -1291,14 +1291,6 @@ plot(x2,F_C_32,x2,F_K_31_A,x2,F_K_48,x2,F_C_50)
 legend('C-32','K-31','K-48','C-50')
 title('Resonant Frequency')
 grid on
-
-figure(100)
-plot(x2,F_C_32./(1e6),'*--',x2,F_K_31_A./(1e6))
-legend('C-32','K-31')
-title('Resonant Frequency')
-xlabel('Turns, n')
-ylabel('Frequency (MHz)')
-grid on
 %% 
 C_32_CT = ((2.*pi.*F_C_32).^(-2))./L_C_32_A;
 
@@ -1336,15 +1328,6 @@ grid on
 % title('Turn to Turn capacitance')
 % legend('C-32','K-31')
 % grid on
-figure(93)
-plot(x2,L_C_32_A.*1e6,'--',x2,L_K_31_new_A.*1e6)
-title('Totale Inductance at 100kHz')
-legend('C-32','K-31')
-xlabel('Turns, n')
-ylabel('L (µH)')
-
-
-grid on
 %% 
 d = 0.33e-3;
 r = d/2
@@ -1353,4 +1336,4 @@ A = (D*pi)*d;
 p = 0.01;
 C = 8.854e-12 * (A/p);
 eps = 8.854e-12;
-Ctt = (pi^2 * D * eps*3)/(log((p/(2*r))+sqrt((p/(2*r))^2 -1)))
+Ctt = (pi^2 * D * eps)/(ln(p/(2*r)))
