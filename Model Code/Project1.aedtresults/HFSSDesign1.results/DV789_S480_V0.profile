@@ -172,4 +172,55 @@ $begin 'Profile'
 		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
 		ProfileTask('Solution Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:00:00 , Hfss ComEngine Memory : 53.7 M', false, true)
 	$end 'ProfileGroup'
+	$begin 'ProfileGroup'
+		StartInfo='Time:  01/12/2021 16:52:26; Host: DESKTOP-IALB3JK; Processor: 12; OS: NT 6.2; HFSS 2017.1.0'
+		TotalInfo='Time:  01/12/2021 16:52:27, Status: Normal Completion'
+		ProfileTask('', 0, 0, 0, 0, 0, 'Executing from C:\\Program Files\\AnsysEM\\AnsysEM18.1\\Win64\\HFSSCOMENGINE.exe', false, true)
+		ProfileTask('RAM Limit', 0, 0, 0, 0, 0, 'DESKTOP-IALB3JK = 90.000000%', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Solution Basis Order: 1', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Adaptive Passes converged', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Adaptive Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:00:00 , Hfss ComEngine Memory : 51.9 M', false, true)
+	$end 'ProfileGroup'
+	$begin 'ProfileGroup'
+		StartInfo='Time:  01/12/2021 16:52:27; Host: DESKTOP-IALB3JK; Processor: 12; OS: NT 6.2; HFSS 2017.1.0'
+		TotalInfo='Time:  01/12/2021 16:53:42, Status: Engine Detected Error'
+		ProfileTask('', 0, 0, 0, 0, 0, 'Executing from C:\\Program Files\\AnsysEM\\AnsysEM18.1\\Win64\\HFSSCOMENGINE.exe', false, true)
+		ProfileTask('RAM Limit', 0, 0, 0, 0, 0, 'DESKTOP-IALB3JK = 90.000000%', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Solution Basis Order: 1', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Solution Sweep', 0, 0, 0, 0, 0, 'Fast Sweep', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'From 0.0001 GHz to 0.2 GHz, 200 Steps', false, true)
+		ProfileTask('Simulation Setup', 9, 0, 9, 0, 195220, 'Disk = 0 KBytes', true, true)
+		ProfileTask('Matrix Assembly', 11, 0, 11, 0, 737480, 'Disk = 0 KBytes, 77704 tetrahedra , 1 lumped port(s) ', true, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Solution Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:01:15 , Hfss ComEngine Memory : 52 M', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '***Failure in reading in Krylov vectors.', false, true)
+	$end 'ProfileGroup'
+	$begin 'ProfileGroup'
+		StartInfo='Time:  01/12/2021 16:53:49; Host: DESKTOP-IALB3JK; Processor: 12; OS: NT 6.2; HFSS 2017.1.0'
+		TotalInfo='Time:  01/12/2021 16:53:50, Status: Normal Completion'
+		ProfileTask('', 0, 0, 0, 0, 0, 'Executing from C:\\Program Files\\AnsysEM\\AnsysEM18.1\\Win64\\HFSSCOMENGINE.exe', false, true)
+		ProfileTask('RAM Limit', 0, 0, 0, 0, 0, 'DESKTOP-IALB3JK = 90.000000%', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Solution Basis Order: 1', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Adaptive Passes converged', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Adaptive Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:00:00 , Hfss ComEngine Memory : 52.3 M', false, true)
+	$end 'ProfileGroup'
+	$begin 'ProfileGroup'
+		StartInfo='Time:  01/12/2021 16:53:50; Host: DESKTOP-IALB3JK; Processor: 12; OS: NT 6.2; HFSS 2017.1.0'
+		TotalInfo='Time:  01/12/2021 16:55:23, Status: Normal Completion'
+		ProfileTask('', 0, 0, 0, 0, 0, 'Executing from C:\\Program Files\\AnsysEM\\AnsysEM18.1\\Win64\\HFSSCOMENGINE.exe', false, true)
+		ProfileTask('RAM Limit', 0, 0, 0, 0, 0, 'DESKTOP-IALB3JK = 90.000000%', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'Solution Basis Order: 1', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Solution Sweep', 0, 0, 0, 0, 0, 'Fast Sweep', false, true)
+		ProfileTask('', 0, 0, 0, 0, 0, 'From 0.0001 GHz to 0.2 GHz, 200 Steps', false, true)
+		ProfileTask('Simulation Setup', 10, 0, 10, 0, 195108, 'Disk = 0 KBytes', true, true)
+		ProfileTask('Matrix Assembly', 8, 0, 8, 0, 737224, 'Disk = 0 KBytes, 77704 tetrahedra , 1 lumped port(s) ', true, true)
+		ProfileTask('Solver DCS1', 72, 0, 71, 0, 3427356, 'Disk = 133249 KBytes, , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) matrix size 425837 , matrix bandwidth  19.0 , reduced matrix size 20 , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) , 1 lumped port(s) ', true, true)
+		ProfileTask('Field Recovery', 0, 0, 0, 0, 3427356, 'Disk = 20369 KBytes, 1 excitations ', true, true)
+		ProfileTask('', 0, 0, 0, 0, 0, '', false, true)
+		ProfileTask('Solution Process', 0, 0, 0, 0, 0, 'Elapsed time : 00:01:33 , Hfss ComEngine Memory : 53.6 M', false, true)
+	$end 'ProfileGroup'
 $end 'Profile'

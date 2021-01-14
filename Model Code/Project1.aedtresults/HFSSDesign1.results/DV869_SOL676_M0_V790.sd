@@ -8,13 +8,13 @@ $begin 'soln'
 	AdaptivePass=-1
 	$begin 'Frequencies'
 		$begin 'DataPoint'
-			Frequency=10000
+			Frequency=99999.99999999999
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(-0.9999996294344342, 0.0008608669437320809)
+					c(-0.9999629443322703, 0.008608511501284213)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -46,13 +46,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=18758750
+			Frequency=25087500
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(-0.2094672164292466, 0.9777786636068232)
+					c(0.07891834953794219, 0.9968314171367346)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -84,13 +84,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=37507500
+			Frequency=50074999.99999999
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(0.4494636691897396, 0.893223570817395)
+					c(0.650955503350064, 0.759014234099497)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -122,13 +122,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=75005000.00000002
+			Frequency=100050000
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(0.8312872126624702, 0.5556844207009061)
+					c(0.9045322788840655, 0.4261807867140734)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -160,13 +160,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=112502500
+			Frequency=150025000
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(0.9251831204959982, 0.3792596812370936)
+					c(0.9603200508161438, 0.2785029600801168)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -198,13 +198,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=131251250
+			Frequency=175012500
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(0.946341182267453, 0.3228452654813935)
+					c(0.9725428251700643, 0.232207097564271)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -236,13 +236,13 @@ $begin 'soln'
 			$end 'TerminalPMatrix'
 		$end 'DataPoint'
 		$begin 'DataPoint'
-			Frequency=150000000
+			Frequency=200000000
 			DataType='None'
 			$begin 'SMatrix'
 				m=1
 				n=1
 				$begin 'r0'
-					c(0.9603047602872672, 0.2785557364471389)
+					c(0.9805195355884842, 0.1957512093761397)
 				$end 'r0'
 			$end 'SMatrix'
 			EnergyError=0
@@ -289,16 +289,16 @@ $begin 'soln'
 		ErrorTolerance=0.002
 		MaxBasisSize=100
 		BasisSize=7
-		LowSampleFreq=10000
-		LowFullRangeFreq=10000
-		HighFullRangeFreq=150000000
+		LowSampleFreq=99999.99999999999
+		LowFullRangeFreq=99999.99999999999
+		HighFullRangeFreq=200000000
 		NumSamples=201
 		MaxSubRangeBasisSize=20
 		MinNumSubRanges=1
 		WeightedErrorForUI=1
-		LastBasisFreq=18758750
+		LastBasisFreq=175012500
 		NumRanges=1
-		Ranges(10000, 150000000, 150000000)
-		FreqSequence(150000000, 10000, 75005000.00000002, 37507500, 112502500, 131251250, 18758750)
+		Ranges(99999.99999999999, 200000000, 200000000)
+		FreqSequence(200000000, 99999.99999999999, 100050000, 50074999.99999999, 25087500, 150025000, 175012500)
 	$end 'InterpolationBasis'
 $end 'soln'
