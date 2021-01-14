@@ -164,8 +164,8 @@ plot(C_F_N10_32_00./1e6,C_R_N10_32_A)
 plot(C_F_N8_32_00./1e6,C_R_N8_32_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.32mm Real Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -180,8 +180,8 @@ plot(C_F_N10_32_00./1e6,C_I_N10_32_A)
 plot(C_F_N8_32_00./1e6,C_I_N8_32_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.32mm Imag Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 %% 
@@ -729,16 +729,16 @@ figure(58)
 plot(K_F_N20_31_06./1e6,K_R_N20_31_new_A,K_F_N18_31_06./1e6,K_R_N18_31_new_A,K_F_N16_31_06./1e6,K_R_N16_31_new_A,K_F_N14_31_06./1e6,K_R_N14_31_new_A,K_F_N12_31_06./1e6,K_R_N12_31_new_A,K_F_N10_31_06./1e6,K_R_N10_31_new_A,K_F_N8_31_06./1e6,K_R_N8_31_new_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.31mm Real Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 
 figure(59)
 plot(K_F_N20_31_06./1e6,K_I_N20_31_new_A,K_F_N18_31_06./1e6,K_I_N18_31_new_A,K_F_N16_31_06./1e6,K_I_N16_31_new_A,K_F_N14_31_06./1e6,K_I_N14_31_new_A,K_F_N12_31_06./1e6,K_I_N12_31_new_A,K_F_N10_31_06./1e6,K_I_N10_31_new_A,K_F_N8_31_06./1e6,K_I_N8_31_new_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.31mm Imag Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 %% 0.48k
 K_F_N20_48_00 = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
@@ -885,8 +885,8 @@ plot(K_F_N10_48_00,K_R_N10_48_00,K_F_N10_48_00,K_R_N10_48_01,K_F_N10_48_00,K_R_N
 plot(K_F_N8_48_00,K_R_N8_48_00,K_F_N8_48_00,K_R_N8_48_01,K_F_N8_48_00,K_R_N8_48_02)
 legend('N20-1','N20-2','N20-3','N18-1','N18-2','N18-3','N16-1','N16-2','N16-3','N14-1','N14-2','N14-3','N12-1','N12-2','N12-3','N10-1','N10-2','N10-3','N8-1','N8-2','N8-3')
 title('Knitted 0.48mm Real')
-xlabel('Frequency (Hz)')
-ylabel('Ohms')
+xlabel('Frequency (Hz)','fontweight','bold','Fontsize',15)
+ylabel('Ohms','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -901,8 +901,8 @@ plot(K_F_N10_48_00,K_I_N10_48_00,K_F_N10_48_00,K_I_N10_48_01,K_F_N10_48_00,K_I_N
 plot(K_F_N8_48_00,K_I_N8_48_00,K_F_N8_48_00,K_I_N8_48_01,K_F_N8_48_00,K_I_N8_48_02)
 legend('N20-1','N20-2','N20-3','N18-1','N18-2','N18-3','N16-1','N16-2','N16-3','N14-1','N14-2','N14-3','N12-1','N12-2','N12-3','N10-1','N10-2','N10-3','N8-1','N8-2','N8-3')
 title('Knitted 0.48mm Imag')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (Hz)','fontweight','bold','Fontsize',15)
+ylabel('Reactance','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -917,8 +917,8 @@ plot(K_F_N10_48_00./1e6,K_R_N10_48_A)
 plot(K_F_N8_48_00./1e6,K_R_N8_48_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.48mm Real Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -933,8 +933,8 @@ plot(K_F_N10_48_00./1e6,K_I_N10_48_A)
 plot(K_F_N8_48_00./1e6,K_I_N8_48_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.48mm Imag Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 %% 0.5mm
@@ -1113,8 +1113,8 @@ plot(C_F_N10_50_00./1e6,C_R_N10_50_A)
 plot(C_F_N8_50_00./1e6,C_R_N8_50_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.5mm Real Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -1129,8 +1129,8 @@ plot(C_F_N10_50_00./1e6,C_I_N10_50_A)
 plot(C_F_N8_50_00./1e6,C_I_N8_50_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.5mm Imag Average')
-xlabel('Frequency (MHz)')
-ylabel('Resistance (Ohms)')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 %% Thin Knit
