@@ -14,11 +14,7 @@ Rlist = [7,6.2,4.5,5.5,4.5,4,4,4];
 Cplist = [0.1e-14,2.4e-14,2.56e-14,2.2e-14, 2.5e-14, 1.7e-14,2e-14];
 for i = 1:7
     open(model(i))
-<<<<<<< HEAD
     sdo.setValueInModel(model(i), 'Cp', 1.5e-14);
-=======
-    sdo.setValueInModel(model(i), 'Cp', 2e-14);
->>>>>>> 85dc0baffbd711e84156f8714e1c2a4c7111b37d
     sdo.setValueInModel(model(i), 'Cc', 3.33e-13);
     sdo.setValueInModel(model(i), 'Cs', 7.5e-12);
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
