@@ -154,34 +154,34 @@ grid on
 hold off
 
 figure(5)
-plot(C_F_N20_32_00,C_R_N20_32_A)
+plot(C_F_N20_32_00./1e6,C_R_N20_32_A)
 hold on
-plot(C_F_N18_32_00,C_R_N18_32_A)
-plot(C_F_N16_32_00,C_R_N16_32_A)
-plot(C_F_N14_32_00,C_R_N14_32_A)
-plot(C_F_N12_32_00,C_R_N12_32_A)
-plot(C_F_N10_32_00,C_R_N10_32_A)
-plot(C_F_N8_32_00,C_R_N8_32_A)
+plot(C_F_N18_32_00./1e6,C_R_N18_32_A)
+plot(C_F_N16_32_00./1e6,C_R_N16_32_A)
+plot(C_F_N14_32_00./1e6,C_R_N14_32_A)
+plot(C_F_N12_32_00./1e6,C_R_N12_32_A)
+plot(C_F_N10_32_00./1e6,C_R_N10_32_A)
+plot(C_F_N8_32_00./1e6,C_R_N8_32_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.32mm Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 
 figure(6)
-plot(C_F_N20_32_00,C_I_N20_32_A)
+plot(C_F_N20_32_00./1e6,C_I_N20_32_A)
 hold on
-plot(C_F_N18_32_00,C_I_N18_32_A)
-plot(C_F_N16_32_00,C_I_N16_32_A)
-plot(C_F_N14_32_00,C_I_N14_32_A)
-plot(C_F_N12_32_00,C_I_N12_32_A)
-plot(C_F_N10_32_00,C_I_N10_32_A)
-plot(C_F_N8_32_00,C_I_N8_32_A)
+plot(C_F_N18_32_00./1e6,C_I_N18_32_A)
+plot(C_F_N16_32_00./1e6,C_I_N16_32_A)
+plot(C_F_N14_32_00./1e6,C_I_N14_32_A)
+plot(C_F_N12_32_00./1e6,C_I_N12_32_A)
+plot(C_F_N10_32_00./1e6,C_I_N10_32_A)
+plot(C_F_N8_32_00./1e6,C_I_N8_32_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.32mm Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 %% 
@@ -726,19 +726,19 @@ end
 
 
 figure(58)
-plot(K_F_N20_31_06,K_R_N20_31_new_A,K_F_N20_31_06,K_R_N18_31_new_A,K_F_N20_31_06,K_R_N16_31_new_A,K_F_N20_31_06,K_R_N14_31_new_A,K_F_N20_31_06,K_R_N12_31_new_A,K_F_N20_31_06,K_R_N10_31_new_A,K_F_N20_31_06,K_R_N8_31_new_A)
+plot(K_F_N20_31_06./1e6,K_R_N20_31_new_A,K_F_N18_31_06./1e6,K_R_N18_31_new_A,K_F_N16_31_06./1e6,K_R_N16_31_new_A,K_F_N14_31_06./1e6,K_R_N14_31_new_A,K_F_N12_31_06./1e6,K_R_N12_31_new_A,K_F_N10_31_06./1e6,K_R_N10_31_new_A,K_F_N8_31_06./1e6,K_R_N8_31_new_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.31mm Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 
 figure(59)
-plot(K_F_N20_31_06,K_I_N20_31_new_A,K_F_N20_31_06,K_I_N18_31_new_A,K_F_N20_31_06,K_I_N16_31_new_A,K_F_N20_31_06,K_I_N14_31_new_A,K_F_N20_31_06,K_I_N12_31_new_A,K_F_N20_31_06,K_I_N10_31_new_A,K_F_N20_31_06,K_I_N8_31_new_A)
+plot(K_F_N20_31_06./1e6,K_I_N20_31_new_A,K_F_N18_31_06./1e6,K_I_N18_31_new_A,K_F_N16_31_06./1e6,K_I_N16_31_new_A,K_F_N14_31_06./1e6,K_I_N14_31_new_A,K_F_N12_31_06./1e6,K_I_N12_31_new_A,K_F_N10_31_06./1e6,K_I_N10_31_new_A,K_F_N8_31_06./1e6,K_I_N8_31_new_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.31mm Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 %% 0.48k
 K_F_N20_48_00 = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
@@ -907,34 +907,34 @@ grid on
 hold off
 
 figure(3)
-plot(K_F_N20_48_00,K_R_N20_48_A)
+plot(K_F_N20_48_00./1e6,K_R_N20_48_A)
 hold on
-plot(K_F_N18_48_00,K_R_N18_48_A)
-plot(K_F_N16_48_00,K_R_N16_48_A)
-plot(K_F_N14_48_00,K_R_N14_48_A)
-plot(K_F_N12_48_00,K_R_N12_48_A)
-plot(K_F_N10_48_00,K_R_N10_48_A)
-plot(K_F_N8_48_00,K_R_N8_48_A)
+plot(K_F_N18_48_00./1e6,K_R_N18_48_A)
+plot(K_F_N16_48_00./1e6,K_R_N16_48_A)
+plot(K_F_N14_48_00./1e6,K_R_N14_48_A)
+plot(K_F_N12_48_00./1e6,K_R_N12_48_A)
+plot(K_F_N10_48_00./1e6,K_R_N10_48_A)
+plot(K_F_N8_48_00./1e6,K_R_N8_48_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.48mm Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 
 figure(4)
-plot(K_F_N20_48_00,K_I_N20_48_A)
+plot(K_F_N20_48_00./1e6,K_I_N20_48_A)
 hold on
-plot(K_F_N18_48_00,K_I_N18_48_A)
-plot(K_F_N16_48_00,K_I_N16_48_A)
-plot(K_F_N14_48_00,K_I_N14_48_A)
-plot(K_F_N12_48_00,K_I_N12_48_A)
-plot(K_F_N10_48_00,K_I_N10_48_A)
-plot(K_F_N8_48_00,K_I_N8_48_A)
+plot(K_F_N18_48_00./1e6,K_I_N18_48_A)
+plot(K_F_N16_48_00./1e6,K_I_N16_48_A)
+plot(K_F_N14_48_00./1e6,K_I_N14_48_A)
+plot(K_F_N12_48_00./1e6,K_I_N12_48_A)
+plot(K_F_N10_48_00./1e6,K_I_N10_48_A)
+plot(K_F_N8_48_00./1e6,K_I_N8_48_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted 0.48mm Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 %% 0.5mm
@@ -1103,34 +1103,34 @@ grid on
 hold off
 
 figure(3)
-plot(C_F_N20_50_00,C_R_N20_50_A)
+plot(C_F_N20_50_00./1e6,C_R_N20_50_A)
 hold on
-plot(C_F_N18_50_00,C_R_N18_50_A)
-plot(C_F_N16_50_00,C_R_N16_50_A)
-plot(C_F_N14_50_00,C_R_N14_50_A)
-plot(C_F_N12_50_00,C_R_N12_50_A)
-plot(C_F_N10_50_00,C_R_N10_50_A)
-plot(C_F_N8_50_00,C_R_N8_50_A)
+plot(C_F_N18_50_00./1e6,C_R_N18_50_A)
+plot(C_F_N16_50_00./1e6,C_R_N16_50_A)
+plot(C_F_N14_50_00./1e6,C_R_N14_50_A)
+plot(C_F_N12_50_00./1e6,C_R_N12_50_A)
+plot(C_F_N10_50_00./1e6,C_R_N10_50_A)
+plot(C_F_N8_50_00./1e6,C_R_N8_50_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.5mm Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 
 figure(4)
-plot(C_F_N20_50_00,C_I_N20_50_A)
+plot(C_F_N20_50_00./1e6,C_I_N20_50_A)
 hold on
-plot(C_F_N18_50_00,C_I_N18_50_A)
-plot(C_F_N16_50_00,C_I_N16_50_A)
-plot(C_F_N14_50_00,C_I_N14_50_A)
-plot(C_F_N12_50_00,C_I_N12_50_A)
-plot(C_F_N10_50_00,C_I_N10_50_A)
-plot(C_F_N8_50_00,C_I_N8_50_A)
+plot(C_F_N18_50_00./1e6,C_I_N18_50_A)
+plot(C_F_N16_50_00./1e6,C_I_N16_50_A)
+plot(C_F_N14_50_00./1e6,C_I_N14_50_A)
+plot(C_F_N12_50_00./1e6,C_I_N12_50_A)
+plot(C_F_N10_50_00./1e6,C_I_N10_50_A)
+plot(C_F_N8_50_00./1e6,C_I_N8_50_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Copper 0.5mm Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 %% Thin Knit
@@ -1298,34 +1298,34 @@ grid on
 hold off
 
 figure(3)
-plot(K_F_N20_T_00,K_R_N20_T_A)
+plot(K_F_N20_T_00./1e6,K_R_N20_T_A)
 hold on
-plot(K_F_N18_T_00,K_R_N18_T_A)
-plot(K_F_N16_T_00,K_R_N16_T_A)
-plot(K_F_N14_T_00,K_R_N14_T_A)
-plot(K_F_N12_T_00,K_R_N12_T_A)
-plot(K_F_N10_T_00,K_R_N10_T_A)
-plot(K_F_N8_T_00,K_R_N8_T_A)
+plot(K_F_N18_T_00./1e6,K_R_N18_T_A)
+plot(K_F_N16_T_00./1e6,K_R_N16_T_A)
+plot(K_F_N14_T_00./1e6,K_R_N14_T_A)
+plot(K_F_N12_T_00./1e6,K_R_N12_T_A)
+plot(K_F_N10_T_00./1e6,K_R_N10_T_A)
+plot(K_F_N8_T_00./1e6,K_R_N8_T_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted THIN Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 
 figure(4)
-plot(K_F_N20_T_00,K_I_N20_T_A)
+plot(K_F_N20_T_00./1e6,K_I_N20_T_A)
 hold on
-plot(K_F_N18_T_00,K_I_N18_T_A)
-plot(K_F_N16_T_00,K_I_N16_T_A)
-plot(K_F_N14_T_00,K_I_N14_T_A)
-plot(K_F_N12_T_00,K_I_N12_T_A)
-plot(K_F_N10_T_00,K_I_N10_T_A)
-plot(K_F_N8_T_00,K_I_N8_T_A)
+plot(K_F_N18_T_00./1e6,K_I_N18_T_A)
+plot(K_F_N16_T_00./1e6,K_I_N16_T_A)
+plot(K_F_N14_T_00./1e6,K_I_N14_T_A)
+plot(K_F_N12_T_00./1e6,K_I_N12_T_A)
+plot(K_F_N10_T_00./1e6,K_I_N10_T_A)
+plot(K_F_N8_T_00./1e6,K_I_N8_T_A)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
 title('Knitted THIN Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+xlabel('Frequency (MHz)')
+ylabel('Resistance (Ohms)')
 grid on
 hold off
 
