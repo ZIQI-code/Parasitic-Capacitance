@@ -66,7 +66,7 @@ Rlist = [6.8,4,2,2.5,2.2,1.5,0.7];
 % Fc32_1 'Cc', 3.33e-13 'Cs', 7.5e-12
 %
 for i = 1:7
-%     open(model(i))
+    open(model(i))
     sdo.setValueInModel(model(i), 'Cc', 3.33e-13);
     sdo.setValueInModel(model(i), 'Cs', 7.5e-12);
     sdo.setValueInModel(model(i), 'L', L_C_32_A(i)/x(i));
@@ -74,7 +74,7 @@ for i = 1:7
     z_data = power_zmeter(model(i), freq'); 
     [M,I] = max(real(z_data.Z));
     Fc32_2 = [Fc32_2, freq(I)];
-    F_C_32;
+    % F_C_32;
     
 %     figure(99)
 %     plot(freq,real(z_data.Z),freq, data_real(i,:))
@@ -97,15 +97,15 @@ end
 %     Fc32 = [Fc32, freq(I)];
 %     F_C_32;
 % end
+%%
 CT32_2 = ((2.*pi.*Fc32_2).^(-2))./L_C_32_A;
-CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
+%CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
 figure(97)
-plot(x,CT32,x,C_32_CT,x,CT32_2)
-legend('simulation','experiment','s2')
+plot(x,CT32_2.*1e12,x,C_32_CT.*1e12)
+legend('simulation','experiment','fontweight','bold')
 grid on
-title('Total Capacitance at Resonant Frequency')
-xlabel('Turn')
-ylabel('Capacitance')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 %% Study of 0.5 Copper
 freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
 data_real = [C_R_N8_50_A;C_R_N10_50_A;C_R_N12_50_A;C_R_N14_50_A;C_R_N16_50_A;C_R_N18_50_A;C_R_N20_50_A];
@@ -172,12 +172,11 @@ end
 CT50 = ((2.*pi.*Fc50).^(-2))./L_C_50_A;
 CT50_2 = ((2.*pi.*Fc50_2).^(-2))./L_C_50_A;
 figure(97)
-plot(x,CT50,x,C_50_CT)
-legend('simulation','experiment')
+plot(x,CT50.*1e12,x,C_50_CT.*1e12)
+legend('simulation','experiment','fontweight','bold')
 grid on
-title('Total Capacitance at Resonant Frequency')
-xlabel('Turn')
-ylabel('Capacitance')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 %% Knitted 0.48
 freq = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
 data_real = [K_R_N8_48_A;K_R_N10_48_A;K_R_N12_48_A;K_R_N14_48_A;K_R_N16_48_A;K_R_N18_48_A;K_R_N20_48_A];
@@ -213,11 +212,13 @@ for i = 1:7
     grid on
     
 end
-
+%%
 CT48 = ((2.*pi.*Fk48).^(-2))./L_K_48_A;
 figure(97)
-plot(x,CT48,x,K_48_CT)
-legend('simulation', 'experiment')
+plot(x,CT48.*1e12,x,K_48_CT.*1e12)
+legend('simulation', 'experiment','fontweight','bold')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 grid on
 %% 
 freq = csvread('N20_0.32C_04.CSV',3,0,[3,0,802,0]);
