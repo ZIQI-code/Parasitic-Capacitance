@@ -1,6 +1,6 @@
 import math
 
-count = 4
+count = 5
 
 infile = open('point.txt', 'r')
 outfile = open('distance.txt', 'r+')
