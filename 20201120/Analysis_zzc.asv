@@ -99,14 +99,13 @@ end
 % end
 %%
 CT32_2 = ((2.*pi.*Fc32_2).^(-2))./L_C_32_A;
-CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
+%CT32 = ((2.*pi.*Fc32).^(-2))./L_C_32_A;
 figure(97)
-plot(x,CT32,x,C_32_CT,x,CT32_2)
-legend('simulation','experiment','s2')
+plot(x,CT32_2.*1e12,x,C_32_CT.*1e12)
+legend('simulation','experiment','fontweight','bold')
 grid on
-title('Total Capacitance at Resonant Frequency')
-xlabel('Turn')
-ylabel('Capacitance')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 %% Study of 0.5 Copper
 freq = csvread('N20_0.5C_04.CSV',3,0,[3,0,802,0]);
 data_real = [C_R_N8_50_A;C_R_N10_50_A;C_R_N12_50_A;C_R_N14_50_A;C_R_N16_50_A;C_R_N18_50_A;C_R_N20_50_A];
@@ -126,10 +125,10 @@ Rlist = [9,3,2,2,1.8,1.2,1];
 %Cc 3.35e-13 Cs 6.89e-12  8.203e-12 8.204e-12 7.73e-12  
 %Cc 3.4e-13  Cs 6.742e-12 7.985e-12 7.915e-12 7.315e-12 
 %Cc 3.5e-13  Cs 6.45e-12  7.53e-12  7.268e-12 6.45e-12  5.902e-12
-for i = 1:7
-    open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
-    sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
+% for i = 1:7
+%     open(model(i))
+%     sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
+%     sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
     sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 

@@ -152,16 +152,16 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
-
+%%
 figure(5)
-plot(C_F_N20_32_00./1e6,C_R_N20_32_A)
+plot(C_F_N20_32_00./1e6,C_R_N20_32_A,'LineWidth',1.5)
 hold on
-plot(C_F_N18_32_00./1e6,C_R_N18_32_A)
-plot(C_F_N16_32_00./1e6,C_R_N16_32_A)
-plot(C_F_N14_32_00./1e6,C_R_N14_32_A)
-plot(C_F_N12_32_00./1e6,C_R_N12_32_A)
-plot(C_F_N10_32_00./1e6,C_R_N10_32_A)
-plot(C_F_N8_32_00./1e6,C_R_N8_32_A)
+plot(C_F_N18_32_00./1e6,C_R_N18_32_A,'LineWidth',1.5)
+plot(C_F_N16_32_00./1e6,C_R_N16_32_A,'LineWidth',1.5)
+plot(C_F_N14_32_00./1e6,C_R_N14_32_A,'LineWidth',1.5)
+plot(C_F_N12_32_00./1e6,C_R_N12_32_A,'LineWidth',1.5)
+plot(C_F_N10_32_00./1e6,C_R_N10_32_A,'LineWidth',1.5)
+plot(C_F_N8_32_00./1e6,C_R_N8_32_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
@@ -169,14 +169,14 @@ grid on
 hold off
 
 figure(6)
-plot(C_F_N20_32_00./1e6,C_I_N20_32_A)
+plot(C_F_N20_32_00./1e6,C_I_N20_32_A,'LineWidth',1.5)
 hold on
-plot(C_F_N18_32_00./1e6,C_I_N18_32_A)
-plot(C_F_N16_32_00./1e6,C_I_N16_32_A)
-plot(C_F_N14_32_00./1e6,C_I_N14_32_A)
-plot(C_F_N12_32_00./1e6,C_I_N12_32_A)
-plot(C_F_N10_32_00./1e6,C_I_N10_32_A)
-plot(C_F_N8_32_00./1e6,C_I_N8_32_A)
+plot(C_F_N18_32_00./1e6,C_I_N18_32_A,'LineWidth',1.5)
+plot(C_F_N16_32_00./1e6,C_I_N16_32_A,'LineWidth',1.5)
+plot(C_F_N14_32_00./1e6,C_I_N14_32_A,'LineWidth',1.5)
+plot(C_F_N12_32_00./1e6,C_I_N12_32_A,'LineWidth',1.5)
+plot(C_F_N10_32_00./1e6,C_I_N10_32_A,'LineWidth',1.5)
+plot(C_F_N8_32_00./1e6,C_I_N8_32_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Reactance (Ohms)','fontweight','bold','Fontsize',15)
@@ -724,14 +724,14 @@ end
 
 
 figure(58)
-plot(K_F_N20_31_06./1e6,K_R_N20_31_new_A,K_F_N18_31_06./1e6,K_R_N18_31_new_A,K_F_N16_31_06./1e6,K_R_N16_31_new_A,K_F_N14_31_06./1e6,K_R_N14_31_new_A,K_F_N12_31_06./1e6,K_R_N12_31_new_A,K_F_N10_31_06./1e6,K_R_N10_31_new_A,K_F_N8_31_06./1e6,K_R_N8_31_new_A)
+plot(K_F_N20_31_06./1e6,K_R_N20_31_new_A,K_F_N18_31_06./1e6,K_R_N18_31_new_A,K_F_N16_31_06./1e6,K_R_N16_31_new_A,K_F_N14_31_06./1e6,K_R_N14_31_new_A,K_F_N12_31_06./1e6,K_R_N12_31_new_A,K_F_N10_31_06./1e6,K_R_N10_31_new_A,K_F_N8_31_06./1e6,K_R_N8_31_new_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 
 figure(59)
-plot(K_F_N20_31_06./1e6,K_I_N20_31_new_A,K_F_N18_31_06./1e6,K_I_N18_31_new_A,K_F_N16_31_06./1e6,K_I_N16_31_new_A,K_F_N14_31_06./1e6,K_I_N14_31_new_A,K_F_N12_31_06./1e6,K_I_N12_31_new_A,K_F_N10_31_06./1e6,K_I_N10_31_new_A,K_F_N8_31_06./1e6,K_I_N8_31_new_A)
+plot(K_F_N20_31_06./1e6,K_I_N20_31_new_A,K_F_N18_31_06./1e6,K_I_N18_31_new_A,K_F_N16_31_06./1e6,K_I_N16_31_new_A,K_F_N14_31_06./1e6,K_I_N14_31_new_A,K_F_N12_31_06./1e6,K_I_N12_31_new_A,K_F_N10_31_06./1e6,K_I_N10_31_new_A,K_F_N8_31_06./1e6,K_I_N8_31_new_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Reactance (Ohms)','fontweight','bold','Fontsize',15)
@@ -901,16 +901,16 @@ xlabel('Frequency (Hz)','fontweight','bold','Fontsize',15)
 ylabel('Reactance','fontweight','bold','Fontsize',15)
 grid on
 hold off
-
+%%
 figure(3)
-plot(K_F_N20_48_00./1e6,K_R_N20_48_A)
+plot(K_F_N20_48_00./1e6,K_R_N20_48_A,'LineWidth',1.5)
 hold on
-plot(K_F_N18_48_00./1e6,K_R_N18_48_A)
-plot(K_F_N16_48_00./1e6,K_R_N16_48_A)
-plot(K_F_N14_48_00./1e6,K_R_N14_48_A)
-plot(K_F_N12_48_00./1e6,K_R_N12_48_A)
-plot(K_F_N10_48_00./1e6,K_R_N10_48_A)
-plot(K_F_N8_48_00./1e6,K_R_N8_48_A)
+plot(K_F_N18_48_00./1e6,K_R_N18_48_A,'LineWidth',1.5)
+plot(K_F_N16_48_00./1e6,K_R_N16_48_A,'LineWidth',1.5)
+plot(K_F_N14_48_00./1e6,K_R_N14_48_A,'LineWidth',1.5)
+plot(K_F_N12_48_00./1e6,K_R_N12_48_A,'LineWidth',1.5)
+plot(K_F_N10_48_00./1e6,K_R_N10_48_A,'LineWidth',1.5)
+plot(K_F_N8_48_00./1e6,K_R_N8_48_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
@@ -918,14 +918,14 @@ grid on
 hold off
 
 figure(4)
-plot(K_F_N20_48_00./1e6,K_I_N20_48_A)
+plot(K_F_N20_48_00./1e6,K_I_N20_48_A,'LineWidth',1.5)
 hold on
-plot(K_F_N18_48_00./1e6,K_I_N18_48_A)
-plot(K_F_N16_48_00./1e6,K_I_N16_48_A)
-plot(K_F_N14_48_00./1e6,K_I_N14_48_A)
-plot(K_F_N12_48_00./1e6,K_I_N12_48_A)
-plot(K_F_N10_48_00./1e6,K_I_N10_48_A)
-plot(K_F_N8_48_00./1e6,K_I_N8_48_A)
+plot(K_F_N18_48_00./1e6,K_I_N18_48_A,'LineWidth',1.5)
+plot(K_F_N16_48_00./1e6,K_I_N16_48_A,'LineWidth',1.5)
+plot(K_F_N14_48_00./1e6,K_I_N14_48_A,'LineWidth',1.5)
+plot(K_F_N12_48_00./1e6,K_I_N12_48_A,'LineWidth',1.5)
+plot(K_F_N10_48_00./1e6,K_I_N10_48_A,'LineWidth',1.5)
+plot(K_F_N8_48_00./1e6,K_I_N8_48_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Reactance (Ohms)','fontweight','bold','Fontsize',15)
@@ -1095,16 +1095,16 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
-
+%%
 figure(3)
-plot(C_F_N20_50_00./1e6,C_R_N20_50_A)
+plot(C_F_N20_50_00./1e6,C_R_N20_50_A,'LineWidth',1.5)
 hold on
-plot(C_F_N18_50_00./1e6,C_R_N18_50_A)
-plot(C_F_N16_50_00./1e6,C_R_N16_50_A)
-plot(C_F_N14_50_00./1e6,C_R_N14_50_A)
-plot(C_F_N12_50_00./1e6,C_R_N12_50_A)
-plot(C_F_N10_50_00./1e6,C_R_N10_50_A)
-plot(C_F_N8_50_00./1e6,C_R_N8_50_A)
+plot(C_F_N18_50_00./1e6,C_R_N18_50_A,'LineWidth',1.5)
+plot(C_F_N16_50_00./1e6,C_R_N16_50_A,'LineWidth',1.5)
+plot(C_F_N14_50_00./1e6,C_R_N14_50_A,'LineWidth',1.5)
+plot(C_F_N12_50_00./1e6,C_R_N12_50_A,'LineWidth',1.5)
+plot(C_F_N10_50_00./1e6,C_R_N10_50_A,'LineWidth',1.5)
+plot(C_F_N8_50_00./1e6,C_R_N8_50_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
@@ -1112,14 +1112,14 @@ grid on
 hold off
 
 figure(4)
-plot(C_F_N20_50_00./1e6,C_I_N20_50_A)
+plot(C_F_N20_50_00./1e6,C_I_N20_50_A,'LineWidth',1.5)
 hold on
-plot(C_F_N18_50_00./1e6,C_I_N18_50_A)
-plot(C_F_N16_50_00./1e6,C_I_N16_50_A)
-plot(C_F_N14_50_00./1e6,C_I_N14_50_A)
-plot(C_F_N12_50_00./1e6,C_I_N12_50_A)
-plot(C_F_N10_50_00./1e6,C_I_N10_50_A)
-plot(C_F_N8_50_00./1e6,C_I_N8_50_A)
+plot(C_F_N18_50_00./1e6,C_I_N18_50_A,'LineWidth',1.5)
+plot(C_F_N16_50_00./1e6,C_I_N16_50_A,'LineWidth',1.5)
+plot(C_F_N14_50_00./1e6,C_I_N14_50_A,'LineWidth',1.5)
+plot(C_F_N12_50_00./1e6,C_I_N12_50_A,'LineWidth',1.5)
+plot(C_F_N10_50_00./1e6,C_I_N10_50_A,'LineWidth',1.5)
+plot(C_F_N8_50_00./1e6,C_I_N8_50_A,'LineWidth',1.5)
 legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
 xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
 ylabel('Reactance (Ohms)','fontweight','bold','Fontsize',15)

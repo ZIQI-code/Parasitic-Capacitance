@@ -125,32 +125,32 @@ Rlist = [9,3,2,2,1.8,1.2,1];
 %Cc 3.35e-13 Cs 6.89e-12  8.203e-12 8.204e-12 7.73e-12  
 %Cc 3.4e-13  Cs 6.742e-12 7.985e-12 7.915e-12 7.315e-12 
 %Cc 3.5e-13  Cs 6.45e-12  7.53e-12  7.268e-12 6.45e-12  5.902e-12
-for i = 1:7
-    open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
-    sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
-    sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
-    sdo.setValueInModel(model(i), 'R', Rlist(i));
-    z_data = power_zmeter(model(i), freq'); 
-    [M,I] = max(real(z_data.Z));
-    Fc50_2 = [Fc50_2, freq(I)];
+% for i = 1:7
+%     open(model(i))
+%     sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
+%     sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
+%     sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
+%     sdo.setValueInModel(model(i), 'R', Rlist(i));
+%     z_data = power_zmeter(model(i), freq'); 
+%     [M,I] = max(real(z_data.Z));
+%     Fc50_2 = [Fc50_2, freq(I)];
     %F_C_50;
     
-    figure(99)
-    plot(freq,real(z_data.Z),freq, data_real(i,:))
-    legend('simulation', 'experiment')
-    grid on
-    figure(98)
-    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
-    legend('simulation', 'experiment')
-    grid on
+%     figure(99)
+%     plot(freq,real(z_data.Z),freq, data_real(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
+%     figure(98)
+%     plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+%     legend('simulation', 'experiment')
+%     grid on
     
-end 
+%end 
 
 for i = 1:7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.29e-13);
-    sdo.setValueInModel(model(i), 'Cs', 8.15e-12);
+    sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
+    sdo.setValueInModel(model(i), 'Cs', 8e-12);
     sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
@@ -168,14 +168,14 @@ for i = 1:7
 %     grid on
     
 end 
-%%
+
 CT50 = ((2.*pi.*Fc50).^(-2))./L_C_50_A;
-CT50_2 = ((2.*pi.*Fc50_2).^(-2))./L_C_50_A;
+% CT50_2 = ((2.*pi.*Fc50_2).^(-2))./L_C_50_A;
 figure(97)
-plot(x,CT50.*1e12,x,C_50_CT.*1e12)
+plot(x,CT50.*1e12,'*--',x,C_50_CT.*1e12,'s-','LineWidth',1.5)
 legend('simulation','experiment','fontweight','bold')
 grid on
-xlabel('Turns','fontweight','bold','Fontsize',15)
+xlabel('Turns, n','fontweight','bold','Fontsize',15)
 ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 %% Knitted 0.48
 freq = csvread('N20_0.48K_01.CSV',3,0,[3,0,802,0]);
@@ -191,9 +191,9 @@ Cplist = [0.6e-14,0.1e-14,0.1e-14,0.6e-14,0.8e-14,0.9e-14,2.8e-14];
 Rlist = [8.5,5,4,3,4,3,2.5];
 for i = 1:7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.29e-13);
-    sdo.setValueInModel(model(i), 'Cp', 2.95e-14);
-    sdo.setValueInModel(model(i), 'Cs', 6.52e-12);
+    sdo.setValueInModel(model(i), 'Cc', 3.314e-13);
+    sdo.setValueInModel(model(i), 'Cp', 1.08e-14);
+    sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
     sdo.setValueInModel(model(i), 'L', L_K_48_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
@@ -212,12 +212,12 @@ for i = 1:7
     grid on
     
 end
-%%
+
 CT48 = ((2.*pi.*Fk48).^(-2))./L_K_48_A;
 figure(97)
-plot(x,CT48.*1e12,x,K_48_CT.*1e12)
+plot(x,CT48.*1e12,'*--',x,K_48_CT.*1e12,'s-','LineWidth',1.5)
 legend('simulation', 'experiment','fontweight','bold')
-xlabel('Turns','fontweight','bold','Fontsize',15)
+xlabel('Turns, n','fontweight','bold','Fontsize',15)   
 ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
 grid on
 %% 
