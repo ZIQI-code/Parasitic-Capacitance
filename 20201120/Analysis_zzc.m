@@ -149,8 +149,8 @@ Rlist = [9,3,2,2,1.8,1.2,1];
 
 for i = 1:7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.3e-13);
-    sdo.setValueInModel(model(i), 'Cs', 8e-12);
+    sdo.setValueInModel(model(i), 'Cc', 3.28e-13);
+    sdo.setValueInModel(model(i), 'Cs', 8.31e-12);
     sdo.setValueInModel(model(i), 'L', L_C_50_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
@@ -168,7 +168,7 @@ for i = 1:7
 %     grid on
     
 end 
-
+%%
 CT50 = ((2.*pi.*Fc50).^(-2))./L_C_50_A;
 % CT50_2 = ((2.*pi.*Fc50_2).^(-2))./L_C_50_A;
 figure(97)
@@ -191,9 +191,9 @@ Cplist = [0.6e-14,0.1e-14,0.1e-14,0.6e-14,0.8e-14,0.9e-14,2.8e-14];
 Rlist = [8.5,5,4,3,4,3,2.5];
 for i = 1:7
     open(model(i))
-    sdo.setValueInModel(model(i), 'Cc', 3.314e-13);
-    sdo.setValueInModel(model(i), 'Cp', 1.08e-14);
-    sdo.setValueInModel(model(i), 'Cs', 8.09e-12);
+    sdo.setValueInModel(model(i), 'Cc', 3.29e-13);
+    sdo.setValueInModel(model(i), 'Cp', 1.2e-14);
+    sdo.setValueInModel(model(i), 'Cs', 8.23e-12);
     sdo.setValueInModel(model(i), 'L', L_K_48_A(i)/x(i));
     sdo.setValueInModel(model(i), 'R', Rlist(i));
     z_data = power_zmeter(model(i), freq'); 
@@ -212,7 +212,7 @@ for i = 1:7
     grid on
     
 end
-
+%%
 CT48 = ((2.*pi.*Fk48).^(-2))./L_K_48_A;
 figure(97)
 plot(x,CT48.*1e12,'*--',x,K_48_CT.*1e12,'s-','LineWidth',1.5)
