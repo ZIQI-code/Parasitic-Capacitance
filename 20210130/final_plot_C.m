@@ -2,9 +2,9 @@
 model = ["RC_Circuit_N8C_1", "RC_Circuit_N10C_1", "RC_Circuit_N12C_1", "RC_Circuit_N14C_1", "RC_Circuit_N16C_1", "RC_Circuit_N18C_1", "RC_Circuit_N20C_1"];
 x = [8, 10, 12, 14, 16, 18, 20];
 
-% for i = 1:7
-%     open(model(i));
-% end
+for i = 1:7
+    open(model(i));
+end
 
 %% 0.32c
 freq_0_32C = csvread('N20_0.32C_04.CSV', 3, 0, [3, 0, 802, 0]);
