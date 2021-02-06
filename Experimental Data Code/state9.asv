@@ -1854,11 +1854,11 @@ C = 8.854e-12 * (A/p);
 eps = 8.854e-12;
 Ctt = (pi^2 * D * eps*3)/(log((p/(2*r))+sqrt((p/(2*r))^2 -1)))
 %%
-x = [8,10,12,14,16,18,20];
 figure(97)
-% plot(x,C_32_CT.*1e12)
+plot(x,CT32_2.*1e12)
 C_32_CT_ERR=[0.0015  0.0007    0.0007    0.0061    0.0076    0.0025    0.0025].*10;
-errorbar(x,C_32_CT.*1e12,C_32_CT_ERR)
+errorbar(x,y,err)
+legend('simulation','experiment','fontweight','bold')
 grid on
 xlabel('Turns','fontweight','bold','Fontsize',15)
 ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
