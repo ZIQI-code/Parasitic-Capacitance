@@ -607,6 +607,7 @@ grid on
 hold off
 
 %% New average real&imag plots for new average inductance
+
 K_R_N20_31_new_A=zeros(800:1);
 K_I_N20_31_new_A=zeros(800:1);
 for i=1:800
@@ -1853,12 +1854,50 @@ p = 0.01;
 C = 8.854e-12 * (A/p);
 eps = 8.854e-12;
 Ctt = (pi^2 * D * eps*3)/(log((p/(2*r))+sqrt((p/(2*r))^2 -1)))
-%%
+%% 0.32C error bar
 x = [8,10,12,14,16,18,20];
 figure(97)
 % plot(x,C_32_CT.*1e12)
 C_32_CT_ERR=[0.0015  0.0007    0.0007    0.0061    0.0076    0.0025    0.0025].*10;
-errorbar(x,C_32_CT.*1e12,C_32_CT_ERR)
+errorbar(x,C_32_CT.*1e12,C_32_CT_ERR,'*-','CapSize',10,'LineWidth',1.5)
 grid on
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
+%% 0.31K error bar
+F_K_31_6=flip([3.7984    4.1110    4.5486    5.1363    5.6864    6.4241    7.4869].*1e7);
+K_31_CT_6 = [0.2166    0.2402    0.2542    0.2750    0.3098    0.3391    0.3605].*1e-11;
+K_31_CT_8 = [0.2171    0.2401    0.2562    0.2837    0.3111    0.3310    0.3580].*1e-11;
+K_31_CT_ERR=[0.0005    0.0001    0.0020    0.0087    0.0013    0.0081    0.0025].*1e-11;
+figure(47)
+% plot(x,C_32_CT.*1e12)
+errorbar(x,C_32_CT.*1e12,C_32_CT_ERR,'*-','CapSize',10,'LineWidth',1.5)
+e.Color = 'blue';
+hold on
+errorbar(x,K_31_CT.*1e12,K_31_CT_ERR.*1e12,'*--','CapSize',10,'LineWidth',1.5)
+e.Color = 'red';
+grid on
+legend('C-32','K-31')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
+%% 0.5C+0.48K
+C_50_CT_0 = [0.2106    0.2314    0.2451    0.2572    0.2801    0.2983    0.3111].*1e-11;
+C_50_CT_1 = [0.2104    0.2332    0.2451    0.2619    0.2781    0.3070    0.3103].*1e-11;
+C_50_CT_2 = [0.2113    0.2339    0.2465    0.2582    0.2776    0.3074    0.3068].*1e-11;
+C_50_CT_ERR=[0.0009    0.0025    0.0014    0.0047    0.0025    0.0091    0.0043].*1e-11;
+
+K_48_CT_0 = [0.2154    0.2307    0.2453    0.2622    0.2769    0.3034    0.3361].*1e-11;
+K_48_CT_1 = [0.2134    0.2297    0.2404    0.2658    0.2883    0.3118    0.3379].*1e-11;
+K_48_CT_2 = [0.2147    0.2284    0.2415    0.2643    0.2819    0.3084    0.3380].*1e-11;
+K_48_CT_ERR=[0.0020    0.0023    0.0049    0.0036    0.0114    0.0084    0.0019].*1e-11;
+
+figure(47)
+% plot(x,C_32_CT.*1e12)
+errorbar(x,C_32_CT.*1e12,C_50_CT_ERR.*1e12,'*-','CapSize',10,'LineWidth',1.5)
+e.Color = 'blue';
+hold on
+errorbar(x,K_31_CT.*1e12,K_48_CT_ERR.*1e12,'*--','CapSize',10,'LineWidth',1.5)
+e.Color = 'red';
+grid on
+legend('C-50','K-48')
 xlabel('Turns','fontweight','bold','Fontsize',15)
 ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)
