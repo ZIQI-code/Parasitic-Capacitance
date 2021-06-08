@@ -1812,8 +1812,8 @@ d = 4.5; m0 = 4e-7*pi; A = pi*(d/2)^2; l = 1.*x;
 % L_32 = (m0.*A.*(x.^2))./(l.*(1+0.9.*(d./(2.*l))));
 
 figure(96)
-% plot(x2,C_32_CT,x2,K_31_CT,x2,C_50_CT,x2,K_48_CT,x4,simuC)
-plot(x2,C_50_CT,x2,K_48_CT,x2,K_27_CT,x4,simuC)
+plot(x2,C_32_CT,x2,K_31_CT,x2,C_50_CT,x2,K_48_CT,x4,simuC)
+% plot(x2,C_50_CT,x2,K_48_CT,x2,K_27_CT,x4,simuC)
 title('Total Capacitance at Resonant Frequency')
 legend('C-50','K-48','K-27','simu')
 grid on
