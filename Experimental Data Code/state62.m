@@ -107,6 +107,30 @@ end
 
 x = [8,10,12,14,16,18,20];
 
+freq = K_F_N20_18_01(2:8);
+imped = transpose(K_I_N20_18_A(2:8));
+format long
+slope = freq\imped;
+imped_pred = slope .* freq;
+
+imped_goal = slope .* K_F_N20_18_01(1)
+
+freq = K_F_N18_18_01(2:8);
+imped = transpose(K_I_N18_18_A(2:8));
+format long
+slope = freq\imped;
+imped_pred = slope .* freq;
+
+imped_goal = slope .* K_F_N20_18_01(1)
+
+freq = K_F_N20_18_01(2:8);
+imped = transpose(K_I_N16_18_A(2:8));
+format long
+slope = freq\imped;
+imped_pred = slope .* freq;
+
+imped_goal = slope .* K_F_N20_18_01(1)
+
 % L_K_31_3 = flip([K_I_N20_31_03(1),K_I_N18_31_03(1),K_I_N16_31_03(1),K_I_N14_31_03(1),K_I_N12_31_03(1),K_I_N10_31_03(1),K_I_N8_31_03(1)]./(1e5*(2*pi)));
 % L_K_31_4 = flip([K_I_N20_31_04(1),K_I_N18_31_04(1),K_I_N16_31_04(1),K_I_N14_31_04(1),K_I_N12_31_04(1),K_I_N10_31_04(1),K_I_N8_31_04(1)]./(1e5*(2*pi)));
 % L_K_31_5 = flip([K_I_N20_31_05(1),K_I_N18_31_05(1),K_I_N16_31_05(1),K_I_N14_31_05(1),K_I_N12_31_05(1),K_I_N10_31_05(1),K_I_N8_31_05(1)]./(1e5*(2*pi)));
@@ -385,3 +409,16 @@ xlabel('Frequency (Hz)')
 ylabel('Reactance')
 grid on
 hold off
+
+%%
+L_N8_25_01 = csvread('L_N8_0.25K_01.CSV',3,2,[3,2,302,2]);
+% K_I_N10_48_02 = csvread('N10_0.48K_03.CSV',3,2,[3,2,802,2]);
+
+
+
+
+
+
+
+
+
