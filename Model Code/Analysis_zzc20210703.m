@@ -1,0 +1,44 @@
+%% study 0.25 Knit
+freq = csvread('N20_0.25K_01.CSV',3,0,[3,0,802,0]);
+model = ["RC_Circuit_N8_1","RC_Circuit_N10_1","RC_Circuit_N12_1","RC_Circuit_N14_1","RC_Circuit_N16_1","RC_Circuit_N18_1","RC_Circuit_N20_1"];
+Fk31 = [];
+x = [8,10,12,14,16,18,20];
+data_real = [K_R_N8_25_A;K_R_N10_25_A;K_R_N12_25_A;K_R_N14_25_A;K_R_N16_25_A;K_R_N18_25_A;K_R_N20_25_A];
+data_imag = [K_I_N8_25_A;K_I_N10_25_A;K_I_N12_25_A;K_I_N14_25_A;K_I_N16_25_A;K_I_N18_25_A;K_I_N20_25_A];
+F_K_25_A = [7.0118, 6.0990, 5.5239, 4.9987, 4.5236, 4.1360, 3.8359].*1.0e+07;
+Fk25 = [];
+K_25_CT = ((2.*pi.*F_K_25).^(-2))./L_K_25;
+Cslist = [5.75e-13,5.15e-13,4.64e-13,4.25e-13,4.02e-13,3.86e-13,3.6e-13];
+Cplist = [0.6e-14,0.1e-14,0.1e-14,0.6e-14,0.8e-14,0.9e-14,2.8e-14];
+Rlist = [8.5,5,4,3,4,3,2.5];
+for i = 1:7
+    open(model(i))
+    sdo.setValueInModel(model(i), 'Cc', 3.2e-13);
+    sdo.setValueInModel(model(i), 'Cp', 3e-14);
+    sdo.setValueInModel(model(i), 'Cs', 7e-12);
+    sdo.setValueInModel(model(i), 'L', L_K_25(i)/x(i));
+    sdo.setValueInModel(model(i), 'R', Rlist(i));
+    z_data = power_zmeter(model(i), freq'); 
+    [M,I] = max(real(z_data.Z));
+    Fk25 = [Fk25, freq(I)]
+    %F_K_48
+
+    
+    figure(99)
+    plot(freq,real(z_data.Z),freq, data_real(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    figure(98)
+    plot(freq, imag(z_data.Z), freq, data_imag(i,:))
+    legend('simulation', 'experiment')
+    grid on
+    
+end
+%%
+CT25 = ((2.*pi.*Fk25).^(-2))./L_K_25;
+figure(97)
+plot(x,CT25.*1e12,'*--',x,K_25_CT.*1e12,'s-','LineWidth',1.5)
+legend('simulation','experiment','fontweight','bold')
+grid on
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Capacitance (pF)','fontweight','bold','Fontsize',15)

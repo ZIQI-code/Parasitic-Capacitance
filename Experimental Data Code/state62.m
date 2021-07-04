@@ -377,36 +377,38 @@ grid on
 hold off
 
 figure(15)
-plot(K_F_N20_25_01,K_R_N20_25_A)
+plot(K_F_N20_25_01(1:640)./1e6,K_R_N20_25_A(1:640),'LineWidth',1.5)
 hold on
-plot(K_F_N18_25_01,K_R_N18_25_A)
-plot(K_F_N16_25_01,K_R_N16_25_A)
-plot(K_F_N14_25_01,K_R_N14_25_A)
-plot(K_F_N12_25_01,K_R_N12_25_A)
-plot(K_F_N10_25_01,K_R_N10_25_A)
-plot(K_F_N8_25_01,K_R_N8_25_A)
+plot(K_F_N18_25_01(1:640)./1e6,K_R_N18_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N16_25_01(1:640)./1e6,K_R_N16_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N14_25_01(1:640)./1e6,K_R_N14_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N12_25_01(1:640)./1e6,K_R_N12_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N10_25_01(1:640)./1e6,K_R_N10_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N8_25_01(1:640)./1e6,K_R_N8_25_A(1:640),'LineWidth',1.5)
 
-legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
-title('Knitted 0.25mm Real Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
+% title('Knitted 0.25mm Real Average')
+
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Resistance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
 figure(16)
-plot(K_F_N20_25_01,K_I_N20_25_A)
+plot(K_F_N20_25_01(1:640)./1e6,K_I_N20_25_A(1:640),'LineWidth',1.5)
 hold on
-plot(K_F_N18_25_01,K_I_N18_25_A)
-plot(K_F_N16_25_01,K_I_N16_25_A)
-plot(K_F_N14_25_01,K_I_N14_25_A)
-plot(K_F_N12_25_01,K_I_N12_25_A)
-plot(K_F_N10_25_01,K_I_N10_25_A)
-plot(K_F_N8_25_01,K_I_N8_25_A)
+plot(K_F_N18_25_01(1:640)./1e6,K_I_N18_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N16_25_01(1:640)./1e6,K_I_N16_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N14_25_01(1:640)./1e6,K_I_N14_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N12_25_01(1:640)./1e6,K_I_N12_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N10_25_01(1:640)./1e6,K_I_N10_25_A(1:640),'LineWidth',1.5)
+plot(K_F_N8_25_01(1:640)./1e6,K_I_N8_25_A(1:640),'LineWidth',1.5)
 
-legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A')
-title('Knitted 0.25mm Imag Average')
-xlabel('Frequency (Hz)')
-ylabel('Reactance')
+legend('N20,A','N18,A','N16,A','N14,A','N12,A','N10,A','N8,A','fontweight','bold')
+
+% title('Knitted 0.25mm Imag Average')
+xlabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+ylabel('Reactance (Ohms)','fontweight','bold','Fontsize',15)
 grid on
 hold off
 
@@ -457,9 +459,12 @@ x=[8,10,12,14,16,18,20];
 L_K_25 = [L_N8_25_A, L_N10_25_A, L_N12_25_A, L_N14_25_A, L_N16_25_A, L_N18_25_A, L_N20_25_A];
 
 figure(1)
-plot(x,L_K_25)
+plot(x,L_K_25.*1e6,'*-','LineWidth',1.5)
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Inductance(µH)','fontweight','bold','Fontsize',15)
+legend('K25','fontweight','bold')
 grid on
-title('Inductance K25')
+% title('Inductance K25')
 
 %% Resonant Frequency
 
@@ -467,9 +472,11 @@ title('Inductance K25')
 F_K_25=[7.0118, 6.0990, 5.5239, 4.9987, 4.5236, 4.1360, 3.8359].*1.0e+07;
 F_K_18=[6.8242, 5.9865, 5.2863, 4.7118, 4.3486, 3.8610, 3.5984].*1.0e+07;
 figure(2)
-plot(x,F_K_25,x,F_K_18);
+plot(x,F_K_25./1E7,'*-','LineWidth',1.5);
 grid on
-legend('K25','K18')
+xlabel('Turns','fontweight','bold','Fontsize',15)
+ylabel('Frequency (MHz)','fontweight','bold','Fontsize',15)
+legend('K25','fontweight','bold')
 
 %%
 K_25_CT = ((2.*pi.*F_K_25).^(-2))./L_K_25;
@@ -481,4 +488,4 @@ grid on
 
 %%
 L1=[1.604, 1.6354, 1.7230, 1.6567, 1.5558, 1.6893]./(1e5*(2*pi))
-L2=[2.0677, 2.0641, 2.1059, 2.0788, 1.9998, 2.1055]./(1e5*(2*pi))
+L2=[2.0677, 2.0640, 2.1059, 2.0788, 1.9998, 2.1055]./(1e5*(2*pi))

@@ -1685,9 +1685,9 @@ title('Inductance K_T')
 legend('1','2','3')
 
 figure(6)
-plot(x,L_K_T_A,x,L_K_48_A)
+plot(x,L_K_T_A)
 grid on
-legend('KT','K48')
+legend('KT')
 title('Average Inductance K_T')
 
 %plot individual graph
